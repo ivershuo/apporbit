@@ -84,7 +84,7 @@ jobs:
           else
             git worktree add --detach "$data_dir" HEAD
             git -C "$data_dir" switch --orphan data
-            git -C "$data_dir" rm -rf .
+            git -C "$data_dir" rm -rf --ignore-unmatch .
           fi
           echo "directory=$data_dir" >> "$GITHUB_OUTPUT"
 
