@@ -19,6 +19,10 @@ on:
         required: false
         type: string
         default: all
+      minimum_usable_ratio:
+        required: false
+        type: string
+        default: "0.75"
   workflow_dispatch:
     inputs:
       store:
@@ -43,6 +47,11 @@ on:
         type: choice
         default: all
         options: [all, top-free, top-paid, top-grossing]
+      minimum_usable_ratio:
+        description: Minimum fraction of targets that must produce valid or partial snapshots
+        required: false
+        type: string
+        default: "0.75"
 
 permissions:
   contents: write
@@ -98,6 +107,7 @@ jobs:
           INPUT_MARKET: ${{ inputs.market }}
           INPUT_SCOPE: ${{ inputs.scope }}
           INPUT_CHART: ${{ inputs.chart }}
+          INPUT_MINIMUM_USABLE_RATIO: ${{ inputs.minimum_usable_ratio }}
           APPORBIT_CONTACT_URL: ${{ github.server_url }}/${{ github.repository }}
         run: |
           set -euo pipefail
@@ -106,7 +116,7 @@ jobs:
           [[ -z "$INPUT_MARKET" ]] || args+=(--market "$INPUT_MARKET")
           [[ -z "$INPUT_SCOPE" || "$INPUT_SCOPE" == "all" ]] || args+=(--scope "$INPUT_SCOPE")
           [[ -z "$INPUT_CHART" || "$INPUT_CHART" == "all" ]] || args+=(--chart "$INPUT_CHART")
-          pnpm collect -- "${args[@]}" --fail-on-any-error
+          pnpm collect -- "${args[@]}" --minimum-usable-ratio "$INPUT_MINIMUM_USABLE_RATIO"
 
       - name: Commit data transaction
         shell: bash
@@ -126,8 +136,8 @@ jobs:
           size_mb="$(du -sm "$DATA_DIR/.git" "$DATA_DIR" 2>/dev/null | awk '{sum += $1} END {print sum}')"
           echo "Data checkout size: ${size_mb} MB (review split at 750 MB)." >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Propagate collection failure after preserving its manifest
+      - name: Enforce collection quality gate after preserving its manifest
         if: steps.collect.outcome != 'success'
         run: |
-          echo "At least one target failed; the run manifest was committed to the data branch." >> "$GITHUB_STEP_SUMMARY"
+          echo "The collector crashed or usable target coverage fell below the configured threshold. Any run manifest produced was committed to the data branch." >> "$GITHUB_STEP_SUMMARY"
           exit 1

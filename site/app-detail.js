@@ -26,6 +26,7 @@ import {
   unique,
   utcDateMinus
 } from "./shared.js";
+import { marketsByScale } from "./market-order.js";
 
 const query = new URLSearchParams(location.search);
 const state = {
@@ -154,7 +155,7 @@ function syncFilters() {
   const capabilities = state.dataset.capabilities.capabilities.filter((item) => item.status !== "unsupported" && item.store === state.store && item.scope === state.scope);
   const charts = unique([...state.options.filter(({ target }) => target.store === state.store && target.scope === state.scope).map(({ target }) => target.chart), ...capabilities.map((item) => item.chart)]);
   state.chart = replaceOptions(nodes.detail_chart, charts, state.chart, chartLabel, { preserveSelection: true });
-  const markets = unique([...state.options.filter(({ target }) => target.store === state.store && target.scope === state.scope && target.chart === state.chart).map(({ target }) => target.market), ...capabilities.filter((item) => item.chart === state.chart).flatMap((item) => item.markets)]);
+  const markets = marketsByScale([...state.options.filter(({ target }) => target.store === state.store && target.scope === state.scope && target.chart === state.chart).map(({ target }) => target.market), ...capabilities.filter((item) => item.chart === state.chart).flatMap((item) => item.markets)]);
   state.market = replaceOptions(nodes.detail_market, markets, state.market, marketLabel, { preserveSelection: true });
   writeQuery();
 }

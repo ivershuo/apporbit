@@ -15,10 +15,43 @@ import { AppMetadataObservationSchema, type Chart, type Scope, type Target } fro
 import { sha256 } from "../hash.js";
 import { collectorUserAgent } from "../http.js";
 import { COLLECTOR_VERSION } from "../version.js";
-import type { AdapterObservation, StoreAdapter } from "./types.js";
+import type { AdapterObservation, MetadataEnrichment, StoreAdapter } from "./types.js";
 
 const GOOGLE_ADAPTER_VERSION = "@mradex77/google-play-scraper@1.2.0";
 type GooglePlayClient = Pick<ReturnType<typeof createClient>, "list" | "app">;
+export const GOOGLE_PLAY_REQUESTS_PER_SECOND = 3;
+const DETAIL_CONCURRENCY_PER_TARGET = 5;
+
+interface GooglePlayEnrichmentContext {
+  kind: "google-play";
+  items: GooglePlayAppItem[];
+}
+
+interface GooglePlayDetailResult {
+  detail: GooglePlayApp;
+  attempts: number;
+  flags: string[];
+}
+
+async function mapWithConcurrency<T, R>(
+  values: T[],
+  concurrency: number,
+  operation: (value: T) => Promise<R>
+): Promise<R[]> {
+  const results = new Array<R>(values.length);
+  let cursor = 0;
+  const worker = async (): Promise<void> => {
+    while (cursor < values.length) {
+      const index = cursor;
+      cursor += 1;
+      results[index] = await operation(values[index]!);
+    }
+  };
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, values.length) }, () => worker())
+  );
+  return results;
+}
 
 function chartCollection(chart: Chart): Collection {
   const mapping: Record<Chart, Collection> = {
@@ -43,12 +76,26 @@ function updatedAtFromEpoch(value: number | undefined): string | undefined {
   return new Date(value).toISOString();
 }
 
+function failureAttempts(error: unknown): number {
+  if (typeof error !== "object" || error === null || !("attempts" in error)) return 1;
+  const attempts = Number(error.attempts);
+  return Number.isInteger(attempts) && attempts > 0 ? attempts : 1;
+}
+
+function failureFlags(error: unknown): string[] {
+  if (typeof error !== "object" || error === null || !("metadataFlags" in error)) return [];
+  return Array.isArray(error.metadataFlags)
+    ? error.metadataFlags.filter((flag): flag is string => typeof flag === "string")
+    : [];
+}
+
 export class GooglePlayAdapter implements StoreAdapter {
   readonly #client: GooglePlayClient;
+  readonly #detailRequests = new Map<string, Promise<GooglePlayDetailResult>>();
 
   constructor(client?: GooglePlayClient) {
     this.#client = client ?? createClient({
-      throttle: 1,
+      throttle: GOOGLE_PLAY_REQUESTS_PER_SECOND,
       requestOptions: {
         timeoutMs: 30_000,
         retries: 2,
@@ -59,7 +106,7 @@ export class GooglePlayAdapter implements StoreAdapter {
     });
   }
 
-  async collect(target: Target): Promise<AdapterObservation> {
+  async collectRanking(target: Target): Promise<AdapterObservation> {
     if (target.store !== "google-play") {
       throw new Error("GooglePlayAdapter received a non-Google-Play target");
     }
@@ -91,29 +138,65 @@ export class GooglePlayAdapter implements StoreAdapter {
       throw error;
     }
 
-    // This timestamp belongs to the ranking response. Metadata enrichment below
-    // is deliberately excluded so it cannot shift the chart's observation time.
+    // This timestamp belongs only to the ranking response. The pipeline persists
+    // the resulting snapshot before starting any metadata enrichment.
     const capturedAt = new Date().toISOString();
     const rankedItems = items as GooglePlayAppItem[];
-    const detailResults = await Promise.allSettled(rankedItems.map((item) =>
-      this.#client.app({
-        appId: item.appId,
-        country: target.market.toLowerCase(),
-        lang: target.language,
-        onDegradation: (event) => flags.push(`metadata_degradation:${event.reason}`),
-        onIntegrityEvent: (event) => flags.push(`metadata_integrity:${event.reason}`),
-        requestOptions: {
-          onRetry: (event) => {
-            attempts = Math.max(attempts, event.attempt + 1);
-          }
+
+    return {
+      target,
+      capturedAt,
+      attempts,
+      flags,
+      entries: rankedItems.map((item, index) => ({ rank: index + 1, appId: item.appId })),
+      enrichmentContext: {
+        kind: "google-play",
+        items: rankedItems
+      } satisfies GooglePlayEnrichmentContext,
+      source: {
+        type: "google-play-scraper",
+        method: "list",
+        url: sourceUrl(target),
+        collectorVersion: COLLECTOR_VERSION,
+        adapterVersion: GOOGLE_ADAPTER_VERSION,
+        payloadSha256: sha256(rankedItems)
+      }
+    };
+  }
+
+  async enrichMetadata(observation: AdapterObservation): Promise<MetadataEnrichment> {
+    const context = observation.enrichmentContext as Partial<GooglePlayEnrichmentContext>;
+    if (context.kind !== "google-play" || !Array.isArray(context.items)) {
+      throw new Error("GooglePlayAdapter received invalid enrichment context");
+    }
+
+    const { target } = observation;
+    const flags: string[] = [];
+    let attempts = 1;
+    const rankedItems = context.items;
+    const detailResults = await mapWithConcurrency(
+      rankedItems,
+      DETAIL_CONCURRENCY_PER_TARGET,
+      async (item) => {
+        try {
+          return { status: "fulfilled" as const, value: await this.#loadDetail(target, item.appId) };
+        } catch (reason) {
+          return { status: "rejected" as const, reason };
         }
-      })
-    ));
+      }
+    );
     const detailsById = new Map<string, GooglePlayApp>();
     let failedDetails = 0;
     for (const result of detailResults) {
-      if (result.status === "fulfilled") detailsById.set(result.value.appId, result.value);
-      else failedDetails += 1;
+      if (result.status === "fulfilled") {
+        detailsById.set(result.value.detail.appId, result.value.detail);
+        attempts = Math.max(attempts, result.value.attempts);
+        flags.push(...result.value.flags);
+      } else {
+        failedDetails += 1;
+        attempts = Math.max(attempts, failureAttempts(result.reason));
+        flags.push(...failureFlags(result.reason));
+      }
     }
     if (failedDetails > 0) {
       flags.push(`metadata_enrichment_failed:google_play_app_details:${failedDetails}/${rankedItems.length}`);
@@ -156,11 +239,8 @@ export class GooglePlayAdapter implements StoreAdapter {
     });
 
     return {
-      target,
-      capturedAt,
       attempts,
-      flags,
-      entries: listItems.map((item, index) => ({ rank: index + 1, appId: item.appId })),
+      flags: [...new Set(flags)].sort(),
       metadata: listItems.map((item) =>
         AppMetadataObservationSchema.parse({
           store: "google-play",
@@ -197,16 +277,41 @@ export class GooglePlayAdapter implements StoreAdapter {
           iapRange: item.iapRange,
           adSupported: item.adSupported
         })
-      ),
-      source: {
-        type: "google-play-scraper",
-        method: "list+app-details",
-        url: sourceUrl(target),
-        collectorVersion: COLLECTOR_VERSION,
-        adapterVersion: GOOGLE_ADAPTER_VERSION,
-        payloadSha256: sha256({ ranking: rankedItems, details: listItems })
-      }
+      )
     };
+  }
+
+  #loadDetail(target: Target, appId: string): Promise<GooglePlayDetailResult> {
+    const key = `${target.market}:${target.language}:${appId}`;
+    const existing = this.#detailRequests.get(key);
+    if (existing) return existing;
+
+    const request = (async () => {
+      let attempts = 1;
+      const flags: string[] = [];
+      try {
+        const detail = await this.#client.app({
+          appId,
+          country: target.market.toLowerCase(),
+          lang: target.language,
+          onDegradation: (event) => flags.push(`metadata_degradation:${event.reason}`),
+          onIntegrityEvent: (event) => flags.push(`metadata_integrity:${event.reason}`),
+          requestOptions: {
+            onRetry: (event) => {
+              attempts = Math.max(attempts, event.attempt + 1);
+            }
+          }
+        });
+        return { detail, attempts, flags };
+      } catch (error) {
+        if (typeof error === "object" && error !== null) {
+          Object.assign(error, { attempts, metadataFlags: flags });
+        }
+        throw error;
+      }
+    })();
+    this.#detailRequests.set(key, request);
+    return request;
   }
 }
 

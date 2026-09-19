@@ -2,7 +2,7 @@ import { AppMetadataObservationSchema, type Target } from "../domain.js";
 import { sha256 } from "../hash.js";
 import { collectorUserAgent } from "../http.js";
 import { COLLECTOR_VERSION } from "../version.js";
-import type { AdapterObservation, StoreAdapter } from "./types.js";
+import type { AdapterObservation, MetadataEnrichment, StoreAdapter } from "./types.js";
 
 const APPLE_ADAPTER_VERSION = "apple-rss-v3+itunes-lookup";
 const MAX_RSS_RESPONSE_BYTES = 2_000_000;
@@ -55,6 +55,11 @@ interface AppleLookupItem {
 
 interface AppleLookupPayload {
   results?: AppleLookupItem[];
+}
+
+interface AppleEnrichmentContext {
+  kind: "apple";
+  items: AppleItem[];
 }
 
 interface FetchResult<T> {
@@ -153,7 +158,7 @@ function errorAttempts(error: unknown): number {
 }
 
 export class AppleAdapter implements StoreAdapter {
-  async collect(target: Target): Promise<AdapterObservation> {
+  async collectRanking(target: Target): Promise<AdapterObservation> {
     if (target.store !== "apple") {
       throw new Error("AppleAdapter received a non-Apple target");
     }
@@ -168,12 +173,40 @@ export class AppleAdapter implements StoreAdapter {
       throw new Error("Apple RSS payload is missing feed.results");
     }
 
-    // Capture the chart time before metadata enrichment so lookup latency does
-    // not become part of the ranking observation timestamp.
+    // Capture and return the chart before the separate metadata stage begins.
     const capturedAt = new Date().toISOString();
+
+    return {
+      target,
+      capturedAt,
+      attempts: rss.attempts,
+      flags: [],
+      entries: items.map((item, index) => ({ rank: index + 1, appId: item.id })),
+      enrichmentContext: {
+        kind: "apple",
+        items
+      } satisfies AppleEnrichmentContext,
+      source: {
+        type: "apple-rss",
+        method: "rss-marketing-tools-v2",
+        url,
+        collectorVersion: COLLECTOR_VERSION,
+        adapterVersion: APPLE_ADAPTER_VERSION,
+        payloadSha256: sha256(rss.payload)
+      }
+    };
+  }
+
+  async enrichMetadata(observation: AdapterObservation): Promise<MetadataEnrichment> {
+    const context = observation.enrichmentContext as Partial<AppleEnrichmentContext>;
+    if (context.kind !== "apple" || !Array.isArray(context.items)) {
+      throw new Error("AppleAdapter received invalid enrichment context");
+    }
+
+    const { target } = observation;
+    const items = context.items;
     const flags: string[] = [];
-    let attempts = rss.attempts;
-    const lookupPayloads: AppleLookupPayload[] = [];
+    let attempts = 1;
     const detailsById = new Map<string, AppleLookupItem>();
     const lookupOutcomes = await Promise.all(
       batches(items.map((item) => item.id), LOOKUP_BATCH_SIZE).map(async (ids, index) => {
@@ -196,7 +229,6 @@ export class AppleAdapter implements StoreAdapter {
         continue;
       }
       attempts = Math.max(attempts, outcome.result.attempts);
-      lookupPayloads.push(outcome.result.payload);
       for (const detail of outcome.result.payload.results ?? []) {
         if (detail.trackId !== undefined) detailsById.set(String(detail.trackId), detail);
       }
@@ -244,20 +276,9 @@ export class AppleAdapter implements StoreAdapter {
     });
 
     return {
-      target,
-      capturedAt,
       attempts,
       flags,
-      entries: items.map((item, index) => ({ rank: index + 1, appId: item.id })),
-      metadata,
-      source: {
-        type: "apple-rss",
-        method: lookupPayloads.length > 0 ? "rss-marketing-tools-v2+itunes-lookup" : "rss-marketing-tools-v2",
-        url,
-        collectorVersion: COLLECTOR_VERSION,
-        adapterVersion: APPLE_ADAPTER_VERSION,
-        payloadSha256: sha256({ rss: rss.payload, lookups: lookupPayloads })
-      }
+      metadata
     };
   }
 }

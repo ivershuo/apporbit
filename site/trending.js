@@ -20,6 +20,7 @@ import {
   unique,
   utcDateMinus
 } from "./shared.js";
+import { marketsByScale } from "./market-order.js";
 
 const query = new URLSearchParams(location.search);
 const state = {
@@ -54,7 +55,7 @@ function syncFilters() {
   state.filters.scope = replaceOptions(nodes.scope, scopes, state.filters.scope, scopeLabel, { preserveSelection: true });
   const charts = unique([...state.options.filter(({ target }) => target.store === state.filters.store && target.scope === state.filters.scope).map(({ target }) => target.chart), ...capabilities.filter((item) => item.store === state.filters.store && item.scope === state.filters.scope).map((item) => item.chart)]);
   state.filters.chart = replaceOptions(nodes.chart, charts, state.filters.chart, chartLabel, { preserveSelection: true });
-  const markets = unique([...state.options.filter(({ target }) => target.store === state.filters.store && target.scope === state.filters.scope && target.chart === state.filters.chart).map(({ target }) => target.market), ...capabilities.filter((item) => item.store === state.filters.store && item.scope === state.filters.scope && item.chart === state.filters.chart).flatMap((item) => item.markets)]);
+  const markets = marketsByScale([...state.options.filter(({ target }) => target.store === state.filters.store && target.scope === state.filters.scope && target.chart === state.filters.chart).map(({ target }) => target.market), ...capabilities.filter((item) => item.store === state.filters.store && item.scope === state.filters.scope && item.chart === state.filters.chart).flatMap((item) => item.markets)]);
   state.filters.market = replaceOptions(nodes.market, markets, state.filters.market, marketLabel, { preserveSelection: true });
   nodes.window.value = state.filters.window;
   const next = new URLSearchParams(state.filters);

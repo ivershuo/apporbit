@@ -44,11 +44,17 @@ Metadata change events are keyed by `(store, market, appId)` because ratings, pr
 - commercial model: numeric and formatted price, currency, free/paid status, in-app purchases, IAP range, and ad support;
 - lifecycle and compatibility: release date, latest update time, version, minimum OS, content rating, download size, and supported languages.
 
-Fields remain optional because the two stores expose different dimensions and individual listings may omit them. Ranking timestamps are recorded immediately after the chart response, before metadata enrichment. Apple metadata is enriched in batches through the iTunes Lookup API; Google Play metadata is fetched separately after its ranked list response. Failed enrichment leaves the ranking usable and adds a `metadata_enrichment_failed:*` validation flag.
+Fields remain optional because the two stores expose different dimensions and individual listings may omit them. Collection has two barriers: all ranking responses are timestamped, validated, and written as snapshots first; only then does metadata enrichment begin. Apple metadata is enriched in batches through the iTunes Lookup API. Google Play metadata uses a shared 3 requests/second limiter, bounds per-target concurrency, and reuses identical `(market, language, appId)` detail requests within a run. Failed enrichment leaves the already-persisted ranking usable and adds a `metadata_enrichment_failed:*` flag to the run target outcome rather than changing the immutable snapshot.
 
 ## Run manifests
 
 Every run records each selected target independently. One target failure does not cancel other targets. Consumers must use run manifests to distinguish a failed collection from an app being absent from a successfully observed chart.
+
+The scheduled GitHub workflow treats `valid` and `partial` outcomes as usable coverage.
+Individual failures are reported as a degraded run rather than failing the workflow; the
+default quality gate fails only when usable coverage drops below 75% or the collector
+cannot complete. This operational threshold does not change any target status stored in
+the run manifest.
 
 The checked-in JSON Schemas are generated from the runtime Zod models. `pnpm schema:check` detects drift, and `pnpm schema:generate` intentionally refreshes generated schema artifacts after a model change.
 

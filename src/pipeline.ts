@@ -34,6 +34,17 @@ export interface RunOptions {
 export interface RunResult {
   manifest: RunManifest;
   manifestPath: string;
+  stageDurationsMs: {
+    ranking: number;
+    metadata: number;
+  };
+}
+
+interface RankedTarget {
+  adapter: ReturnType<AdapterRegistry["forTarget"]>;
+  observation: AdapterObservation;
+  outcome: RunTargetOutcome;
+  disposition: "valid" | "partial" | "quarantined";
 }
 
 function errorDetails(error: unknown, target: Target): { kind: string; message: string } {
@@ -164,6 +175,7 @@ export async function runCollection(options: RunOptions): Promise<RunResult> {
   const store = new DataStore(options.outputRoot);
   const registry = options.registry ?? new AdapterRegistry();
   const now = options.now ?? (() => new Date());
+  const rankingStageStarted = performance.now();
   const startedAt = now().toISOString();
   const runId = utcPathParts(startedAt).token;
   const existingLatest = await store.readJson<unknown>("manifests/latest.json");
@@ -171,6 +183,7 @@ export async function runCollection(options: RunOptions): Promise<RunResult> {
     ? LatestManifestSchema.parse(existingLatest)
     : LatestManifestSchema.parse({ schemaVersion: SCHEMA_VERSION, updatedAt: startedAt, targets: {} });
   const outcomes: RunTargetOutcome[] = new Array(options.targets.length);
+  const rankedTargets: Array<RankedTarget | undefined> = new Array(options.targets.length);
   const probeMetadata: AppMetadataObservation[] = [];
   const publishedMetadata: AppMetadataObservation[] = [];
 
@@ -180,9 +193,10 @@ export async function runCollection(options: RunOptions): Promise<RunResult> {
       publicationMode: options.publicationMode ?? configuredTarget.publicationMode
     });
     const itemStartedAt = now().toISOString();
+    const adapter = registry.forTarget(target);
     try {
       const previous = await previousSnapshot(store, latest, target);
-      const observation = await registry.forTarget(target).collect(target);
+      const observation = await adapter.collectRanking(target);
       const quality = validateObservation(observation, previous?.entries ?? null);
       const snapshotStatus = quality.disposition === "valid" ? "valid" : "partial";
       const snapshot = makeSnapshot(
@@ -205,11 +219,6 @@ export async function runCollection(options: RunOptions): Promise<RunResult> {
           capturedAt: snapshot.capturedAt
         };
       }
-      if (isProbe) {
-        probeMetadata.push(...observation.metadata);
-      } else if (quality.disposition !== "quarantined") {
-        publishedMetadata.push(...observation.metadata);
-      }
       const outcome: RunTargetOutcome = {
         targetKey: targetKey(target),
         target,
@@ -222,7 +231,12 @@ export async function runCollection(options: RunOptions): Promise<RunResult> {
         flags: quality.flags
       };
       outcomes[index] = outcome;
-      reportTargetComplete(options.onTargetComplete, outcome);
+      rankedTargets[index] = {
+        adapter,
+        observation,
+        outcome,
+        disposition: quality.disposition
+      };
     } catch (error) {
       const outcome: RunTargetOutcome = {
         targetKey: targetKey(target),
@@ -239,6 +253,36 @@ export async function runCollection(options: RunOptions): Promise<RunResult> {
       reportTargetComplete(options.onTargetComplete, outcome);
     }
   }));
+
+  const rankingStageDuration = performance.now() - rankingStageStarted;
+  const metadataStageStarted = performance.now();
+
+  await Promise.all(rankedTargets.map(async (ranked) => {
+    if (!ranked) return;
+    const { adapter, observation, outcome, disposition } = ranked;
+    try {
+      const enrichment = await adapter.enrichMetadata(observation);
+      outcome.attempts = Math.max(outcome.attempts, enrichment.attempts);
+      outcome.flags = [...new Set([...outcome.flags, ...enrichment.flags])].sort();
+      const isProbe = observation.target.publicationMode === "probe";
+      if (isProbe) {
+        probeMetadata.push(...enrichment.metadata);
+      } else if (disposition !== "quarantined") {
+        publishedMetadata.push(...enrichment.metadata);
+      }
+    } catch (error) {
+      outcome.attempts = Math.max(outcome.attempts, errorAttempts(error));
+      const details = errorDetails(error, observation.target);
+      outcome.flags = [...new Set([
+        ...outcome.flags,
+        `metadata_enrichment_failed:${details.kind}`
+      ])].sort();
+    }
+    outcome.finishedAt = now().toISOString();
+    reportTargetComplete(options.onTargetComplete, outcome);
+  }));
+
+  const metadataStageDuration = performance.now() - metadataStageStarted;
 
   const finishedAt = now().toISOString();
   const manifest = RunManifestSchema.parse({
@@ -261,5 +305,12 @@ export async function runCollection(options: RunOptions): Promise<RunResult> {
     await store.writeMutableJson("manifests/latest.json", LatestManifestSchema.parse(latest));
   }
 
-  return { manifest, manifestPath };
+  return {
+    manifest,
+    manifestPath,
+    stageDurationsMs: {
+      ranking: Math.round(rankingStageDuration),
+      metadata: Math.round(metadataStageDuration)
+    }
+  };
 }

@@ -28,6 +28,7 @@ import {
   text,
   unique
 } from "./shared.js";
+import { marketsByScale } from "./market-order.js";
 
 const state = {
   dataset: null,
@@ -98,7 +99,7 @@ function syncFilters() {
     ...capabilities.filter((item) => item.store === state.filters.store && item.scope === state.filters.scope).map((item) => item.chart)
   ]);
   state.filters.chart = replaceOptions(nodes.chart, charts, state.filters.chart, chartLabel, { preserveSelection: true });
-  const markets = unique([
+  const markets = marketsByScale([
     ...state.options.filter(({ target }) => target.store === state.filters.store && target.scope === state.filters.scope && target.chart === state.filters.chart).map(({ target }) => target.market),
     ...capabilities.filter((item) => item.store === state.filters.store && item.scope === state.filters.scope && item.chart === state.filters.chart).flatMap((item) => item.markets)
   ]);

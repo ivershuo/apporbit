@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { appendFile, readFile } from "node:fs/promises";
 import path from "node:path";
 
 import { AdapterRegistry } from "./adapters/index.js";
@@ -12,8 +12,9 @@ import {
   TargetSchema,
   type Target
 } from "./domain.js";
-import type { RunTargetOutcome } from "./domain.js";
+import type { RunManifest, RunTargetOutcome } from "./domain.js";
 import { runCollection } from "./pipeline.js";
+import { evaluateRunHealth, type RunHealth } from "./run-health.js";
 import { schemaDocuments } from "./schema-documents.js";
 import { DataStore } from "./storage.js";
 
@@ -41,6 +42,16 @@ function stringArgument(args: Arguments, name: string): string | undefined {
   if (value === undefined) return undefined;
   if (typeof value !== "string") throw new Error(`--${name} requires a value`);
   return value;
+}
+
+function ratioArgument(args: Arguments, name: string): number | undefined {
+  const value = stringArgument(args, name);
+  if (value === undefined) return undefined;
+  const ratio = Number(value);
+  if (!Number.isFinite(ratio) || ratio < 0 || ratio > 1) {
+    throw new Error(`--${name} must be a number between 0 and 1`);
+  }
+  return ratio;
 }
 
 function filterTargets(targets: Target[], args: Arguments): Target[] {
@@ -111,6 +122,7 @@ async function collect(cwd: string, args: Arguments): Promise<void> {
     stringArgument(args, "capabilities") ?? "config/capabilities.json"
   );
   const outputRoot = path.resolve(cwd, stringArgument(args, "output") ?? ".local-data/v1");
+  const minimumUsableRatio = ratioArgument(args, "minimum-usable-ratio");
   const targets = filterTargets(await loadTargets(configPath), args);
   if (targets.length === 0) throw new Error("target filters matched no configured targets");
 
@@ -130,6 +142,7 @@ async function collect(cwd: string, args: Arguments): Promise<void> {
     onTargetComplete: reportTargetOutcome
   });
   const counts = Object.groupBy(result.manifest.targets, (outcome) => outcome.status);
+  const health = evaluateRunHealth(result.manifest.targets, minimumUsableRatio ?? 0);
   const failedTargets = result.manifest.targets
     .filter((outcome) => outcome.status === "failed")
     .map((outcome) => ({
@@ -154,9 +167,20 @@ async function collect(cwd: string, args: Arguments): Promise<void> {
         startedAt: result.manifest.startedAt,
         finishedAt: result.manifest.finishedAt,
         durationSeconds: durationSeconds(result.manifest.startedAt, result.manifest.finishedAt),
+        stageDurationsSeconds: {
+          ranking: Number((result.stageDurationsMs.ranking / 1_000).toFixed(3)),
+          metadata: Number((result.stageDurationsMs.metadata / 1_000).toFixed(3))
+        },
         outcomes: Object.fromEntries(
           Object.entries(counts).map(([status, items]) => [status, items?.length ?? 0])
         ),
+        health: {
+          usableTargets: health.usableTargets,
+          totalTargets: health.totalTargets,
+          usableRatio: health.usableRatio,
+          minimumUsableRatio: minimumUsableRatio ?? null,
+          meetsMinimum: minimumUsableRatio === undefined ? null : health.meetsMinimum
+        },
         failedTargets,
         partialTargets
       },
@@ -164,9 +188,76 @@ async function collect(cwd: string, args: Arguments): Promise<void> {
       2
     )
   );
-  if (args["fail-on-any-error"] === true && result.manifest.targets.some((item) => item.status === "failed")) {
+  const strictFailure =
+    args["fail-on-any-error"] === true &&
+    result.manifest.targets.some((item) => item.status === "failed");
+  const coverageFailure = minimumUsableRatio !== undefined && !health.meetsMinimum;
+  await writeGitHubSummary(
+    result.manifest,
+    health,
+    minimumUsableRatio,
+    strictFailure || coverageFailure,
+    result.stageDurationsMs
+  );
+  if (strictFailure || coverageFailure) {
     process.exitCode = 1;
   }
+}
+
+function markdownCell(value: string): string {
+  return value.replaceAll("|", "\\|").replaceAll("\n", " ");
+}
+
+async function writeGitHubSummary(
+  manifest: RunManifest,
+  health: RunHealth,
+  minimumUsableRatio: number | undefined,
+  failedGate: boolean,
+  stageDurationsMs: { ranking: number; metadata: number }
+): Promise<void> {
+  const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+  if (!summaryPath) return;
+
+  const nonValid = manifest.targets.filter((outcome) => outcome.status !== "valid");
+  const percentage = (health.usableRatio * 100).toFixed(1);
+  const threshold = minimumUsableRatio === undefined
+    ? "not configured"
+    : `${(minimumUsableRatio * 100).toFixed(1)}%`;
+  const state = failedGate
+    ? "❌ Collection quality gate failed"
+    : nonValid.length > 0
+      ? "⚠️ Collection accepted with gaps"
+      : "✅ Collection complete";
+  const lines = [
+    "## Collection outcome",
+    "",
+    `**${state}**`,
+    "",
+    `- Usable targets: **${health.usableTargets}/${health.totalTargets} (${percentage}%)**`,
+    `- Minimum usable ratio: **${threshold}**`,
+    `- Run manifest: \`${manifest.runId}\``,
+    `- Ranking stage: **${(stageDurationsMs.ranking / 1_000).toFixed(1)}s**`,
+    `- Metadata stage: **${(stageDurationsMs.metadata / 1_000).toFixed(1)}s**`,
+    ""
+  ];
+
+  if (nonValid.length > 0) {
+    lines.push(
+      "### Non-valid targets",
+      "",
+      "| Target | Status | Attempts | Details |",
+      "| --- | --- | ---: | --- |"
+    );
+    for (const outcome of nonValid) {
+      const details = outcome.error?.message ?? (outcome.flags.join(", ") || "—");
+      lines.push(
+        `| ${markdownCell(targetLabel(outcome))} | ${outcome.status} | ${outcome.attempts} | ${markdownCell(details)} |`
+      );
+    }
+    lines.push("");
+  }
+
+  await appendFile(summaryPath, `${lines.join("\n")}\n`);
 }
 
 function targetLabel(outcome: RunTargetOutcome): string {

@@ -10,7 +10,7 @@ AppOrbit collects App Store and Google Play ranking observations and presents th
 - Run manifests, validation results, and generated JSON Schemas
 - A local website for exploring charts, app details, trends, and coverage
 
-Apple rankings use the Marketing Tools RSS feed with iTunes Lookup enrichment. Google Play collection is isolated behind a replaceable adapter. App icons are stored as source URLs; image binaries are not included in the dataset.
+Apple rankings use the Marketing Tools RSS feed with iTunes Lookup enrichment. Google Play collection is isolated behind a replaceable adapter. Collection runs in two explicit stages: every ranking response is timestamped, validated, and persisted before metadata enrichment starts. Google Play detail requests share a 3 requests/second limiter and are deduplicated by market and App ID within each run. App icons are stored as source URLs; image binaries are not included in the dataset.
 
 ## Requirements
 
@@ -28,6 +28,14 @@ pnpm collect:full
 Collected data is written to `.local-data/v1` by default. `collect:full` runs the complete matrix in `config/targets.json`. Use `pnpm collect:full:strict` when any failed target should produce a non-zero exit code.
 
 The `collect` command also accepts filters such as `--store`, `--market`, `--scope`, `--chart`, `--limit`, `--output`, and `--publication-mode`.
+
+Scheduled collection accepts partial target failures. A run is considered usable when a
+target produces either a `valid` or `partial` snapshot, and the GitHub workflow fails only
+when fewer than 75% of selected targets are usable or the collector itself crashes. The
+threshold is configurable through the workflow's `minimum_usable_ratio` input. Every
+non-valid target remains visible in the run manifest and GitHub Step Summary. Use
+`--fail-on-any-error` (or `pnpm collect:full:strict`) when strict all-target success is
+required instead.
 
 ## Local website
 

@@ -81,14 +81,17 @@ describe("Apple adapter metadata enrichment", () => {
       expectedCount: 1,
       publicationMode: "probe"
     });
-    const observation = await new AppleAdapter().collect(target);
+    const adapter = new AppleAdapter();
+    const observation = await adapter.collectRanking(target);
 
-    expect(fetchMock).toHaveBeenCalledTimes(2);
-    expect(observation.source.method).toBe("rss-marketing-tools-v2+itunes-lookup");
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(observation.source.method).toBe("rss-marketing-tools-v2");
     expect(observation.capturedAt).toBe("2026-09-18T02:17:00.000Z");
-    expect(observation.metadata[0]?.observedAt).toBe("2026-09-18T03:17:00.000Z");
-    expect(observation.flags).toEqual([]);
-    expect(observation.metadata[0]).toMatchObject({
+    const enrichment = await adapter.enrichMetadata(observation);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(enrichment.metadata[0]?.observedAt).toBe("2026-09-18T03:17:00.000Z");
+    expect(enrichment.flags).toEqual([]);
+    expect(enrichment.metadata[0]).toMatchObject({
       appId: "123",
       name: "Example App",
       developer: "Example Studio",

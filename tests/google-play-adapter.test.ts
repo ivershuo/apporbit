@@ -1,6 +1,9 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { GooglePlayAdapter } from "../src/adapters/google-play.js";
+import {
+  GOOGLE_PLAY_REQUESTS_PER_SECOND,
+  GooglePlayAdapter
+} from "../src/adapters/google-play.js";
 import { target } from "./helpers.js";
 
 afterEach(() => {
@@ -37,13 +40,50 @@ describe("Google Play adapter observation timing", () => {
       })
     };
 
-    const observation = await new GooglePlayAdapter(client as never).collect(
-      target({ expectedCount: 1 })
-    );
+    const adapter = new GooglePlayAdapter(client as never);
+    const observation = await adapter.collectRanking(target({ expectedCount: 1 }));
 
     expect(observation.capturedAt).toBe("2026-09-18T02:17:00.000Z");
-    expect(observation.metadata[0]?.observedAt).toBe("2026-09-18T03:17:00.000Z");
-    expect(observation.source.method).toBe("list+app-details");
+    expect(observation.source.method).toBe("list");
+    expect(client.app).not.toHaveBeenCalled();
     expect(client.list).toHaveBeenCalledWith(expect.objectContaining({ fullDetail: false }));
+
+    const enrichment = await adapter.enrichMetadata(observation);
+    expect(enrichment.metadata[0]?.observedAt).toBe("2026-09-18T03:17:00.000Z");
+    expect(client.app).toHaveBeenCalledTimes(1);
+  });
+
+  it("uses the configured three-request-per-second shared limit", () => {
+    expect(GOOGLE_PLAY_REQUESTS_PER_SECOND).toBe(3);
+  });
+
+  it("deduplicates app details across charts in the same market", async () => {
+    const rankedItem = {
+      appId: "com.example.shared",
+      title: "Shared App",
+      developer: "Example Studio",
+      icon: "https://example.com/icon.png",
+      url: "https://play.google.com/store/apps/details?id=com.example.shared",
+      price: 0,
+      free: true
+    };
+    const client = {
+      list: vi.fn(async () => [rankedItem]),
+      app: vi.fn(async () => ({
+        ...rankedItem,
+        categories: [],
+        genre: "Application"
+      }))
+    };
+    const adapter = new GooglePlayAdapter(client as never);
+    const first = await adapter.collectRanking(target({ expectedCount: 1, chart: "top-free" }));
+    const second = await adapter.collectRanking(target({ expectedCount: 1, chart: "top-paid" }));
+
+    await Promise.all([
+      adapter.enrichMetadata(first),
+      adapter.enrichMetadata(second)
+    ]);
+
+    expect(client.app).toHaveBeenCalledTimes(1);
   });
 });

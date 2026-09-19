@@ -1,4 +1,5 @@
 import { bindChrome, buildHistories, chartLabel, element, formatTime, loadDataset, marketLabel, scopeLabel, storeLabel, targetOptions, text } from "./shared.js";
+import { compareMarketsByScale } from "./market-order.js";
 
 const nodes = {
   runs: document.querySelector("#run-count"),
@@ -129,7 +130,7 @@ function renderCatalog(records) {
     if (item.store === "apple") counts.apple += 1;
     if (item.store === "google-play") counts.googlePlay += 1;
   }
-  const marketRows = [...markets.entries()].sort(([left], [right]) => left.localeCompare(right));
+  const marketRows = [...markets.entries()].sort(([left], [right]) => compareMarketsByScale(left, right));
   const maximumMarketCount = Math.max(0, ...marketRows.flatMap(([, counts]) => [counts.apple, counts.googlePlay]));
   nodes.marketCatalogChart.replaceChildren();
   for (const [market, counts] of marketRows) {
