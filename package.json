@@ -16,6 +16,7 @@
     "probe": "node --import tsx src/cli.ts collect --publication-mode probe",
     "schema:generate": "node --import tsx scripts/generate-schemas.ts",
     "schema:check": "node --import tsx src/cli.ts schema-check",
+    "site:build": "node --import tsx scripts/build-site.ts",
     "site:dev": "node --import tsx scripts/serve-site.ts",
     "test": "vitest run",
     "test:watch": "vitest",

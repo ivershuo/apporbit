@@ -1,5 +1,5 @@
 /* AppOrbit base components. Reference-screen styling lives in theme.css. */
-@import url("/tokens.css");
+@import url("./tokens.css");
 
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }

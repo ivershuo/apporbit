@@ -47,6 +47,26 @@ APPORBIT_DATA_DIR=/absolute/path/to/v1 pnpm site:dev
 
 Set `PORT` to override the default port.
 
+## GitHub Pages
+
+The `Deploy GitHub Pages` workflow builds the static website from `main` and reads
+the versioned dataset from the orphan `data` branch. The generated artifact contains
+static equivalents of the local `/api/*` responses and only the ranking snapshots
+referenced by run manifests. Generated files are never committed to `main` or `data`.
+
+To enable the first deployment, open **Settings → Pages** and change **Source** to
+**GitHub Actions**, then run the workflow manually or push a website change to `main`.
+Later collection workflow completions automatically rebuild the site with the latest
+data. The generated links work both at `/apporbit/` and at a custom domain.
+
+Build the same artifact locally with:
+
+```bash
+APPORBIT_DATA_DIR=/absolute/path/to/data-branch/v1 pnpm site:build
+```
+
+The output directory is `dist/pages`.
+
 ## Data layout
 
 The repository uses `main` for source code and documentation. Dataset files can be published from the orphan `data` branch under `v1/`. See [docs/data-format.md](./docs/data-format.md) for paths, record fields, and time semantics.

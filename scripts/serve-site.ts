@@ -1,15 +1,9 @@
 import { createReadStream } from "node:fs";
-import { readdir, readFile, stat } from "node:fs/promises";
+import { stat } from "node:fs/promises";
 import { createServer, type ServerResponse } from "node:http";
 import path from "node:path";
 
-import {
-  AppMetadataObservationSchema,
-  CapabilitiesManifestSchema,
-  RunManifestSchema,
-  type AppMetadataObservation,
-  type RunManifest
-} from "../src/domain.js";
+import { loadCapabilities, loadCatalog, loadRuns } from "./site-data.js";
 
 const projectRoot = process.cwd();
 const siteRoot = path.resolve(projectRoot, "site");
@@ -43,10 +37,6 @@ const staticFiles: Record<string, { path: string; type: string }> = {
   "/tokens.css": { path: path.join(projectRoot, "tokens.css"), type: "text/css; charset=utf-8" }
 };
 
-interface RunWithPath extends RunManifest {
-  manifestPath: string;
-}
-
 function responseHeaders(type: string): Record<string, string> {
   return {
     "content-type": type,
@@ -59,70 +49,6 @@ function responseHeaders(type: string): Record<string, string> {
 function sendJson(response: ServerResponse, status: number, value: unknown): void {
   response.writeHead(status, responseHeaders("application/json; charset=utf-8"));
   response.end(`${JSON.stringify(value)}\n`);
-}
-
-async function walkFiles(directory: string, suffix: string): Promise<string[]> {
-  try {
-    const entries = await readdir(directory, { withFileTypes: true });
-    const results = await Promise.all(
-      entries.map(async (entry) => {
-        const itemPath = path.join(directory, entry.name);
-        if (entry.isDirectory()) return walkFiles(itemPath, suffix);
-        return entry.isFile() && entry.name.endsWith(suffix) ? [itemPath] : [];
-      })
-    );
-    return results.flat();
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") return [];
-    throw error;
-  }
-}
-
-async function loadRuns(): Promise<RunWithPath[]> {
-  const roots = [path.join(dataRoot, "probes/runs"), path.join(dataRoot, "runs")];
-  const files = (await Promise.all(roots.map((root) => walkFiles(root, ".json")))).flat();
-  const runs: RunWithPath[] = [];
-  for (const file of files) {
-    try {
-      const manifest = RunManifestSchema.parse(JSON.parse(await readFile(file, "utf8")));
-      runs.push({ ...manifest, manifestPath: path.relative(dataRoot, file).split(path.sep).join("/") });
-    } catch (error) {
-      console.warn(`Skipping invalid run manifest ${file}:`, error);
-    }
-  }
-  return runs
-    .sort((left, right) => right.startedAt.localeCompare(left.startedAt));
-}
-
-async function loadCatalog(): Promise<Record<string, AppMetadataObservation>> {
-  const roots = [
-    path.join(dataRoot, "probes/metadata/events"),
-    path.join(dataRoot, "metadata/events")
-  ];
-  const files = (await Promise.all(roots.map((root) => walkFiles(root, ".ndjson")))).flat().sort();
-  const catalog: Record<string, AppMetadataObservation> = {};
-  for (const file of files) {
-    const lines = (await readFile(file, "utf8")).split("\n").filter(Boolean);
-    for (const line of lines) {
-      let value: unknown;
-      try {
-        value = JSON.parse(line);
-      } catch {
-        continue;
-      }
-      const result = AppMetadataObservationSchema.safeParse(value);
-      if (!result.success) continue;
-      const item = result.data;
-      const key = `${item.store}:${item.market}:${item.appId}`;
-      if (!catalog[key] || catalog[key].observedAt <= item.observedAt) catalog[key] = item;
-    }
-  }
-  return catalog;
-}
-
-async function loadCapabilities(): Promise<unknown> {
-  const file = path.join(projectRoot, "config/capabilities.json");
-  return CapabilitiesManifestSchema.parse(JSON.parse(await readFile(file, "utf8")));
 }
 
 function safeDataPath(pathname: string): string | null {
@@ -166,20 +92,20 @@ const server = createServer(async (request, response) => {
       return;
     }
     const url = new URL(request.url ?? "/", `http://${host}:${port}`);
-    if (url.pathname === "/api/runs") {
-      const runs = await loadRuns();
+    if (url.pathname === "/api/runs" || url.pathname === "/api/runs.json") {
+      const runs = await loadRuns(dataRoot);
       sendJson(response, 200, {
         dataRootLabel: process.env.APPORBIT_DATA_DIR ? "APPORBIT_DATA_DIR" : ".local-data/v1",
         runs
       });
       return;
     }
-    if (url.pathname === "/api/catalog") {
-      sendJson(response, 200, { catalog: await loadCatalog() });
+    if (url.pathname === "/api/catalog" || url.pathname === "/api/catalog.json") {
+      sendJson(response, 200, { catalog: await loadCatalog(dataRoot) });
       return;
     }
-    if (url.pathname === "/api/capabilities") {
-      sendJson(response, 200, { capabilities: await loadCapabilities() });
+    if (url.pathname === "/api/capabilities" || url.pathname === "/api/capabilities.json") {
+      sendJson(response, 200, { capabilities: await loadCapabilities(projectRoot) });
       return;
     }
     if (url.pathname.startsWith("/data/")) {

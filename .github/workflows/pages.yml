@@ -1,0 +1,91 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/pages.yml"
+      - "config/capabilities.json"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "scripts/build-site.ts"
+      - "scripts/site-data.ts"
+      - "site/**"
+      - "src/domain.ts"
+      - "src/version.ts"
+      - "tokens.css"
+      - "tsconfig.json"
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Collect ranking probes
+      - Collect BR ranking probes
+      - Collect CN ranking probes
+      - Collect DE ranking probes
+      - Collect GB ranking probes
+      - Collect ID and VN ranking probes
+      - Collect IN ranking probes
+      - Collect JP and KR ranking probes
+      - Collect US ranking probes
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Install pnpm
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+        with:
+          version: 10.21.0
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22.x"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Check out the data branch when available
+        id: data
+        shell: bash
+        run: |
+          set -euo pipefail
+          data_dir="$RUNNER_TEMP/apporbit-pages-data"
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git fetch --depth=1 origin data
+            git worktree add --detach "$data_dir" FETCH_HEAD
+          else
+            mkdir -p "$data_dir/v1"
+            echo "The data branch does not exist yet; publishing an empty dataset." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo "directory=$data_dir/v1" >> "$GITHUB_OUTPUT"
+      - name: Build static site
+        env:
+          APPORBIT_DATA_DIR: ${{ steps.data.outputs.directory }}
+        run: pnpm site:build
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: dist/pages
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

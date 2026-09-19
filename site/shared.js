@@ -1,5 +1,10 @@
 const snapshotCache = new Map();
 let ratingSequence = 0;
+const siteBaseUrl = new URL("./", import.meta.url);
+
+function siteUrl(relativePath) {
+  return new URL(relativePath, siteBaseUrl).toString();
+}
 
 export function ratingStars(rating) {
   const value = Math.round(Math.min(5, Math.max(0, rating)) * 10) / 10;
@@ -58,9 +63,9 @@ export async function fetchJson(url) {
 
 export async function loadDataset() {
   const [runsPayload, catalogPayload, capabilitiesPayload] = await Promise.all([
-    fetchJson("/api/runs"),
-    fetchJson("/api/catalog"),
-    fetchJson("/api/capabilities")
+    fetchJson(siteUrl("api/runs.json")),
+    fetchJson(siteUrl("api/catalog.json")),
+    fetchJson(siteUrl("api/capabilities.json"))
   ]);
   return {
     runs: runsPayload.runs,
@@ -193,7 +198,8 @@ export function previousValidOutcome(history, current) {
 }
 
 export function snapshotDataUrl(relativePath) {
-  return `/data/${relativePath.split("/").map(encodeURIComponent).join("/")}`;
+  const encodedPath = relativePath.split("/").map(encodeURIComponent).join("/");
+  return siteUrl(`data/${encodedPath}`);
 }
 
 export async function loadSnapshot(snapshotPath) {
@@ -268,7 +274,7 @@ export function appDetailUrl(target, appId) {
     category: target.normalizedCategory,
     id: appId
   });
-  return `/app.html?${query}`;
+  return siteUrl(`app.html?${query}`);
 }
 
 export function unique(values) {
