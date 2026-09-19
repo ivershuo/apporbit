@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-gb-apps-top-paid-all-apps-20260919T154929288Z",
+  "store": "google-play",
+  "market": "GB",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-19T15:49:29.288Z",
+  "observationDate": "2026-09-19",
+  "marketTimeZone": "Europe/London",
+  "marketObservationDate": "2026-09-19",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 20,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list+app-details",
+    "url": "https://play.google.com/store/apps?hl=en&gl=GB",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "199513a8f247fd25d133e8370c3338c2da67a91366d10a6d3579a7a65938d09a"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:20/100",
+      "metadata_integrity:optional-section-parse"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "uk.co.focusmm.DTSCombo"
+    },
+    {
+      "rank": 2,
+      "appId": "uk.co.tso.ctt"
+    },
+    {
+      "rank": 3,
+      "appId": "uk.co.citb.imagitech.gt100.android.vy19.plus"
+    },
+    {
+      "rank": 4,
+      "appId": "uk.co.citb.imagitech.gt200.android.vy23.plus"
+    },
+    {
+      "rank": 5,
+      "appId": "com.edshed.spellingshed"
+    },
+    {
+      "rank": 6,
+      "appId": "uk.co.tso.lituk"
+    },
+    {
+      "rank": 7,
+      "appId": "com.propagator.squeezy"
+    },
+    {
+      "rank": 8,
+      "appId": "com.veamstudios.siteauditpro"
+    },
+    {
+      "rank": 9,
+      "appId": "uk.co.tso.highwaycode"
+    },
+    {
+      "rank": 10,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 11,
+      "appId": "com.goblintools"
+    },
+    {
+      "rank": 12,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 13,
+      "appId": "com.SpottedGhosts.SpiritTalker"
+    },
+    {
+      "rank": 14,
+      "appId": "com.wildinart.stlukesguidinglights"
+    },
+    {
+      "rank": 15,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 16,
+      "appId": "com.minimaa.minimal.detox.launcher"
+    },
+    {
+      "rank": 17,
+      "appId": "com.watchfacestudio.md326"
+    },
+    {
+      "rank": 18,
+      "appId": "events.vikin.shambala2026"
+    },
+    {
+      "rank": 19,
+      "appId": "com.watchfacestudio.md307digital"
+    },
+    {
+      "rank": 20,
+      "appId": "uk.co.whitbyfolk.whitby_app"
+    }
+  ]
+}

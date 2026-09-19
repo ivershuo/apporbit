@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-gb-apps-top-grossing-all-apps-20260919T154930411Z",
+  "store": "google-play",
+  "market": "GB",
+  "scope": "apps",
+  "chart": "top-grossing",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-19T15:49:30.411Z",
+  "observationDate": "2026-09-19",
+  "marketTimeZone": "Europe/London",
+  "marketObservationDate": "2026-09-19",
+  "status": "valid",
+  "expectedCount": 100,
+  "actualCount": 100,
+  "complete": true,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list+app-details",
+    "url": "https://play.google.com/store/apps?hl=en&gl=GB",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "85b1018b3cadeecb9876d40118ad1c099f15e3ae5056a212bc23c865e4d6a884"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": []
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.google.android.apps.subscriptions.red"
+    },
+    {
+      "rank": 2,
+      "appId": "com.zhiliaoapp.musically"
+    },
+    {
+      "rank": 3,
+      "appId": "com.openai.chatgpt"
+    },
+    {
+      "rank": 4,
+      "appId": "com.amazon.mShop.android.shopping"
+    },
+    {
+      "rank": 5,
+      "appId": "com.spotify.music"
+    },
+    {
+      "rank": 6,
+      "appId": "com.disney.disneyplus"
+    },
+    {
+      "rank": 7,
+      "appId": "com.tinder"
+    },
+    {
+      "rank": 8,
+      "appId": "com.microsoft.skydrive"
+    },
+    {
+      "rank": 9,
+      "appId": "co.hinge.app"
+    },
+    {
+      "rank": 10,
+      "appId": "com.duolingo"
+    },
+    {
+      "rank": 11,
+      "appId": "com.storymatrix.drama"
+    },
+    {
+      "rank": 12,
+      "appId": "com.linkedin.android"
+    },
+    {
+      "rank": 13,
+      "appId": "com.anthropic.claude"
+    },
+    {
+      "rank": 14,
+      "appId": "com.nordvpn.android"
+    },
+    {
+      "rank": 15,
+      "appId": "ai.x.grok"
+    },
+    {
+      "rank": 16,
+      "appId": "com.lemon.lvoverseas"
+    },
+    {
+      "rank": 17,
+      "appId": "com.crunchyroll.crunchyroid"
+    },
+    {
+      "rank": 18,
+      "appId": "com.snapchat.android"
+    },
+    {
+      "rank": 19,
+      "appId": "com.grindrapp.android"
+    },
+    {
+      "rank": 20,
+      "appId": "tv.twitch.android.app"
+    },
+    {
+      "rank": 21,
+      "appId": "com.bumble.app"
+    },
+    {
+      "rank": 22,
+      "appId": "com.tipsyturbo.app"
+    },
+    {
+      "rank": 23,
+      "appId": "com.audible.application"
+    },
+    {
+      "rank": 24,
+      "appId": "com.cbs.ca"
+    },
+    {
+      "rank": 25,
+      "appId": "com.strava"
+    },
+    {
+      "rank": 26,
+      "appId": "org.telegram.messenger"
+    },
+    {
+      "rank": 27,
+      "appId": "com.microsoft.office.outlook"
+    },
+    {
+      "rank": 28,
+      "appId": "com.nutratech.app.android"
+    },
+    {
+      "rank": 29,
+      "appId": "com.instagram.android"
+    },
+    {
+      "rank": 30,
+      "appId": "com.life360.android.safetymapd"
+    },
+    {
+      "rank": 31,
+      "appId": "com.discord"
+    },
+    {
+      "rank": 32,
+      "appId": "com.radio.pocketfm"
+    },
+    {
+      "rank": 33,
+      "appId": "com.canva.editor"
+    },
+    {
+      "rank": 34,
+      "appId": "com.facebook.katana"
+    },
+    {
+      "rank": 35,
+      "appId": "com.tplink.iot"
+    },
+    {
+      "rank": 36,
+      "appId": "com.classdojo.android"
+    },
+    {
+      "rank": 37,
+      "appId": "com.fitbit.FitbitMobile"
+    },
+    {
+      "rank": 38,
+      "appId": "com.amazon.mp3"
+    },
+    {
+      "rank": 39,
+      "appId": "com.guardian"
+    },
+    {
+      "rank": 40,
+      "appId": "uk.co.ordnancesurvey.osmaps"
+    },
+    {
+      "rank": 41,
+      "appId": "com.netshort.abroad"
+    },
+    {
+      "rank": 42,
+      "appId": "com.getpure.pure"
+    },
+    {
+      "rank": 43,
+      "appId": "com.newleaf.app.android.victor"
+    },
+    {
+      "rank": 44,
+      "appId": "com.antivirus"
+    },
+    {
+      "rank": 45,
+      "appId": "air.ITVMobilePlayer"
+    },
+    {
+      "rank": 46,
+      "appId": "com.dropbox.android"
+    },
+    {
+      "rank": 47,
+      "appId": "com.apple.android.music"
+    },
+    {
+      "rank": 48,
+      "appId": "com.storyreel.tv.android"
+    },
+    {
+      "rank": 49,
+      "appId": "co.feeld"
+    },
+    {
+      "rank": 50,
+      "appId": "com.badoo.mobile"
+    },
+    {
+      "rank": 51,
+      "appId": "com.adobe.reader"
+    },
+    {
+      "rank": 52,
+      "appId": "com.soundcloud.android"
+    },
+    {
+      "rank": 53,
+      "appId": "com.surfshark.vpnclient.android"
+    },
+    {
+      "rank": 54,
+      "appId": "com.myfitnesspal.android"
+    },
+    {
+      "rank": 55,
+      "appId": "com.helmsmanintl.migao"
+    },
+    {
+      "rank": 56,
+      "appId": "com.symantec.mobilesecurity"
+    },
+    {
+      "rank": 57,
+      "appId": "com.runbuddy.prod"
+    },
+    {
+      "rank": 58,
+      "appId": "com.vibeshort.visualnovel.android"
+    },
+    {
+      "rank": 59,
+      "appId": "com.alltrails.alltrails"
+    },
+    {
+      "rank": 60,
+      "appId": "com.dramawave.app"
+    },
+    {
+      "rank": 61,
+      "appId": "com.blink.drama.player"
+    },
+    {
+      "rank": 62,
+      "appId": "com.pof.android"
+    },
+    {
+      "rank": 63,
+      "appId": "org.iggymedia.periodtracker"
+    },
+    {
+      "rank": 64,
+      "appId": "com.newreading.goodreels"
+    },
+    {
+      "rank": 65,
+      "appId": "com.suno.android"
+    },
+    {
+      "rank": 66,
+      "appId": "com.apple.atve.androidtv.appletv"
+    },
+    {
+      "rank": 67,
+      "appId": "com.microsoft.office.officehubrow"
+    },
+    {
+      "rank": 68,
+      "appId": "com.zyhwplatform.shortplay"
+    },
+    {
+      "rank": 69,
+      "appId": "com.twitter.android"
+    },
+    {
+      "rank": 70,
+      "appId": "ch.protonvpn.android"
+    },
+    {
+      "rank": 71,
+      "appId": "live.shorttv.apps"
+    },
+    {
+      "rank": 72,
+      "appId": "deezer.android.app"
+    },
+    {
+      "rank": 73,
+      "appId": "com.microsoft.office.word"
+    },
+    {
+      "rank": 74,
+      "appId": "com.flightradar24free"
+    },
+    {
+      "rank": 75,
+      "appId": "com.aadhk.woinvoice"
+    },
+    {
+      "rank": 76,
+      "appId": "com.storage.androidcleaner"
+    },
+    {
+      "rank": 77,
+      "appId": "net.ilius.android.match"
+    },
+    {
+      "rank": 78,
+      "appId": "com.nexbase.whispy"
+    },
+    {
+      "rank": 79,
+      "appId": "org.findmykids.app"
+    },
+    {
+      "rank": 80,
+      "appId": "com.joyreels.video"
+    },
+    {
+      "rank": 81,
+      "appId": "com.Beauchamp.Messenger.external"
+    },
+    {
+      "rank": 82,
+      "appId": "ai.socialapps.speakmaster"
+    },
+    {
+      "rank": 83,
+      "appId": "cn.danatech.xingseus"
+    },
+    {
+      "rank": 84,
+      "appId": "com.hkfuliao.chamet"
+    },
+    {
+      "rank": 85,
+      "appId": "com.sgiggle.production"
+    },
+    {
+      "rank": 86,
+      "appId": "com.amazon.kindle"
+    },
+    {
+      "rank": 87,
+      "appId": "com.discovery.dplay"
+    },
+    {
+      "rank": 88,
+      "appId": "com.tomtom.gplay.navapp"
+    },
+    {
+      "rank": 89,
+      "appId": "com.newsclapper.video"
+    },
+    {
+      "rank": 90,
+      "appId": "io.faceapp"
+    },
+    {
+      "rank": 91,
+      "appId": "co.yellw.yellowapp"
+    },
+    {
+      "rank": 92,
+      "appId": "uk.co.focusmm.DTSCombo"
+    },
+    {
+      "rank": 93,
+      "appId": "com.seeing.doorbell"
+    },
+    {
+      "rank": 94,
+      "appId": "com.expressvpn.vpn"
+    },
+    {
+      "rank": 95,
+      "appId": "com.cricut.designspace"
+    },
+    {
+      "rank": 96,
+      "appId": "com.ancestry.android.apps.ancestry"
+    },
+    {
+      "rank": 97,
+      "appId": "com.ultimateguitar.tabs"
+    },
+    {
+      "rank": 98,
+      "appId": "com.read.goodnovel"
+    },
+    {
+      "rank": 99,
+      "appId": "com.hybrid.doorbell"
+    },
+    {
+      "rank": 100,
+      "appId": "com.calm.android"
+    }
+  ]
+}
