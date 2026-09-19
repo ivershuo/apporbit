@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-us-apps-top-paid-all-apps-20260919T153755075Z",
+  "store": "google-play",
+  "market": "US",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-19T15:37:55.075Z",
+  "observationDate": "2026-09-19",
+  "marketTimeZone": "America/New_York",
+  "marketObservationDate": "2026-09-19",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 92,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list+app-details",
+    "url": "https://play.google.com/store/apps?hl=en&gl=US",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "779682019b7fcd8b5355475daa50c9d95a0a10dddfe4117a3bee5e0a5ee95084"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:92/100",
+      "metadata_integrity:optional-section-parse"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.tdr3.hs.android"
+    },
+    {
+      "rank": 2,
+      "appId": "com.sonosaurus.tonalenergytuner"
+    },
+    {
+      "rank": 3,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 4,
+      "appId": "com.jndapp.nothing.widgets.pack"
+    },
+    {
+      "rank": 5,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 6,
+      "appId": "com.facer.pipboy_se"
+    },
+    {
+      "rank": 7,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 8,
+      "appId": "com.goblintools"
+    },
+    {
+      "rank": 9,
+      "appId": "com.ekwatchfaces.paperoftime"
+    },
+    {
+      "rank": 10,
+      "appId": "ae.A.A10"
+    },
+    {
+      "rank": 11,
+      "appId": "com.andrerinas.headunitrevived"
+    },
+    {
+      "rank": 12,
+      "appId": "com.samruston.buzzkill"
+    },
+    {
+      "rank": 13,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 14,
+      "appId": "com.jndapp.line.x.iconpack"
+    },
+    {
+      "rank": 15,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 16,
+      "appId": "net.esword.esword"
+    },
+    {
+      "rank": 17,
+      "appId": "com.nerdykidapps21.carequalizermc"
+    },
+    {
+      "rank": 18,
+      "appId": "hardman.bret.quickbend.pro"
+    },
+    {
+      "rank": 19,
+      "appId": "com.AlfaOBD.AlfaOBD"
+    },
+    {
+      "rank": 20,
+      "appId": "com.jndapp.oneui.widgets.pack"
+    },
+    {
+      "rank": 21,
+      "appId": "com.eatos.onedarkpro"
+    },
+    {
+      "rank": 22,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 23,
+      "appId": "net.liveatc.liveatc_app"
+    },
+    {
+      "rank": 24,
+      "appId": "com.SpottedGhosts.SpiritTalker"
+    },
+    {
+      "rank": 25,
+      "appId": "org.readera.premium"
+    },
+    {
+      "rank": 26,
+      "appId": "com.watchfacestudio.md326"
+    },
+    {
+      "rank": 27,
+      "appId": "com.milgpspro.jsps"
+    },
+    {
+      "rank": 28,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 29,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 30,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 31,
+      "appId": "com.minimaa.minimal.detox.launcher"
+    },
+    {
+      "rank": 32,
+      "appId": "com.WagotabiLimited.Wagotabi"
+    },
+    {
+      "rank": 33,
+      "appId": "com.solocator"
+    },
+    {
+      "rank": 34,
+      "appId": "com.watchfacestudio.per32"
+    },
+    {
+      "rank": 35,
+      "appId": "com.watchfacestudio.md307digital"
+    },
+    {
+      "rank": 36,
+      "appId": "com.acmeandroid.listen"
+    },
+    {
+      "rank": 37,
+      "appId": "com.balsoy.fatih.compass"
+    },
+    {
+      "rank": 38,
+      "appId": "com.radikal.gamelauncher"
+    },
+    {
+      "rank": 39,
+      "appId": "us.flexswag.flexutilitypremium"
+    },
+    {
+      "rank": 40,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 41,
+      "appId": "com.A0Re.recreative68"
+    },
+    {
+      "rank": 42,
+      "appId": "com.watchfacestudio.s4uassen"
+    },
+    {
+      "rank": 43,
+      "appId": "com.edde746.plezy"
+    },
+    {
+      "rank": 44,
+      "appId": "com.watchfacestudio.md339"
+    },
+    {
+      "rank": 45,
+      "appId": "OCTech.Mobile.Applications.TouchScan"
+    },
+    {
+      "rank": 46,
+      "appId": "com.jrustonapps.mylightningtrackerpro"
+    },
+    {
+      "rank": 47,
+      "appId": "com.bearessentials.knotIQ"
+    },
+    {
+      "rank": 48,
+      "appId": "org.kustom.widget.pro"
+    },
+    {
+      "rank": 49,
+      "appId": "com.digipom.easyvoicerecorder.pro"
+    },
+    {
+      "rank": 50,
+      "appId": "com.flyersoft.moonreaderp"
+    },
+    {
+      "rank": 51,
+      "appId": "com.progdigy.cdisplay"
+    },
+    {
+      "rank": 52,
+      "appId": "app.moertel.retro.iconpack.neon"
+    },
+    {
+      "rank": 53,
+      "appId": "com.watchfacestudio.per27"
+    },
+    {
+      "rank": 54,
+      "appId": "tech.ula.gimp"
+    },
+    {
+      "rank": 55,
+      "appId": "com.g19mobile.gameboosterplus"
+    },
+    {
+      "rank": 56,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 57,
+      "appId": "dev.vodik7.tvquickactions"
+    },
+    {
+      "rank": 58,
+      "appId": "com.asa2fly.prepware.general"
+    },
+    {
+      "rank": 59,
+      "appId": "wb.illuminator.hybridlcd"
+    },
+    {
+      "rank": 60,
+      "appId": "com.alexvas.dvr.pro"
+    },
+    {
+      "rank": 61,
+      "appId": "com.appslab.materialyou.widgetspro"
+    },
+    {
+      "rank": 62,
+      "appId": "com.panda.mouse"
+    },
+    {
+      "rank": 63,
+      "appId": "com.t11.skyview"
+    },
+    {
+      "rank": 64,
+      "appId": "com.watchfacestudio.md242"
+    },
+    {
+      "rank": 65,
+      "appId": "fluffy.oneui.icons"
+    },
+    {
+      "rank": 66,
+      "appId": "com.extreamsd.usbaudioplayerpro"
+    },
+    {
+      "rank": 67,
+      "appId": "com.wildinart.wildwoodfollowthecrows"
+    },
+    {
+      "rank": 68,
+      "appId": "com.grill.xbxplay"
+    },
+    {
+      "rank": 69,
+      "appId": "com.penly.penly"
+    },
+    {
+      "rank": 70,
+      "appId": "com.basevelocity.radarscope"
+    },
+    {
+      "rank": 71,
+      "appId": "org.hamstudy.mobile"
+    },
+    {
+      "rank": 72,
+      "appId": "com.BitPlague.Necrometer"
+    },
+    {
+      "rank": 73,
+      "appId": "com.fulldive.extension.fullroid.pro"
+    },
+    {
+      "rank": 74,
+      "appId": "com.chillseekers.Necrophonic"
+    },
+    {
+      "rank": 75,
+      "appId": "com.patricksmith.PFA_calculator"
+    },
+    {
+      "rank": 76,
+      "appId": "com.tmsoft.whitenoise.full"
+    },
+    {
+      "rank": 77,
+      "appId": "jp.ne.ibis.ibispaint.app"
+    },
+    {
+      "rank": 78,
+      "appId": "de.twokit.video.tv.cast.browser.lg.pro"
+    },
+    {
+      "rank": 79,
+      "appId": "com.creativepixels.wispdark.iconpack.app"
+    },
+    {
+      "rank": 80,
+      "appId": "com.appslab.nothing.widgetspro"
+    },
+    {
+      "rank": 81,
+      "appId": "com.weirdhat.roughanimator"
+    },
+    {
+      "rank": 82,
+      "appId": "org.fossify.thankyou"
+    },
+    {
+      "rank": 83,
+      "appId": "gb.xxy.hr"
+    },
+    {
+      "rank": 84,
+      "appId": "com.watchfacestudio.ml2u215"
+    },
+    {
+      "rank": 85,
+      "appId": "com.acmeaom.android.myradarpro"
+    },
+    {
+      "rank": 86,
+      "appId": "com.massimobiolcati.irealb"
+    },
+    {
+      "rank": 87,
+      "appId": "com.photopills.android.photopills"
+    },
+    {
+      "rank": 88,
+      "appId": "com.watchfacestudio.per023pro"
+    },
+    {
+      "rank": 89,
+      "appId": "com.cateater.stopmotionstudiopro"
+    },
+    {
+      "rank": 90,
+      "appId": "com.vitotechnology.StarWalk2"
+    },
+    {
+      "rank": 91,
+      "appId": "cz.hipercalc.pro"
+    },
+    {
+      "rank": 92,
+      "appId": "com.rhmsoft.edit.pro"
+    }
+  ]
+}
