@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-18T00:00:00Z",
+  "capabilities": [
+    {
+      "store": "apple",
+      "scope": "apps",
+      "chart": "top-free",
+      "markets": ["US", "CN", "JP", "KR", "GB", "DE", "BR", "IN", "ID", "VN"],
+      "status": "probe",
+      "notes": "Apple Marketing Tools RSS v2; Top 100 and all markets require continuous contract verification."
+    },
+    {
+      "store": "apple",
+      "scope": "apps",
+      "chart": "top-paid",
+      "markets": ["US", "CN", "JP", "KR", "GB", "DE", "BR", "IN", "ID", "VN"],
+      "status": "probe",
+      "notes": "Apple Marketing Tools RSS v2; Top 100 and all markets require continuous contract verification."
+    },
+    {
+      "store": "apple",
+      "scope": "apps",
+      "chart": "top-grossing",
+      "markets": [],
+      "status": "unsupported",
+      "notes": "Not exposed by the verified Apple RSS endpoint."
+    },
+    {
+      "store": "apple",
+      "scope": "games",
+      "chart": "top-free",
+      "markets": [],
+      "status": "unsupported",
+      "notes": "Apps/Games separation has not been verified against the Apple RSS endpoint."
+    },
+    {
+      "store": "google-play",
+      "scope": "apps",
+      "chart": "top-free",
+      "markets": ["US", "JP", "KR", "GB", "DE", "BR", "IN", "ID", "VN"],
+      "status": "probe",
+      "notes": "Collected with @mradex77/google-play-scraper; redistribution and long-term reliability remain under validation."
+    },
+    {
+      "store": "google-play",
+      "scope": "apps",
+      "chart": "top-paid",
+      "markets": ["US", "JP", "KR", "GB", "DE", "BR", "IN", "ID", "VN"],
+      "status": "probe",
+      "notes": "Collected with @mradex77/google-play-scraper; redistribution and long-term reliability remain under validation."
+    },
+    {
+      "store": "google-play",
+      "scope": "apps",
+      "chart": "top-grossing",
+      "markets": ["US", "JP", "KR", "GB", "DE", "BR", "IN", "ID", "VN"],
+      "status": "probe",
+      "notes": "Collected with @mradex77/google-play-scraper; redistribution and long-term reliability remain under validation."
+    },
+    {
+      "store": "google-play",
+      "scope": "games",
+      "chart": "top-free",
+      "markets": ["US", "JP", "KR", "GB", "DE", "BR", "IN", "ID", "VN"],
+      "status": "probe",
+      "notes": "Collected with @mradex77/google-play-scraper; redistribution and long-term reliability remain under validation."
+    },
+    {
+      "store": "google-play",
+      "scope": "games",
+      "chart": "top-paid",
+      "markets": ["US", "JP", "KR", "GB", "DE", "BR", "IN", "ID", "VN"],
+      "status": "probe",
+      "notes": "Collected with @mradex77/google-play-scraper; redistribution and long-term reliability remain under validation."
+    },
+    {
+      "store": "google-play",
+      "scope": "games",
+      "chart": "top-grossing",
+      "markets": ["US", "JP", "KR", "GB", "DE", "BR", "IN", "ID", "VN"],
+      "status": "probe",
+      "notes": "Collected with @mradex77/google-play-scraper; redistribution and long-term reliability remain under validation."
+    }
+  ]
+}

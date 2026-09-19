@@ -1,0 +1,35 @@
+{
+  "name": "apporbit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open historical App Store and Google Play ranking observations",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.21.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "collect": "node --import tsx src/cli.ts collect",
+    "collect:full": "node --import tsx src/cli.ts collect --expected-count 100",
+    "collect:full:strict": "node --import tsx src/cli.ts collect --expected-count 100 --fail-on-any-error",
+    "probe": "node --import tsx src/cli.ts collect --publication-mode probe",
+    "schema:generate": "node --import tsx scripts/generate-schemas.ts",
+    "schema:check": "node --import tsx src/cli.ts schema-check",
+    "site:dev": "node --import tsx scripts/serve-site.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "check": "tsc --noEmit && vitest run && node --import tsx src/cli.ts schema-check"
+  },
+  "dependencies": {
+    "@mradex77/google-play-scraper": "1.2.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "4.23.13",
+    "typescript": "7.0.2",
+    "vitest": "5.0.1"
+  }
+}

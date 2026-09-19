@@ -1,0 +1,133 @@
+name: Collect ranking probes
+
+on:
+  workflow_call:
+    inputs:
+      store:
+        required: false
+        type: string
+        default: all
+      market:
+        required: false
+        type: string
+        default: ""
+      scope:
+        required: false
+        type: string
+        default: all
+      chart:
+        required: false
+        type: string
+        default: all
+  workflow_dispatch:
+    inputs:
+      store:
+        description: Optional store filter
+        required: false
+        type: choice
+        default: all
+        options: [all, apple, google-play]
+      market:
+        description: Optional comma-separated two-letter market filter
+        required: false
+        type: string
+      scope:
+        description: Optional scope filter
+        required: false
+        type: choice
+        default: all
+        options: [all, apps, games]
+      chart:
+        description: Optional chart filter
+        required: false
+        type: choice
+        default: all
+        options: [all, top-free, top-paid, top-grossing]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apporbit-data-collection
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+      - name: Install pnpm
+        uses: pnpm/action-setup@ff378ebe6b225b0680b81c1ad4498ae0d1d3a5e3 # v6.0.10
+        with:
+          version: 10.21.0
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22.x"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+
+      - name: Prepare orphan data branch
+        id: data
+        shell: bash
+        run: |
+          set -euo pipefail
+          data_dir="$RUNNER_TEMP/apporbit-data"
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git fetch origin data:data
+            git worktree add "$data_dir" data
+          else
+            git worktree add --detach "$data_dir" HEAD
+            git -C "$data_dir" switch --orphan data
+            git -C "$data_dir" rm -rf .
+          fi
+          echo "directory=$data_dir" >> "$GITHUB_OUTPUT"
+
+      - name: Run probe collection
+        id: collect
+        continue-on-error: true
+        shell: bash
+        env:
+          DATA_DIR: ${{ steps.data.outputs.directory }}
+          INPUT_STORE: ${{ inputs.store }}
+          INPUT_MARKET: ${{ inputs.market }}
+          INPUT_SCOPE: ${{ inputs.scope }}
+          INPUT_CHART: ${{ inputs.chart }}
+          APPORBIT_CONTACT_URL: ${{ github.server_url }}/${{ github.repository }}
+        run: |
+          set -euo pipefail
+          args=(--output "$DATA_DIR/v1" --publication-mode probe)
+          [[ -z "$INPUT_STORE" || "$INPUT_STORE" == "all" ]] || args+=(--store "$INPUT_STORE")
+          [[ -z "$INPUT_MARKET" ]] || args+=(--market "$INPUT_MARKET")
+          [[ -z "$INPUT_SCOPE" || "$INPUT_SCOPE" == "all" ]] || args+=(--scope "$INPUT_SCOPE")
+          [[ -z "$INPUT_CHART" || "$INPUT_CHART" == "all" ]] || args+=(--chart "$INPUT_CHART")
+          pnpm collect -- "${args[@]}" --fail-on-any-error
+
+      - name: Commit data transaction
+        shell: bash
+        env:
+          DATA_DIR: ${{ steps.data.outputs.directory }}
+        run: |
+          set -euo pipefail
+          git -C "$DATA_DIR" config user.name "apporbit-bot"
+          git -C "$DATA_DIR" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$DATA_DIR" add v1
+          if git -C "$DATA_DIR" diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          git -C "$DATA_DIR" commit -m "data: collect $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git -C "$DATA_DIR" push origin HEAD:data
+          size_mb="$(du -sm "$DATA_DIR/.git" "$DATA_DIR" 2>/dev/null | awk '{sum += $1} END {print sum}')"
+          echo "Data checkout size: ${size_mb} MB (review split at 750 MB)." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Propagate collection failure after preserving its manifest
+        if: steps.collect.outcome != 'success'
+        run: |
+          echo "At least one target failed; the run manifest was committed to the data branch." >> "$GITHUB_STEP_SUMMARY"
+          exit 1

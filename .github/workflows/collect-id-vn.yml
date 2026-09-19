@@ -1,0 +1,16 @@
+name: Collect ID and VN ranking probes
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+      timezone: "Asia/Jakarta"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    uses: ./.github/workflows/collect.yml
+    with:
+      market: ID,VN

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "marketTimeZones": {
+    "US": "America/New_York",
+    "CN": "Asia/Shanghai",
+    "JP": "Asia/Tokyo",
+    "KR": "Asia/Seoul",
+    "GB": "Europe/London",
+    "DE": "Europe/Berlin",
+    "BR": "America/Sao_Paulo",
+    "IN": "Asia/Kolkata",
+    "ID": "Asia/Jakarta",
+    "VN": "Asia/Ho_Chi_Minh"
+  },
+  "groups": [
+    {
+      "store": "apple",
+      "markets": ["US", "CN", "JP", "KR", "GB", "DE", "BR", "IN", "ID", "VN"],
+      "language": "en",
+      "scopes": ["apps"],
+      "charts": ["top-free", "top-paid"],
+      "expectedCount": 100,
+      "publicationMode": "probe"
+    },
+    {
+      "store": "google-play",
+      "markets": ["US", "JP", "KR", "GB", "DE", "BR", "IN", "ID", "VN"],
+      "language": "en",
+      "scopes": ["apps", "games"],
+      "charts": ["top-free", "top-paid", "top-grossing"],
+      "expectedCount": 100,
+      "publicationMode": "probe"
+    }
+  ]
+}

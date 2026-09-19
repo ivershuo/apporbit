@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="App ranking details, history, and market coverage on AppOrbit."><meta name="color-scheme" content="light">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; img-src 'self' data: https:; base-uri 'none'; form-action 'none'">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/theme.css"><title>App · AppOrbit</title>
+  </head>
+  <body data-page="app">
+    <header class="site-header">
+      <div class="site-header__inner"><a class="wordmark" href="/" aria-label="AppOrbit home"><img class="wordmark__mark" src="/orbit-mark.svg" width="38" height="38" alt=""><span>AppOrbit</span></a><button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button><nav class="primary-nav" id="primary-nav" aria-label="Primary navigation"><a href="/">Charts</a><a href="/trending.html">Trending</a><a href="/data.html">Data</a><a href="/about.html">About</a></nav><a class="github-link" href="https://github.com/ivershuo/apporbit" target="_blank" rel="noreferrer" aria-label="Open the AppOrbit open-source repository on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.82a9.6 9.6 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg><span>GitHub</span><span aria-hidden="true">↗</span></a></div>
+    </header>
+
+    <main class="page page--detail">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Charts</a><span aria-hidden="true">›</span><span id="breadcrumb-name">App</span></nav>
+      <section class="app-header" aria-labelledby="app-name">
+        <div class="app-identity"><div class="app-identity__icon" id="app-icon-wrap"></div><div><h1 id="app-name">Loading app…</h1><strong id="app-developer">—</strong><p id="app-summary">Loading app details.</p><div class="tag-list" id="app-tags"></div><p class="app-metadata-line" id="app-metadata-line">—</p></div></div>
+        <a class="button button--primary store-link" id="app-store-link" href="#" target="_blank" rel="noreferrer" hidden>Open store page <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="stat-strip" aria-label="App ranking summary">
+        <article class="stat-card"><span>Current Rank</span><strong id="current-rank">—</strong><small id="current-rank-note">—</small></article>
+        <article class="stat-card"><span>Highest Rank</span><strong id="highest-rank">—</strong><small>Within the selected history</small></article>
+        <article class="stat-card"><span>Markets Ranked</span><strong id="countries-ranked">—</strong><small id="countries-note">Current complete charts</small></article>
+        <article class="stat-card"><span>Days in Top 10</span><strong id="top-ten-days">—</strong><small>Distinct market chart dates</small></article>
+        <article class="stat-card"><span>First Seen</span><strong id="first-seen">—</strong><small>First observed by AppOrbit</small></article>
+      </section>
+
+      <div class="detail-layout">
+        <div class="detail-main">
+          <section class="surface chart-surface" aria-labelledby="trend-heading">
+            <div class="section-heading"><div><h2 id="trend-heading">Ranking Trend</h2><p>A lower number means a higher rank.</p></div><div class="range-tabs" role="group" aria-label="Trend period"><button data-range="7">7D</button><button data-range="30">30D</button><button data-range="90" aria-pressed="true">90D</button><button data-range="all">All</button></div></div>
+            <div class="inline-filters"><label class="field"><span>Store</span><select id="detail-store"></select></label><label class="field"><span>Market</span><select id="detail-market"></select></label><label class="field"><span>Chart</span><select id="detail-chart"></select></label></div>
+            <div class="rank-chart" id="app-rank-chart"></div>
+          </section>
+          <section class="surface history-surface" aria-labelledby="history-heading">
+            <div class="section-heading"><div><h2 id="history-heading">Recent Ranking History</h2><p id="history-context">Daily market-time rankings</p></div></div>
+            <div class="empty-state" id="history-empty" hidden></div>
+            <div class="table-scroll" id="history-table-wrap"><table class="data-table"><thead><tr><th>Date</th><th>Rank</th><th>Change</th><th>Status</th></tr></thead><tbody id="history-body"></tbody></table></div>
+          </section>
+        </div>
+
+        <aside class="detail-side">
+          <section class="surface markets-surface" aria-labelledby="markets-heading"><div class="section-heading section-heading--compact"><div><h2 id="markets-heading">Rankings by Market</h2><p>Rank on the latest complete chart</p></div></div><div class="table-scroll"><table class="data-table data-table--compact"><thead><tr><th>Market</th><th>Rank</th><th>Change</th></tr></thead><tbody id="markets-body"></tbody></table></div></section>
+          <section class="surface insights-surface"><div class="section-heading section-heading--compact"><div><h2>Insights</h2><p>Highlights from available history</p></div></div><div class="detail-insights"><article><span>Biggest Jump</span><strong id="biggest-jump">—</strong><small id="biggest-jump-note">More history is needed</small></article><article><span>Best Observed Rank</span><strong id="best-observed">—</strong><small id="best-observed-note">Current selection</small></article></div></section>
+          <section class="surface metadata-surface" aria-labelledby="metadata-heading"><div class="section-heading section-heading--compact"><div><h2 id="metadata-heading">App Metadata</h2><p>Latest store details for this market</p></div></div><dl class="metadata-grid" id="app-metadata-list"></dl></section>
+          <details class="surface provenance provenance--card" id="app-provenance"><summary>App and chart details</summary><dl id="app-provenance-list"></dl></details>
+        </aside>
+      </div>
+      <details class="surface app-description" id="app-description" hidden><summary>Store description</summary><p id="app-description-copy"></p></details>
+    </main>
+    <footer class="site-footer"><a class="wordmark wordmark--small" href="/">AppOrbit</a><p>Code under MIT · Database under ODbL 1.0</p><div class="footer-actions"><a href="https://github.com/ivershuo/apporbit" target="_blank" rel="noreferrer">View on GitHub ↗</a><button class="timezone-toggle" id="timezone-toggle" type="button" aria-pressed="false">Times: UTC</button></div></footer>
+    <script type="module" src="/app-detail.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+node_modules/
+.pnpm-store/
+.local-data/
+coverage/
+dist/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+.hallmark
+
+docs/local
+cankao/

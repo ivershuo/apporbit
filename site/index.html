@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Explore current and historical Apple App Store and Google Play rankings.">
+    <meta name="color-scheme" content="light">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; img-src 'self' data: https:; base-uri 'none'; form-action 'none'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/theme.css">
+    <title>Charts · AppOrbit</title>
+  </head>
+  <body data-page="charts">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="wordmark" href="/" aria-label="AppOrbit home"><img class="wordmark__mark" src="/orbit-mark.svg" width="38" height="38" alt=""><span>AppOrbit</span></a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation"><a href="/" aria-current="page">Charts</a><a href="/trending.html">Trending</a><a href="/data.html">Data</a><a href="/about.html">About</a></nav>
+        <a class="github-link" href="https://github.com/ivershuo/apporbit" target="_blank" rel="noreferrer" aria-label="Open the AppOrbit open-source repository on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.82a9.6 9.6 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg><span>GitHub</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero__copy">
+          <p class="kicker">APPS MOVE THE WORLD</p>
+          <h1 id="page-title">Historical App Rankings</h1>
+          <p>Explore app rankings across stores and markets. See what moved, what held, and what entered the chart.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#ranking">Explore charts <span aria-hidden="true">→</span></a>
+            <a class="button button--secondary" href="/data.html">View the data</a>
+          </div>
+        </div>
+        <div class="hero-visual hero-visual--charts" aria-hidden="true"><img class="hero-globe" src="/hero-globe.svg" width="600" height="300" alt=""><p>Track rankings.<br>Understand momentum.<br>Build what’s next.</p></div>
+      </section>
+
+      <div class="charts-layout" id="ranking">
+        <section class="surface ranking-surface" aria-labelledby="ranking-title">
+      <section class="filter-panel" aria-label="Chart filters">
+        <div class="store-tabs" role="group" aria-label="Store">
+          <button type="button" data-store="apple" aria-pressed="true"><img class="store-tab-icon store-tab-icon--apple" src="/app-store.png" width="24" height="24" alt="">App Store</button>
+          <button type="button" data-store="google-play" aria-pressed="false"><img class="store-tab-icon store-tab-icon--play" src="/google-play.svg" width="24" height="24" alt="">Google Play</button>
+        </div>
+        <div class="filter-grid">
+          <label class="field"><span>Market</span><select id="market-filter"></select></label>
+          <label class="field"><span>Category</span><select id="scope-filter"></select></label>
+          <label class="field"><span>Chart</span><select id="chart-filter"></select></label>
+          <label class="field"><span>Market date</span><select id="date-filter"></select></label>
+        </div>
+        <div class="capture-status" id="capture-status" aria-live="polite">Loading chart data…</div>
+      </section>
+          <div class="section-heading">
+            <div><p class="section-heading__context" id="ranking-context">CURRENT CHART</p><h2 id="ranking-title">Loading rankings</h2></div>
+            <span class="status-badge" id="ranking-status">LOADING</span>
+          </div>
+          <p class="table-context" id="ranking-metadata">Metadata observed: —</p>
+          <div class="empty-state" id="ranking-empty" data-state="loading"><strong class="empty-state__title">Loading rankings</strong><p class="empty-state__copy">Fetching the selected chart.</p></div>
+          <div class="table-scroll" id="ranking-table-wrap" hidden>
+            <table class="data-table ranking-table"><thead><tr><th>#</th><th>App</th><th>Change</th><th data-column="price">Price</th><th>Categories</th><th>Rating</th><th data-column="installs">Installs</th><th data-column="monetization">Monetization</th><th>Content rating</th><th>Version</th><th>Minimum OS</th><th>Released</th><th>Updated</th><th>Store</th></tr></thead><tbody id="ranking-body"></tbody></table>
+          </div>
+          <details class="provenance" id="snapshot-details" hidden><summary>Chart details</summary><dl id="snapshot-details-list"></dl></details>
+        </section>
+
+        <aside class="insights-column" aria-label="Chart insights">
+          <section class="surface insights-surface">
+            <div class="section-heading section-heading--compact"><h2>Chart Insights</h2><span id="insight-date">—</span></div>
+            <div class="metric-grid">
+              <article class="metric"><strong id="new-count">—</strong><span>New Entries</span><small>Apps new since the previous chart</small></article>
+              <article class="metric"><strong id="riser-count">—</strong><span>Risers</span><small>Apps that moved up</small></article>
+              <article class="metric"><strong id="faller-count">—</strong><span>Fallers</span><small>Apps that moved down</small></article>
+              <article class="metric"><strong id="market-count">—</strong><span>Markets Covered</span><small>Markets with this chart</small></article>
+            </div>
+            <p class="baseline-note" id="baseline-note">Waiting for the previous chart.</p>
+          </section>
+          <section class="surface trend-preview">
+            <div class="section-heading section-heading--compact"><div><h2 id="trend-title">Ranking Trend</h2><p>History for the current #1 app</p></div></div>
+            <div class="rank-chart rank-chart--compact" id="trend-chart"></div>
+          </section>
+          <a class="surface data-callout" href="/data.html"><span class="data-callout__mark" aria-hidden="true">DB</span><span><strong>Explore the dataset</strong><small>Review coverage, recent updates, and available fields.</small></span><span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer"><a class="wordmark wordmark--small" href="/">AppOrbit</a><p>Code under MIT · Database under ODbL 1.0</p><div class="footer-actions"><a href="https://github.com/ivershuo/apporbit" target="_blank" rel="noreferrer">View on GitHub ↗</a><button class="timezone-toggle" id="timezone-toggle" type="button" aria-pressed="false">Times: UTC</button></div></footer>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
