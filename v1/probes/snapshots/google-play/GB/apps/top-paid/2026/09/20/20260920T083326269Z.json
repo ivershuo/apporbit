@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-gb-apps-top-paid-all-apps-20260920T083326269Z",
+  "store": "google-play",
+  "market": "GB",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-20T08:33:26.269Z",
+  "observationDate": "2026-09-20",
+  "marketTimeZone": "Europe/London",
+  "marketObservationDate": "2026-09-20",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 26,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=GB",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "8595485c5c89ba1630417bc9474d8e375ccf9d5126bf25b37a1e4d5a9ab5947d"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:26/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "uk.co.focusmm.DTSCombo"
+    },
+    {
+      "rank": 2,
+      "appId": "uk.co.tso.ctt"
+    },
+    {
+      "rank": 3,
+      "appId": "uk.co.citb.imagitech.gt100.android.vy19.plus"
+    },
+    {
+      "rank": 4,
+      "appId": "com.edshed.spellingshed"
+    },
+    {
+      "rank": 5,
+      "appId": "com.propagator.squeezy"
+    },
+    {
+      "rank": 6,
+      "appId": "uk.co.citb.imagitech.gt200.android.vy23.plus"
+    },
+    {
+      "rank": 7,
+      "appId": "uk.co.tso.lituk"
+    },
+    {
+      "rank": 8,
+      "appId": "com.veamstudios.siteauditpro"
+    },
+    {
+      "rank": 9,
+      "appId": "uk.co.tso.highwaycode"
+    },
+    {
+      "rank": 10,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 11,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 12,
+      "appId": "com.SpottedGhosts.SpiritTalker"
+    },
+    {
+      "rank": 13,
+      "appId": "com.goblintools"
+    },
+    {
+      "rank": 14,
+      "appId": "com.watchfacestudio.md326"
+    },
+    {
+      "rank": 15,
+      "appId": "com.andrerinas.headunitrevived"
+    },
+    {
+      "rank": 16,
+      "appId": "com.facer.pipboy_se"
+    },
+    {
+      "rank": 17,
+      "appId": "com.watchfacestudio.md307digital"
+    },
+    {
+      "rank": 18,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 19,
+      "appId": "com.minimaa.minimal.detox.launcher"
+    },
+    {
+      "rank": 20,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 21,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 22,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 23,
+      "appId": "com.universalis.android.universalis"
+    },
+    {
+      "rank": 24,
+      "appId": "com.wildinart.stlukesguidinglights"
+    },
+    {
+      "rank": 25,
+      "appId": "events.vikin.shambala2026"
+    },
+    {
+      "rank": 26,
+      "appId": "uk.co.whitbyfolk.whitby_app"
+    }
+  ]
+}
