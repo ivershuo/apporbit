@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-br-apps-top-paid-all-apps-20260920T122322727Z",
+  "store": "google-play",
+  "market": "BR",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-20T12:23:22.727Z",
+  "observationDate": "2026-09-20",
+  "marketTimeZone": "America/Sao_Paulo",
+  "marketObservationDate": "2026-09-20",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 24,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=BR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "66079767ecb74c1050525825df49b3990fdca9915ce42bb5aa4a5d38a2c37e85"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:24/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.orealsensiff.pro.com"
+    },
+    {
+      "rank": 2,
+      "appId": "com.booster.gfxpro"
+    },
+    {
+      "rank": 3,
+      "appId": "com.iliturgia"
+    },
+    {
+      "rank": 4,
+      "appId": "com.dedealbano.padlab"
+    },
+    {
+      "rank": 5,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 6,
+      "appId": "com.panda.mouse"
+    },
+    {
+      "rank": 7,
+      "appId": "org.prowl.torque"
+    },
+    {
+      "rank": 8,
+      "appId": "com.extreamsd.aemobile"
+    },
+    {
+      "rank": 9,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 10,
+      "appId": "com.jndapp.nothing.widgets.pack"
+    },
+    {
+      "rank": 11,
+      "appId": "com.appsgenz.launcherios.pro"
+    },
+    {
+      "rank": 12,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 13,
+      "appId": "com.g19mobile.gameboosterplus"
+    },
+    {
+      "rank": 14,
+      "appId": "com.appslab.galaxy.oneui.widgets"
+    },
+    {
+      "rank": 15,
+      "appId": "com.h4xhdv.ffh4xraistarmacrofire"
+    },
+    {
+      "rank": 16,
+      "appId": "com.minimaa.minimal.detox.launcher"
+    },
+    {
+      "rank": 17,
+      "appId": "psyberia.alpinequest.full"
+    },
+    {
+      "rank": 18,
+      "appId": "com.zoxo.realsensiff"
+    },
+    {
+      "rank": 19,
+      "appId": "com.labmcs.bibliastrong"
+    },
+    {
+      "rank": 20,
+      "appId": "inc.trilokia.pubgfxtool"
+    },
+    {
+      "rank": 21,
+      "appId": "com.eatos.onedarkpro"
+    },
+    {
+      "rank": 22,
+      "appId": "com.panda.gamepad"
+    },
+    {
+      "rank": 23,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 24,
+      "appId": "com.flyersoft.moonreaderp"
+    }
+  ]
+}
