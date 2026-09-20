@@ -1,4 +1,4 @@
-import { bindChrome, buildHistories, chartLabel, element, formatTime, loadDataset, marketLabel, scopeLabel, storeLabel, targetOptions, text } from "./shared.js";
+import { bindChrome, chartLabel, element, formatTime, loadDataset, loadStats, marketLabel, scopeLabel, storeLabel, text } from "./shared.js";
 import { compareMarketsByScale } from "./market-order.js";
 
 const nodes = {
@@ -39,24 +39,6 @@ function percent(count, total) {
   return total ? `${Math.round((count / total) * 100)}%` : "—";
 }
 
-function distinctAppKey(item) {
-  return `${item.store}:${item.appId}`;
-}
-
-function groupedDistinctCounts(records, valuesForRecord) {
-  const groups = new Map();
-  for (const item of records) {
-    for (const value of valuesForRecord(item)) {
-      if (!value) continue;
-      if (!groups.has(value)) groups.set(value, new Set());
-      groups.get(value).add(distinctAppKey(item));
-    }
-  }
-  return [...groups.entries()]
-    .map(([name, apps]) => ({ name, count: apps.size }))
-    .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name));
-}
-
 function chartRow(label, value, maximum, valueLabel = String(value)) {
   const row = element("div", "chart-row");
   const name = element("span", "chart-row__label", label);
@@ -88,64 +70,46 @@ function marketChartColumn(market, counts, maximum) {
   return column;
 }
 
-function renderCatalog(records) {
-  const uniqueApps = new Set(records.map(distinctAppKey));
-  const developers = new Set(records.map((item) => item.developer).filter(Boolean));
-  const latestObserved = records.map((item) => item.observedAt).filter(Boolean).sort().at(-1);
-  text(nodes.catalog, records.length.toLocaleString("en"));
-  text(nodes.apps, uniqueApps.size.toLocaleString("en"));
-  text(nodes.developers, developers.size.toLocaleString("en"));
-  text(nodes.latestMetadata, latestObserved ? formatTime(latestObserved) : "—");
+function renderCatalog(stats) {
+  text(nodes.catalog, stats.records.toLocaleString("en"));
+  text(nodes.apps, stats.apps.toLocaleString("en"));
+  text(nodes.developers, stats.developers.toLocaleString("en"));
+  text(nodes.latestMetadata, stats.latestObserved ? formatTime(stats.latestObserved) : "—");
 
-  const dimensions = [
-    ["Ratings", (item) => Number.isFinite(item.rating) || Number.isFinite(item.ratingsCount)],
-    ["Installs", (item) => Boolean(item.installRange) || Number.isFinite(item.minInstalls) || Number.isFinite(item.maxInstalls)],
-    ["App pricing", (item) => item.free !== undefined || Boolean(item.priceText) || Number.isFinite(item.price)],
-    ["Monetization", (item) => item.offersIAP !== undefined || item.adSupported !== undefined || Boolean(item.iapRange)],
-    ["Lifecycle", (item) => Boolean(item.released) || Boolean(item.updatedAt) || Boolean(item.version)],
-    ["Compatibility", (item) => Boolean(item.minimumOsVersion) || Boolean(item.contentRating) || Number.isFinite(item.fileSizeBytes)]
-  ];
   nodes.metadataCoverageChart.replaceChildren();
-  for (const [name, predicate] of dimensions) {
-    const count = records.filter(predicate).length;
-    nodes.metadataCoverageChart.append(chartRow(name, count, records.length, `${count.toLocaleString("en")} · ${percent(count, records.length)}`));
+  for (const item of stats.dimensions) {
+    nodes.metadataCoverageChart.append(chartRow(item.name, item.count, stats.records, `${item.count.toLocaleString("en")} · ${percent(item.count, stats.records)}`));
   }
 
-  const categories = groupedDistinctCounts(records, (record) => record.storeCategories ?? []).slice(0, 10);
   nodes.categoriesChart.replaceChildren();
-  for (const item of categories) {
-    nodes.categoriesChart.append(chartRow(item.name, item.count, categories[0]?.count ?? 0, item.count.toLocaleString("en")));
+  for (const item of stats.categories) {
+    nodes.categoriesChart.append(chartRow(item.name, item.count, stats.categories[0]?.count ?? 0, item.count.toLocaleString("en")));
   }
 
-  const topDevelopers = groupedDistinctCounts(records, (record) => record.developer ? [record.developer] : []).slice(0, 10);
   nodes.developersChart.replaceChildren();
-  for (const item of topDevelopers) {
-    nodes.developersChart.append(chartRow(item.name, item.count, topDevelopers[0]?.count ?? 0, item.count.toLocaleString("en")));
+  for (const item of stats.topDevelopers) {
+    nodes.developersChart.append(chartRow(item.name, item.count, stats.topDevelopers[0]?.count ?? 0, item.count.toLocaleString("en")));
   }
 
-  const markets = new Map();
-  for (const item of records) {
-    if (!markets.has(item.market)) markets.set(item.market, { apple: 0, googlePlay: 0 });
-    const counts = markets.get(item.market);
-    if (item.store === "apple") counts.apple += 1;
-    if (item.store === "google-play") counts.googlePlay += 1;
-  }
-  const marketRows = [...markets.entries()].sort(([left], [right]) => compareMarketsByScale(left, right));
-  const maximumMarketCount = Math.max(0, ...marketRows.flatMap(([, counts]) => [counts.apple, counts.googlePlay]));
+  const marketRows = [...stats.markets]
+    .sort((left, right) => compareMarketsByScale(left.market, right.market));
+  const maximumMarketCount = Math.max(0, ...marketRows.flatMap((item) => [item.apple, item.googlePlay]));
   nodes.marketCatalogChart.replaceChildren();
-  for (const [market, counts] of marketRows) {
-    nodes.marketCatalogChart.append(marketChartColumn(market, counts, maximumMarketCount));
+  for (const item of marketRows) {
+    nodes.marketCatalogChart.append(marketChartColumn(item.market, item, maximumMarketCount));
   }
 }
 
-function render(dataset) {
-  const options = targetOptions(buildHistories(dataset.runs));
+function render(dataset, stats) {
+  const targetCount = new Set(dataset.runs.flatMap((run) =>
+    run.targets.map((outcome) => outcome.targetKey)
+  )).size;
   const coveredMarkets = new Set(dataset.capabilities.capabilities.flatMap((item) => item.markets));
   text(nodes.runs, String(dataset.runs.length));
-  text(nodes.targets, String(options.length));
+  text(nodes.targets, String(targetCount));
   text(nodes.capabilities, String(dataset.capabilities.capabilities.length));
   text(nodes.root, String(coveredMarkets.size));
-  renderCatalog(Object.values(dataset.catalog));
+  renderCatalog(stats.catalog);
 
   nodes.capabilityBody.replaceChildren();
   for (const capability of dataset.capabilities.capabilities) {
@@ -172,12 +136,13 @@ function render(dataset) {
 }
 
 bindChrome(() => {
-  if (currentDataset) render(currentDataset);
+  if (currentDataset) render(currentDataset.dataset, currentDataset.stats);
 });
 
 try {
-  currentDataset = await loadDataset();
-  render(currentDataset);
+  const [dataset, stats] = await Promise.all([loadDataset(), loadStats()]);
+  currentDataset = { dataset, stats };
+  render(dataset, stats);
 } catch (error) {
   text(nodes.root, error instanceof Error ? error.message : String(error));
 }

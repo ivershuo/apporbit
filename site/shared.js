@@ -1,4 +1,6 @@
 const snapshotCache = new Map();
+const marketCatalogCache = new Map();
+const appMetadataCache = new Map();
 let ratingSequence = 0;
 const siteBaseUrl = new URL("./", import.meta.url);
 
@@ -62,17 +64,39 @@ export async function fetchJson(url) {
 }
 
 export async function loadDataset() {
-  const [runsPayload, catalogPayload, capabilitiesPayload] = await Promise.all([
-    fetchJson(siteUrl("api/runs.json")),
-    fetchJson(siteUrl("api/catalog.json")),
-    fetchJson(siteUrl("api/capabilities.json"))
-  ]);
+  const payload = await fetchJson(siteUrl("api/bootstrap.json"));
   return {
-    runs: runsPayload.runs,
-    catalog: catalogPayload.catalog,
-    capabilities: capabilitiesPayload.capabilities,
-    dataRootLabel: runsPayload.dataRootLabel
+    runs: payload.runs,
+    capabilities: payload.capabilities,
+    dataRootLabel: payload.dataRootLabel
   };
+}
+
+export function loadStats() {
+  return fetchJson(siteUrl("api/stats.json"));
+}
+
+export async function loadMarketCatalog(store, market) {
+  const key = `${store}:${market}`;
+  if (!marketCatalogCache.has(key)) {
+    const path = `api/catalog/${encodeURIComponent(store)}/${encodeURIComponent(market)}.json`;
+    marketCatalogCache.set(key, fetchJson(siteUrl(path)).then((payload) => payload.catalog));
+  }
+  return marketCatalogCache.get(key);
+}
+
+export async function loadAppMetadata(store, market, appId) {
+  const key = `${store}:${market}:${appId}`;
+  if (!appMetadataCache.has(key)) {
+    const path = `api/apps/${encodeURIComponent(store)}/${encodeURIComponent(market)}/${encodeURIComponent(appId)}.json`;
+    appMetadataCache.set(key, fetch(siteUrl(path)).then(async (response) => {
+      if (response.status === 404) return null;
+      if (!response.ok) throw new Error(`${path} returned HTTP ${response.status}`);
+      const payload = await response.json();
+      return payload.metadata ?? null;
+    }));
+  }
+  return appMetadataCache.get(key);
 }
 
 export function formatTime(value, mode = ui.timezone) {
@@ -211,7 +235,7 @@ export async function loadSnapshot(snapshotPath) {
 }
 
 export function metadataFor(catalog, target, appId) {
-  return catalog[`${target.store}:${target.market}:${appId}`] ?? null;
+  return catalog?.[appId] ?? catalog?.[`${target.store}:${target.market}:${appId}`] ?? null;
 }
 
 export function storeLabel(store) {

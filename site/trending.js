@@ -6,6 +6,7 @@ import {
   element,
   formatDate,
   loadDataset,
+  loadMarketCatalog,
   loadSnapshot,
   marketLabel,
   metadataFor,
@@ -27,6 +28,7 @@ const state = {
   dataset: null,
   histories: new Map(),
   options: [],
+  catalog: {},
   filters: {
     store: query.get("store") ?? "apple",
     market: query.get("market") ?? "US",
@@ -91,7 +93,7 @@ function movers(current, baseline) {
 function renderList(container, items, target, tone) {
   container.replaceChildren();
   for (const item of items.slice(0, 10)) {
-    const metadata = metadataFor(state.dataset.catalog, target, item.appId);
+    const metadata = metadataFor(state.catalog, target, item.appId);
     const row = document.createElement("li");
     const link = element("a", "mover-app");
     link.href = appDetailUrl(target, item.appId);
@@ -141,7 +143,12 @@ async function render() {
     return;
   }
   try {
-    const [current, baseline] = await Promise.all([loadSnapshot(endOutcome.snapshotPath), loadSnapshot(startOutcome.snapshotPath)]);
+    const [current, baseline, catalog] = await Promise.all([
+      loadSnapshot(endOutcome.snapshotPath),
+      loadSnapshot(startOutcome.snapshotPath),
+      loadMarketCatalog(selected.target.store, selected.target.market)
+    ]);
+    state.catalog = catalog;
     const result = movers(current, baseline);
     text(nodes.moved, String(result.moved)); text(nodes.entrants, String(result.newEntries.length));
     text(nodes.status, `${formatDate(baseline.marketObservationDate ?? baseline.observationDate)} → ${formatDate(current.marketObservationDate ?? current.observationDate)} · Complete charts`);

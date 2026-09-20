@@ -3,6 +3,7 @@ import path from "node:path";
 
 import { SnapshotSchema } from "../src/domain.js";
 import { loadCapabilities, loadCatalog, loadRuns } from "./site-data.js";
+import { buildCatalogStats, compactMetadata, compactRuns } from "./site-output.js";
 
 const projectRoot = process.cwd();
 const siteRoot = path.join(projectRoot, "site");
@@ -30,6 +31,35 @@ async function writeJson(relativePath: string, value: unknown): Promise<void> {
   const destination = path.join(outputRoot, relativePath);
   await mkdir(path.dirname(destination), { recursive: true });
   await writeFile(destination, `${JSON.stringify(value)}\n`);
+}
+
+function encodedSegment(value: string): string {
+  return encodeURIComponent(value);
+}
+
+async function writeCatalogFiles(
+  catalog: Awaited<ReturnType<typeof loadCatalog>>
+): Promise<void> {
+  const marketCatalogs = new Map<string, Record<string, ReturnType<typeof compactMetadata>>>();
+  const detailWrites: Array<() => Promise<void>> = [];
+
+  for (const item of Object.values(catalog)) {
+    const marketPath = `${encodedSegment(item.store)}/${encodedSegment(item.market)}`;
+    const marketCatalog = marketCatalogs.get(marketPath) ?? {};
+    marketCatalog[item.appId] = compactMetadata(item);
+    marketCatalogs.set(marketPath, marketCatalog);
+    detailWrites.push(() => writeJson(
+      `api/apps/${marketPath}/${encodedSegment(item.appId)}.json`,
+      { metadata: item }
+    ));
+  }
+
+  for (let index = 0; index < detailWrites.length; index += 100) {
+    await Promise.all(detailWrites.slice(index, index + 100).map((write) => write()));
+  }
+  await Promise.all([...marketCatalogs.entries()].map(([marketPath, marketCatalog]) =>
+    writeJson(`api/catalog/${marketPath}.json`, { catalog: marketCatalog })
+  ));
 }
 
 async function makeSitePathsPortable(): Promise<void> {
@@ -73,9 +103,13 @@ async function build(): Promise<void> {
   ].sort();
 
   await Promise.all([
-    writeJson("api/runs.json", { dataRootLabel: "data branch / v1", runs }),
-    writeJson("api/catalog.json", { catalog }),
-    writeJson("api/capabilities.json", { capabilities }),
+    writeJson("api/bootstrap.json", {
+      dataRootLabel: "data branch / v1",
+      runs: compactRuns(runs),
+      capabilities
+    }),
+    writeJson("api/stats.json", { catalog: buildCatalogStats(catalog) }),
+    writeCatalogFiles(catalog),
     writeFile(path.join(outputRoot, ".nojekyll"), "")
   ]);
   await copySnapshots(snapshotPaths);

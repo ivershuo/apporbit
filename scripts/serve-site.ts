@@ -4,6 +4,7 @@ import { createServer, type ServerResponse } from "node:http";
 import path from "node:path";
 
 import { loadCapabilities, loadCatalog, loadRuns } from "./site-data.js";
+import { buildCatalogStats, compactMetadata, compactRuns } from "./site-output.js";
 
 const projectRoot = process.cwd();
 const siteRoot = path.resolve(projectRoot, "site");
@@ -14,6 +15,12 @@ const dataRoot = path.resolve(
 const port = Number(process.env.PORT ?? "4180");
 const host = "127.0.0.1";
 const MAX_FILE_SIZE = 5_000_000;
+let catalogPromise: ReturnType<typeof loadCatalog> | undefined;
+
+function siteCatalog() {
+  catalogPromise ??= loadCatalog(dataRoot);
+  return catalogPromise;
+}
 
 const staticFiles: Record<string, { path: string; type: string }> = {
   "/": { path: path.join(siteRoot, "index.html"), type: "text/html; charset=utf-8" },
@@ -30,6 +37,7 @@ const staticFiles: Record<string, { path: string; type: string }> = {
   "/google-play.svg": { path: path.join(siteRoot, "google-play.svg"), type: "image/svg+xml" },
   "/app.js": { path: path.join(siteRoot, "app.js"), type: "text/javascript; charset=utf-8" },
   "/shared.js": { path: path.join(siteRoot, "shared.js"), type: "text/javascript; charset=utf-8" },
+  "/market-order.js": { path: path.join(siteRoot, "market-order.js"), type: "text/javascript; charset=utf-8" },
   "/app-detail.js": { path: path.join(siteRoot, "app-detail.js"), type: "text/javascript; charset=utf-8" },
   "/trending.js": { path: path.join(siteRoot, "trending.js"), type: "text/javascript; charset=utf-8" },
   "/data-page.js": { path: path.join(siteRoot, "data-page.js"), type: "text/javascript; charset=utf-8" },
@@ -92,20 +100,41 @@ const server = createServer(async (request, response) => {
       return;
     }
     const url = new URL(request.url ?? "/", `http://${host}:${port}`);
-    if (url.pathname === "/api/runs" || url.pathname === "/api/runs.json") {
-      const runs = await loadRuns(dataRoot);
+    if (url.pathname === "/api/bootstrap.json") {
+      const [runs, capabilities] = await Promise.all([
+        loadRuns(dataRoot),
+        loadCapabilities(projectRoot)
+      ]);
       sendJson(response, 200, {
         dataRootLabel: process.env.APPORBIT_DATA_DIR ? "APPORBIT_DATA_DIR" : ".local-data/v1",
-        runs
+        runs: compactRuns(runs),
+        capabilities
       });
       return;
     }
-    if (url.pathname === "/api/catalog" || url.pathname === "/api/catalog.json") {
-      sendJson(response, 200, { catalog: await loadCatalog(dataRoot) });
+    if (url.pathname === "/api/stats.json") {
+      sendJson(response, 200, { catalog: buildCatalogStats(await siteCatalog()) });
       return;
     }
-    if (url.pathname === "/api/capabilities" || url.pathname === "/api/capabilities.json") {
-      sendJson(response, 200, { capabilities: await loadCapabilities(projectRoot) });
+    const catalogMatch = url.pathname.match(/^\/api\/catalog\/([^/]+)\/([^/]+)\.json$/);
+    if (catalogMatch) {
+      const store = decodeURIComponent(catalogMatch[1]!);
+      const market = decodeURIComponent(catalogMatch[2]!);
+      const catalog = Object.fromEntries(
+        Object.values(await siteCatalog())
+          .filter((item) => item.store === store && item.market === market)
+          .map((item) => [item.appId, compactMetadata(item)])
+      );
+      sendJson(response, 200, { catalog });
+      return;
+    }
+    const appMatch = url.pathname.match(/^\/api\/apps\/([^/]+)\/([^/]+)\/([^/]+)\.json$/);
+    if (appMatch) {
+      const store = decodeURIComponent(appMatch[1]!);
+      const market = decodeURIComponent(appMatch[2]!);
+      const appId = decodeURIComponent(appMatch[3]!);
+      const metadata = (await siteCatalog())[`${store}:${market}:${appId}`];
+      sendJson(response, metadata ? 200 : 404, metadata ? { metadata } : { error: "not_found" });
       return;
     }
     if (url.pathname.startsWith("/data/")) {

@@ -9,10 +9,10 @@ import {
   formatDate,
   formatStoreDate,
   formatTime,
+  loadAppMetadata,
   loadDataset,
   loadSnapshot,
   marketLabel,
-  metadataFor,
   outcomeForDate,
   previousValidOutcome,
   renderRankChart,
@@ -160,8 +160,7 @@ function syncFilters() {
   writeQuery();
 }
 
-function renderIdentity(target) {
-  const metadata = metadataFor(state.dataset.catalog, target, state.appId);
+function renderIdentity(target, metadata) {
   text(nodes.app_name, metadata?.name ?? state.appId ?? "Unknown app");
   text(nodes.breadcrumb_name, metadata?.name ?? state.appId ?? "App");
   text(nodes.app_developer, metadata?.developer ?? "Developer not available");
@@ -293,7 +292,8 @@ async function render() {
   }
   if (!selected) {
     const requestedTarget = { store: state.store, market: state.market, scope: state.scope, chart: state.chart, normalizedCategory: state.category };
-    renderIdentity(requestedTarget);
+    const metadata = await loadAppMetadata(state.store, state.market, state.appId);
+    renderIdentity(requestedTarget, metadata);
     text(nodes.current_rank, "—");
     text(nodes.current_rank_note, `No ${chartLabel(state.chart)} data is available for ${marketLabel(state.market)}.`);
     text(nodes.highest_rank, "—");
@@ -308,7 +308,8 @@ async function render() {
     await renderMarkets(requestedTarget);
     return;
   }
-  const metadata = renderIdentity(selected.target);
+  const metadata = await loadAppMetadata(state.store, state.market, state.appId);
+  renderIdentity(selected.target, metadata);
   const validOutcomes = selected.history.filter((item) => item.status === "valid");
   const snapshots = await Promise.all(validOutcomes.map((item) => loadSnapshot(item.snapshotPath)));
   snapshots.sort((left, right) => left.capturedAt.localeCompare(right.capturedAt));
@@ -335,8 +336,9 @@ async function render() {
   const bestPoint = best ? points.find((point) => point.rank === best) : null;
   text(nodes.best_observed_note, bestPoint ? `${formatDate(bestPoint.date)} · ${marketLabel(selected.target.market)}` : "More history is needed");
   text(nodes.top_ten_days, String(points.filter((point) => point.rank && point.rank <= 10).length));
-  const metadataDates = Object.values(state.dataset.catalog).filter((item) => item.store === state.store && item.appId === state.appId).map((item) => item.observedAt).sort();
-  const firstSeen = metadataDates[0] ?? snapshots.find((snapshot) => snapshot.entries.some((entry) => entry.appId === state.appId))?.capturedAt;
+  const firstSeen = snapshots.find((snapshot) =>
+    snapshot.entries.some((entry) => entry.appId === state.appId)
+  )?.capturedAt ?? metadata?.observedAt;
   text(nodes.first_seen, firstSeen ? formatDate(firstSeen.slice(0, 10)) : "—");
 
   renderRankChart(nodes.app_rank_chart, filterRange(points));

@@ -61,6 +61,10 @@ The `Deploy GitHub Pages` workflow builds the static website from `main` and rea
 the versioned dataset from the orphan `data` branch. The generated artifact contains
 static equivalents of the local `/api/*` responses and only the ranking snapshots
 referenced by run manifests. Generated files are never committed to `main` or `data`.
+The browser loads a compact bootstrap index first, then fetches ranking metadata from
+store-and-market catalog shards. Full descriptions and other heavy fields are emitted
+as per-app detail files and loaded only when an app page is opened. Dataset-wide charts
+use a small precomputed statistics file instead of downloading the complete catalog.
 
 To enable the first deployment, open **Settings → Pages** and change **Source** to
 **GitHub Actions**, then run the workflow manually or push a website change to `main`.

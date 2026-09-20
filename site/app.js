@@ -11,6 +11,7 @@ import {
   formatStoreDate,
   formatTime,
   loadDataset,
+  loadMarketCatalog,
   loadSnapshot,
   marketLabel,
   metadataFor,
@@ -34,6 +35,7 @@ const state = {
   dataset: null,
   histories: new Map(),
   options: [],
+  catalog: {},
   filters: { store: "apple", market: "US", scope: "apps", chart: "top-free", date: "latest" },
   lastRender: null
 };
@@ -219,14 +221,14 @@ function mobileDetailsCell(metadata, target, visibleColumns, storeCell) {
 
 function latestMetadataTime(target, compared) {
   return compared
-    .map((item) => metadataFor(state.dataset.catalog, target, item.appId)?.observedAt)
+    .map((item) => metadataFor(state.catalog, target, item.appId)?.observedAt)
     .filter(Boolean)
     .sort()
     .at(-1) ?? null;
 }
 
 function appendRankingRow(item, target, hasBaseline, visibleColumns) {
-  const metadata = metadataFor(state.dataset.catalog, target, item.appId);
+  const metadata = metadataFor(state.catalog, target, item.appId);
   const row = document.createElement("tr");
   const rank = element("td", "rank-cell", String(item.rank));
   rank.dataset.label = "Rank";
@@ -324,7 +326,7 @@ async function renderTrend(target, appId) {
   const valid = selected.history.filter((item) => item.status === "valid");
   const snapshots = await Promise.all(valid.map((item) => loadSnapshot(item.snapshotPath)));
   const points = dailyRankPoints(snapshots.sort((a, b) => a.capturedAt.localeCompare(b.capturedAt)), appId);
-  const metadata = metadataFor(state.dataset.catalog, target, appId);
+  const metadata = metadataFor(state.catalog, target, appId);
   text(nodes.trendTitle, `${metadata?.name ?? appId} Ranking Trend`);
   renderRankChart(nodes.trendChart, points, { compact: true });
 }
@@ -366,19 +368,21 @@ async function render() {
   nodes.tableWrap.hidden = true;
   try {
     const previousOutcome = previousValidOutcome(selected.history, outcome);
-    const [snapshot, previous] = await Promise.all([
+    const [snapshot, previous, catalog] = await Promise.all([
       loadSnapshot(outcome.snapshotPath),
-      previousOutcome ? loadSnapshot(previousOutcome.snapshotPath) : Promise.resolve(null)
+      previousOutcome ? loadSnapshot(previousOutcome.snapshotPath) : Promise.resolve(null),
+      loadMarketCatalog(selected.target.store, selected.target.market)
     ]);
+    state.catalog = catalog;
     const compared = compareSnapshots(snapshot, previous);
     const visibleColumns = {
       price: snapshot.chart !== "top-free",
       installs: compared.some((item) => {
-        const metadata = metadataFor(state.dataset.catalog, selected.target, item.appId);
+        const metadata = metadataFor(state.catalog, selected.target, item.appId);
         return Boolean(metadata?.installRange) || Number.isFinite(metadata?.minInstalls) || Number.isFinite(metadata?.maxInstalls);
       }),
       monetization: compared.some((item) => {
-        const metadata = metadataFor(state.dataset.catalog, selected.target, item.appId);
+        const metadata = metadataFor(state.catalog, selected.target, item.appId);
         return metadata?.offersIAP !== undefined || metadata?.adSupported !== undefined || Boolean(metadata?.iapRange);
       })
     };
