@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20260920T074509423Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-20T07:45:09.423Z",
+  "observationDate": "2026-09-20",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-09-20",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 32,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "19bd2945057ede287680f7241555e5503118e9b927a2e3d3060e2d26cda9098e"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:32/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 4,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 5,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 6,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 7,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 8,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 9,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 10,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 11,
+      "appId": "com.ked.kennysgifs"
+    },
+    {
+      "rank": 12,
+      "appId": "de.dihk.ihk.gewo"
+    },
+    {
+      "rank": 13,
+      "appId": "de.blitzer.pro.automotive"
+    },
+    {
+      "rank": 14,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 15,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 16,
+      "appId": "de.theorie24.fs.auto"
+    },
+    {
+      "rank": 17,
+      "appId": "de.koellenGolf.dgvPlatzreife"
+    },
+    {
+      "rank": 18,
+      "appId": "de.hwn.community"
+    },
+    {
+      "rank": 19,
+      "appId": "com.klett.blitzrechnen.schulversion"
+    },
+    {
+      "rank": 20,
+      "appId": "org.fossify.thankyou"
+    },
+    {
+      "rank": 21,
+      "appId": "com.jndapp.nothing.widgets.pack"
+    },
+    {
+      "rank": 22,
+      "appId": "com.mobiteka.maps"
+    },
+    {
+      "rank": 23,
+      "appId": "de.adac.camping26"
+    },
+    {
+      "rank": 24,
+      "appId": "org.withouthat.acalendarplus"
+    },
+    {
+      "rank": 25,
+      "appId": "org.readera.premium"
+    },
+    {
+      "rank": 26,
+      "appId": "com.andrerinas.headunitrevived"
+    },
+    {
+      "rank": 27,
+      "appId": "com.tappytaps.android.babymonitor3g"
+    },
+    {
+      "rank": 28,
+      "appId": "com.photopills.android.photopills"
+    },
+    {
+      "rank": 29,
+      "appId": "com.recreative.recreative31"
+    },
+    {
+      "rank": 30,
+      "appId": "de.bbs_verwaltung.myBBS"
+    },
+    {
+      "rank": 31,
+      "appId": "com.tsojka.tunehelper"
+    },
+    {
+      "rank": 32,
+      "appId": "garage.ringtone.maker.audio.mp3.converter.pro"
+    }
+  ]
+}

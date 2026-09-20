@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "runId": "20260920T074509078Z",
+  "collectorVersion": "0.1.0",
+  "startedAt": "2026-09-20T07:45:09.078Z",
+  "finishedAt": "2026-09-20T07:47:55.398Z",
+  "targets": [
+    {
+      "targetKey": "apple:DE:apps:top-free:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "DE",
+        "marketTimeZone": "Europe/Berlin",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-20T07:45:09.080Z",
+      "finishedAt": "2026-09-20T07:45:17.285Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/apple/DE/apps/top-free/2026/09/20/20260920T074511150Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "apple:DE:apps:top-paid:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "DE",
+        "marketTimeZone": "Europe/Berlin",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-20T07:45:09.080Z",
+      "finishedAt": "2026-09-20T07:45:17.238Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/apple/DE/apps/top-paid/2026/09/20/20260920T074516116Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:99/100"
+      ]
+    },
+    {
+      "targetKey": "google-play:DE:apps:top-free:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "DE",
+        "marketTimeZone": "Europe/Berlin",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-20T07:45:09.080Z",
+      "finishedAt": "2026-09-20T07:47:46.343Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/DE/apps/top-free/2026/09/20/20260920T074509579Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:DE:apps:top-paid:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "DE",
+        "marketTimeZone": "Europe/Berlin",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-20T07:45:09.080Z",
+      "finishedAt": "2026-09-20T07:46:17.310Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/DE/apps/top-paid/2026/09/20/20260920T074509423Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:32/100"
+      ]
+    },
+    {
+      "targetKey": "google-play:DE:apps:top-grossing:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "DE",
+        "marketTimeZone": "Europe/Berlin",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-20T07:45:09.080Z",
+      "finishedAt": "2026-09-20T07:47:52.366Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/DE/apps/top-grossing/2026/09/20/20260920T074509517Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:DE:games:top-free:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "DE",
+        "marketTimeZone": "Europe/Berlin",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-free",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-20T07:45:09.081Z",
+      "finishedAt": "2026-09-20T07:47:44.384Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/DE/games/top-free/2026/09/20/20260920T074510497Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:DE:games:top-paid:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "DE",
+        "marketTimeZone": "Europe/Berlin",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-paid",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-20T07:45:09.081Z",
+      "finishedAt": "2026-09-20T07:47:55.398Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/DE/games/top-paid/2026/09/20/20260920T074510515Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:DE:games:top-grossing:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "DE",
+        "marketTimeZone": "Europe/Berlin",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-20T07:45:09.081Z",
+      "finishedAt": "2026-09-20T07:47:51.409Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/DE/games/top-grossing/2026/09/20/20260920T074510449Z.json",
+      "error": null,
+      "flags": []
+    }
+  ]
+}
