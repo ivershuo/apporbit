@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20260921T075808666Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-21T07:58:08.666Z",
+  "observationDate": "2026-09-21",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-09-21",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 24,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "e09ee8d69af255ee2c4c89e7808b05cb77372c73dcf37a05a5fd637eeb9b6ccb"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:24/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 4,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 5,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 6,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 7,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 8,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 9,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 10,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 11,
+      "appId": "com.klett.blitzrechnen.schulversion"
+    },
+    {
+      "rank": 12,
+      "appId": "de.dihk.ihk.gewo"
+    },
+    {
+      "rank": 13,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 14,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 15,
+      "appId": "de.hwn.community"
+    },
+    {
+      "rank": 16,
+      "appId": "de.koellenGolf.dgvPlatzreife"
+    },
+    {
+      "rank": 17,
+      "appId": "de.theorie24.fs.auto"
+    },
+    {
+      "rank": 18,
+      "appId": "com.jndapp.nothing.widgets.pack"
+    },
+    {
+      "rank": 19,
+      "appId": "com.mobiteka.maps"
+    },
+    {
+      "rank": 20,
+      "appId": "org.withouthat.acalendarplus"
+    },
+    {
+      "rank": 21,
+      "appId": "de.adac.camping26"
+    },
+    {
+      "rank": 22,
+      "appId": "de.bbs_verwaltung.myBBS"
+    },
+    {
+      "rank": 23,
+      "appId": "com.tsojka.tunehelper"
+    },
+    {
+      "rank": 24,
+      "appId": "garage.ringtone.maker.audio.mp3.converter.pro"
+    }
+  ]
+}
