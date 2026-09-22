@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20260922T074259839Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-22T07:42:59.839Z",
+  "observationDate": "2026-09-22",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-09-22",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 20,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "a819dad47bdd670d904429c27e6eefc3d830ecb39429013c1e612f52bfa68dc3"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:20/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 4,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 5,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 6,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 7,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 8,
+      "appId": "com.watchfacestudio.per32"
+    },
+    {
+      "rank": 9,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 10,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 11,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 12,
+      "appId": "de.koellenGolf.dgvPlatzreife"
+    },
+    {
+      "rank": 13,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 14,
+      "appId": "de.bbs_verwaltung.myBBS"
+    },
+    {
+      "rank": 15,
+      "appId": "com.klett.blitzrechnen.schulversion"
+    },
+    {
+      "rank": 16,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 17,
+      "appId": "de.dihk.ihk.gewo"
+    },
+    {
+      "rank": 18,
+      "appId": "com.ked.kennysgifs"
+    },
+    {
+      "rank": 19,
+      "appId": "com.tsojka.tunehelper"
+    },
+    {
+      "rank": 20,
+      "appId": "garage.ringtone.maker.audio.mp3.converter.pro"
+    }
+  ]
+}
