@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-in-apps-top-paid-all-apps-20260923T005621478Z",
+  "store": "google-play",
+  "market": "IN",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-23T00:56:21.478Z",
+  "observationDate": "2026-09-23",
+  "marketTimeZone": "Asia/Kolkata",
+  "marketObservationDate": "2026-09-23",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 33,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=IN",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "f319b274547bdf1f08b69c79e21b0c0369232d2537ebe3bebc38e8d5d9ab94c8"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:33/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.jndapp.nothing.widgets.pack"
+    },
+    {
+      "rank": 2,
+      "appId": "com.h4xhdv.ffh4xraistarmacrofire"
+    },
+    {
+      "rank": 3,
+      "appId": "com.booster.gfxpro"
+    },
+    {
+      "rank": 4,
+      "appId": "com.g19mobile.gameboosterplus"
+    },
+    {
+      "rank": 5,
+      "appId": "com.appslab.galaxy.oneui.widgets"
+    },
+    {
+      "rank": 6,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 7,
+      "appId": "com.appslab.nothing.widgetspro"
+    },
+    {
+      "rank": 8,
+      "appId": "com.pokeflix.pokemon.tv.episodes.hindi"
+    },
+    {
+      "rank": 9,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 10,
+      "appId": "com.orealsensiff.pro.com"
+    },
+    {
+      "rank": 11,
+      "appId": "com.gps.maps.camera.geotag.pro"
+    },
+    {
+      "rank": 12,
+      "appId": "jp.ne.ibis.ibispaint.app"
+    },
+    {
+      "rank": 13,
+      "appId": "com.neural.boost.pro"
+    },
+    {
+      "rank": 14,
+      "appId": "com.smart_clicker.captainhelper"
+    },
+    {
+      "rank": 15,
+      "appId": "com.medhaapps.wififtpserver.pro"
+    },
+    {
+      "rank": 16,
+      "appId": "com.orquos.onetapsensiproaim"
+    },
+    {
+      "rank": 17,
+      "appId": "com.appslab.materialyou.widgetspro"
+    },
+    {
+      "rank": 18,
+      "appId": "inc.trilokia.pubgfxtool"
+    },
+    {
+      "rank": 19,
+      "appId": "com.appsgenz.launcherios.pro"
+    },
+    {
+      "rank": 20,
+      "appId": "com.jndapp.oneui.widgets.pack"
+    },
+    {
+      "rank": 21,
+      "appId": "com.xsensi.headshotpro"
+    },
+    {
+      "rank": 22,
+      "appId": "com.defianttech.diskdiggerpro"
+    },
+    {
+      "rank": 23,
+      "appId": "com.swarsystems.ishala"
+    },
+    {
+      "rank": 24,
+      "appId": "com.orquos.sensiaimtrainer"
+    },
+    {
+      "rank": 25,
+      "appId": "com.psslabs.rhythmpaid"
+    },
+    {
+      "rank": 26,
+      "appId": "com.watchfacestudio.s4uassen"
+    },
+    {
+      "rank": 27,
+      "appId": "com.eatos.onedarkpro"
+    },
+    {
+      "rank": 28,
+      "appId": "com.jndapp.line.x.iconpack"
+    },
+    {
+      "rank": 29,
+      "appId": "com.minimaa.minimal.detox.launcher"
+    },
+    {
+      "rank": 30,
+      "appId": "idm.internet.download.manager.plus"
+    },
+    {
+      "rank": 31,
+      "appId": "com.italiano.iglass"
+    },
+    {
+      "rank": 32,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 33,
+      "appId": "com.techiboy.walls"
+    }
+  ]
+}
