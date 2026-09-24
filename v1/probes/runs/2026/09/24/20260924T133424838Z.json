@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "runId": "20260924T133424838Z",
+  "collectorVersion": "0.1.0",
+  "startedAt": "2026-09-24T13:34:24.838Z",
+  "finishedAt": "2026-09-24T13:37:29.242Z",
+  "targets": [
+    {
+      "targetKey": "apple:US:apps:top-free:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "US",
+        "marketTimeZone": "America/New_York",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T13:34:24.840Z",
+      "finishedAt": "2026-09-24T13:34:27.896Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/apple/US/apps/top-free/2026/09/24/20260924T133426585Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "apple:US:apps:top-paid:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "US",
+        "marketTimeZone": "America/New_York",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T13:34:24.840Z",
+      "finishedAt": "2026-09-24T13:34:27.746Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/apple/US/apps/top-paid/2026/09/24/20260924T133426274Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:US:apps:top-free:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "US",
+        "marketTimeZone": "America/New_York",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T13:34:24.840Z",
+      "finishedAt": "2026-09-24T13:37:13.042Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/US/apps/top-free/2026/09/24/20260924T133425266Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:US:apps:top-paid:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "US",
+        "marketTimeZone": "America/New_York",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T13:34:24.840Z",
+      "finishedAt": "2026-09-24T13:37:28.090Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/US/apps/top-paid/2026/09/24/20260924T133425332Z.json",
+      "error": null,
+      "flags": [
+        "metadata_integrity:optional-section-parse"
+      ]
+    },
+    {
+      "targetKey": "google-play:US:apps:top-grossing:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "US",
+        "marketTimeZone": "America/New_York",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T13:34:24.840Z",
+      "finishedAt": "2026-09-24T13:37:16.077Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/US/apps/top-grossing/2026/09/24/20260924T133425299Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:US:games:top-free:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "US",
+        "marketTimeZone": "America/New_York",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-free",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T13:34:24.841Z",
+      "finishedAt": "2026-09-24T13:37:17.127Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/US/games/top-free/2026/09/24/20260924T133426183Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:US:games:top-paid:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "US",
+        "marketTimeZone": "America/New_York",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-paid",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T13:34:24.841Z",
+      "finishedAt": "2026-09-24T13:37:29.242Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/US/games/top-paid/2026/09/24/20260924T133426444Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:US:games:top-grossing:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "US",
+        "marketTimeZone": "America/New_York",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T13:34:24.841Z",
+      "finishedAt": "2026-09-24T13:37:25.095Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/US/games/top-grossing/2026/09/24/20260924T133426213Z.json",
+      "error": null,
+      "flags": []
+    }
+  ]
+}
