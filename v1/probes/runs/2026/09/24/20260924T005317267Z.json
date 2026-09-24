@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "runId": "20260924T005317267Z",
+  "collectorVersion": "0.1.0",
+  "startedAt": "2026-09-24T00:53:17.267Z",
+  "finishedAt": "2026-09-24T00:55:55.697Z",
+  "targets": [
+    {
+      "targetKey": "apple:IN:apps:top-free:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T00:53:17.269Z",
+      "finishedAt": "2026-09-24T00:53:20.588Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/apple/IN/apps/top-free/2026/09/24/20260924T005318248Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "apple:IN:apps:top-paid:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-24T00:53:17.269Z",
+      "finishedAt": "2026-09-24T00:53:20.488Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/apple/IN/apps/top-paid/2026/09/24/20260924T005318429Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:97/100"
+      ]
+    },
+    {
+      "targetKey": "google-play:IN:apps:top-free:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T00:53:17.269Z",
+      "finishedAt": "2026-09-24T00:55:51.507Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/apps/top-free/2026/09/24/20260924T005318165Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:IN:apps:top-paid:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-24T00:53:17.270Z",
+      "finishedAt": "2026-09-24T00:54:31.534Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/apps/top-paid/2026/09/24/20260924T005317637Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:40/100",
+        "metadata_integrity:optional-section-parse"
+      ]
+    },
+    {
+      "targetKey": "google-play:IN:apps:top-grossing:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T00:53:17.270Z",
+      "finishedAt": "2026-09-24T00:55:54.546Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/apps/top-grossing/2026/09/24/20260924T005317702Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:IN:games:top-free:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-free",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T00:53:17.270Z",
+      "finishedAt": "2026-09-24T00:55:52.706Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/games/top-free/2026/09/24/20260924T005319217Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:IN:games:top-paid:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-paid",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-24T00:53:17.270Z",
+      "finishedAt": "2026-09-24T00:55:09.866Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/games/top-paid/2026/09/24/20260924T005318671Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:59/100",
+        "metadata_integrity:optional-section-parse"
+      ]
+    },
+    {
+      "targetKey": "google-play:IN:games:top-grossing:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-24T00:53:17.270Z",
+      "finishedAt": "2026-09-24T00:55:55.697Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/games/top-grossing/2026/09/24/20260924T005318749Z.json",
+      "error": null,
+      "flags": []
+    }
+  ]
+}
