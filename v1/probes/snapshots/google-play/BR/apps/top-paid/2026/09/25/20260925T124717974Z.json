@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-br-apps-top-paid-all-apps-20260925T124717974Z",
+  "store": "google-play",
+  "market": "BR",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-25T12:47:17.974Z",
+  "observationDate": "2026-09-25",
+  "marketTimeZone": "America/Sao_Paulo",
+  "marketObservationDate": "2026-09-25",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 25,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=BR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "3e35ada1b3615906e71fe7c8b9eb7facd4da2f24113827e987dc7a7723afd886"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:25/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.orealsensiff.pro.com"
+    },
+    {
+      "rank": 2,
+      "appId": "com.booster.gfxpro"
+    },
+    {
+      "rank": 3,
+      "appId": "com.jndapp.oneui.widgets.pack"
+    },
+    {
+      "rank": 4,
+      "appId": "com.dedealbano.padlab"
+    },
+    {
+      "rank": 5,
+      "appId": "com.panda.mouse"
+    },
+    {
+      "rank": 6,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 7,
+      "appId": "com.nerdykidapps21.carequalizermc"
+    },
+    {
+      "rank": 8,
+      "appId": "org.prowl.torque"
+    },
+    {
+      "rank": 9,
+      "appId": "com.extreamsd.aemobile"
+    },
+    {
+      "rank": 10,
+      "appId": "com.iliturgia"
+    },
+    {
+      "rank": 11,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 12,
+      "appId": "com.h4xhdv.ffh4xraistarmacrofire"
+    },
+    {
+      "rank": 13,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 14,
+      "appId": "com.g19mobile.gameboosterplus"
+    },
+    {
+      "rank": 15,
+      "appId": "com.appsgenz.launcherios.pro"
+    },
+    {
+      "rank": 16,
+      "appId": "com.jndapp.nothing.widgets.pack"
+    },
+    {
+      "rank": 17,
+      "appId": "com.addons.gamerbubbles"
+    },
+    {
+      "rank": 18,
+      "appId": "inc.trilokia.pubgfxtool"
+    },
+    {
+      "rank": 19,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 20,
+      "appId": "com.appslab.galaxy.oneui.widgets"
+    },
+    {
+      "rank": 21,
+      "appId": "com.minimaa.minimal.detox.launcher"
+    },
+    {
+      "rank": 22,
+      "appId": "com.geradordesensi.app"
+    },
+    {
+      "rank": 23,
+      "appId": "com.labmcs.bibliastrong"
+    },
+    {
+      "rank": 24,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 25,
+      "appId": "com.flyersoft.moonreaderp"
+    }
+  ]
+}
