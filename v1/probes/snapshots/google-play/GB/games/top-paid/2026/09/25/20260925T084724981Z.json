@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-gb-games-top-paid-all-games-20260925T084724981Z",
+  "store": "google-play",
+  "market": "GB",
+  "scope": "games",
+  "chart": "top-paid",
+  "normalizedCategory": "all-games",
+  "storeCategory": "GAME",
+  "capturedAt": "2026-09-25T08:47:24.981Z",
+  "observationDate": "2026-09-25",
+  "marketTimeZone": "Europe/London",
+  "marketObservationDate": "2026-09-25",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 83,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/games?hl=en&gl=GB",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "cca05b5aa3b4b1cb46732c0dc973819767ccba21c0983bc0590ec7782724d45d"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:83/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.mojang.minecraftpe"
+    },
+    {
+      "rank": 2,
+      "appId": "com.batomon.showdown"
+    },
+    {
+      "rank": 3,
+      "appId": "com.robtopx.geometryjump"
+    },
+    {
+      "rank": 4,
+      "appId": "com.mintrocket.drmobile"
+    },
+    {
+      "rank": 5,
+      "appId": "com.playstack.balatro.android"
+    },
+    {
+      "rank": 6,
+      "appId": "com.chucklefish.stardewvalley"
+    },
+    {
+      "rank": 7,
+      "appId": "com.ninjakiwi.bloonstd6"
+    },
+    {
+      "rank": 8,
+      "appId": "nz.co.codepoint.minimetro"
+    },
+    {
+      "rank": 9,
+      "appId": "com.humble.SlayTheSpire"
+    },
+    {
+      "rank": 10,
+      "appId": "com.strayfawnstudio.gambonanza"
+    },
+    {
+      "rank": 11,
+      "appId": "com.brewisapps.fullconfidence"
+    },
+    {
+      "rank": 12,
+      "appId": "com.marmalade.monopoly"
+    },
+    {
+      "rank": 13,
+      "appId": "com.RustyLake.ServantOfTheLake"
+    },
+    {
+      "rank": 14,
+      "appId": "com.undergroundcreative.footballchairmanpro2"
+    },
+    {
+      "rank": 15,
+      "appId": "com.fundaygames.scritchyscratchy"
+    },
+    {
+      "rank": 16,
+      "appId": "com.and.games505.TerrariaPaid"
+    },
+    {
+      "rank": 17,
+      "appId": "com.sofarsogood.incredibox"
+    },
+    {
+      "rank": 18,
+      "appId": "com.rockstargames.gtasa"
+    },
+    {
+      "rank": 19,
+      "appId": "com.doghowlgames.trashgoblin"
+    },
+    {
+      "rank": 20,
+      "appId": "com.rubberbandgames.wobblylifev2"
+    },
+    {
+      "rank": 21,
+      "appId": "com.barnstormgames.tenable"
+    },
+    {
+      "rank": 22,
+      "appId": "it.rortos.realflightsimulator"
+    },
+    {
+      "rank": 23,
+      "appId": "com.llc3909.papersplease"
+    },
+    {
+      "rank": 24,
+      "appId": "uk.co.topmarks.HitTheButton"
+    },
+    {
+      "rank": 25,
+      "appId": "com.nekki.vector.paid"
+    },
+    {
+      "rank": 26,
+      "appId": "com.FireproofStudios.TheRoom"
+    },
+    {
+      "rank": 27,
+      "appId": "com.footballagent"
+    },
+    {
+      "rank": 28,
+      "appId": "com.ninjakiwi.bloonstd5"
+    },
+    {
+      "rank": 29,
+      "appId": "com.ustwo.monumentvalley"
+    },
+    {
+      "rank": 30,
+      "appId": "com.fastemulator.gba"
+    },
+    {
+      "rank": 31,
+      "appId": "com.atari.mobile.rctclassic"
+    },
+    {
+      "rank": 32,
+      "appId": "com.feralinteractive.medieval2_android"
+    },
+    {
+      "rank": 33,
+      "appId": "com.notdoppler.earntodie"
+    },
+    {
+      "rank": 34,
+      "appId": "com.scottgames.fivenightsatfreddys"
+    },
+    {
+      "rank": 35,
+      "appId": "com.doghowlgames.thronefall"
+    },
+    {
+      "rank": 36,
+      "appId": "com.xd.tabs.google"
+    },
+    {
+      "rank": 37,
+      "appId": "com.playdigious.cultist"
+    },
+    {
+      "rank": 38,
+      "appId": "com.Friedemann.SlotsAndDaggers"
+    },
+    {
+      "rank": 39,
+      "appId": "com.bscotch.hmd"
+    },
+    {
+      "rank": 40,
+      "appId": "com.playdigious.sor4"
+    },
+    {
+      "rank": 41,
+      "appId": "com.refineryproductions_2112td"
+    },
+    {
+      "rank": 42,
+      "appId": "com.drycactus.polybridge2"
+    },
+    {
+      "rank": 43,
+      "appId": "joybits.doodlegod"
+    },
+    {
+      "rank": 44,
+      "appId": "com.Level5.LT1REU"
+    },
+    {
+      "rank": 45,
+      "appId": "com.onecwireless.mahjong.full"
+    },
+    {
+      "rank": 46,
+      "appId": "com.playdigious.deadcells.mobile"
+    },
+    {
+      "rank": 47,
+      "appId": "com.codebrewgames.pocketcity2"
+    },
+    {
+      "rank": 48,
+      "appId": "com.khg.doorkickers"
+    },
+    {
+      "rank": 49,
+      "appId": "uk.co.revolution.bs1r.google"
+    },
+    {
+      "rank": 50,
+      "appId": "com.PanikArcade.CloverPit"
+    },
+    {
+      "rank": 51,
+      "appId": "com.FireproofStudios.TheRoom2"
+    },
+    {
+      "rank": 52,
+      "appId": "com.trampolinetales.lbal"
+    },
+    {
+      "rank": 53,
+      "appId": "com.ironhidegames.android.kingdomrush.alliance"
+    },
+    {
+      "rank": 54,
+      "appId": "com.brotato.shooting.survivors.games.paid.android"
+    },
+    {
+      "rank": 55,
+      "appId": "brownmonster.app.game.rushrally3"
+    },
+    {
+      "rank": 56,
+      "appId": "com.gridpop.isleofarrowsandroid"
+    },
+    {
+      "rank": 57,
+      "appId": "com.teazel.crossword.full"
+    },
+    {
+      "rank": 58,
+      "appId": "com.RustyLake.ThePastWithin"
+    },
+    {
+      "rank": 59,
+      "appId": "com.unknownworlds.subnautica"
+    },
+    {
+      "rank": 60,
+      "appId": "com.playdigious.littlenightmare"
+    },
+    {
+      "rank": 61,
+      "appId": "com.VladimirPlyashkun.FootballReferee"
+    },
+    {
+      "rank": 62,
+      "appId": "com.square_enix.android_googleplay.FFVII"
+    },
+    {
+      "rank": 63,
+      "appId": "com.timleg.quizPro"
+    },
+    {
+      "rank": 64,
+      "appId": "com.greenheartgames.gdt"
+    },
+    {
+      "rank": 65,
+      "appId": "com.devolver.reigns"
+    },
+    {
+      "rank": 66,
+      "appId": "com.the10tons.dysmantle"
+    },
+    {
+      "rank": 67,
+      "appId": "com.ustwo.monumentvalley2"
+    },
+    {
+      "rank": 68,
+      "appId": "com.OskarStalberg.Townscaper"
+    },
+    {
+      "rank": 69,
+      "appId": "com.Level5.LT2REU"
+    },
+    {
+      "rank": 70,
+      "appId": "com.pid.caravansandwitch"
+    },
+    {
+      "rank": 71,
+      "appId": "com.FireproofStudios.TheRoom3"
+    },
+    {
+      "rank": 72,
+      "appId": "com.strayfawnstudio.dungeonclawlermobile"
+    },
+    {
+      "rank": 73,
+      "appId": "com.PlausibleConcept.BadNorthFull"
+    },
+    {
+      "rank": 74,
+      "appId": "com.DMAP.Ting_WD"
+    },
+    {
+      "rank": 75,
+      "appId": "com.adriaandejongh.hiddenfolks"
+    },
+    {
+      "rank": 76,
+      "appId": "com.doghowlgames.EasyDeliveryCo"
+    },
+    {
+      "rank": 77,
+      "appId": "com.rawfury.kingdom2crowns"
+    },
+    {
+      "rank": 78,
+      "appId": "com.and.games505.humanfallflat"
+    },
+    {
+      "rank": 79,
+      "appId": "com.headupgames.bridgeconstructorportal"
+    },
+    {
+      "rank": 80,
+      "appId": "net.kairosoft.android.gamedev3en"
+    },
+    {
+      "rank": 81,
+      "appId": "com.noodlecake.gettingoverit"
+    },
+    {
+      "rank": 82,
+      "appId": "com.playdead.limbo.full"
+    },
+    {
+      "rank": 83,
+      "appId": "com.snapbreak.discounty"
+    }
+  ]
+}

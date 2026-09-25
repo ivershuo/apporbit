@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-gb-apps-top-paid-all-apps-20260925T084723848Z",
+  "store": "google-play",
+  "market": "GB",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-09-25T08:47:23.848Z",
+  "observationDate": "2026-09-25",
+  "marketTimeZone": "Europe/London",
+  "marketObservationDate": "2026-09-25",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 23,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=GB",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "5494a8a7baa4349532ac8b12896c4cda223a87629d8bb41994069a150e67b22b"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:23/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "uk.co.focusmm.DTSCombo"
+    },
+    {
+      "rank": 2,
+      "appId": "uk.co.tso.ctt"
+    },
+    {
+      "rank": 3,
+      "appId": "uk.co.citb.imagitech.gt100.android.vy19.plus"
+    },
+    {
+      "rank": 4,
+      "appId": "com.propagator.squeezy"
+    },
+    {
+      "rank": 5,
+      "appId": "uk.co.citb.imagitech.gt200.android.vy23.plus"
+    },
+    {
+      "rank": 6,
+      "appId": "uk.co.tso.lituk"
+    },
+    {
+      "rank": 7,
+      "appId": "com.edshed.spellingshed"
+    },
+    {
+      "rank": 8,
+      "appId": "com.veamstudios.siteauditpro"
+    },
+    {
+      "rank": 9,
+      "appId": "com.goblintools"
+    },
+    {
+      "rank": 10,
+      "appId": "uk.co.tso.highwaycode"
+    },
+    {
+      "rank": 11,
+      "appId": "com.watchfacestudio.md326"
+    },
+    {
+      "rank": 12,
+      "appId": "com.SpottedGhosts.SpiritTalker"
+    },
+    {
+      "rank": 13,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 14,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 15,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 16,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 17,
+      "appId": "com.facer.pipboy_se"
+    },
+    {
+      "rank": 18,
+      "appId": "com.wildinart.stlukesguidinglights"
+    },
+    {
+      "rank": 19,
+      "appId": "com.watchfacestudio.per32"
+    },
+    {
+      "rank": 20,
+      "appId": "com.watchfacestudio.md307digital"
+    },
+    {
+      "rank": 21,
+      "appId": "ae.A.A10"
+    },
+    {
+      "rank": 22,
+      "appId": "events.vikin.shambala2026"
+    },
+    {
+      "rank": 23,
+      "appId": "uk.co.whitbyfolk.whitby_app"
+    }
+  ]
+}
