@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-in-games-top-paid-all-games-20260926T005308218Z",
+  "store": "google-play",
+  "market": "IN",
+  "scope": "games",
+  "chart": "top-paid",
+  "normalizedCategory": "all-games",
+  "storeCategory": "GAME",
+  "capturedAt": "2026-09-26T00:53:08.218Z",
+  "observationDate": "2026-09-26",
+  "marketTimeZone": "Asia/Kolkata",
+  "marketObservationDate": "2026-09-26",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 54,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/games?hl=en&gl=IN",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "d82f3642e40ba4671fc2d4249a7160ed3130cefcc25eb3aa051c55a1d7c2b976"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:54/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.mojang.minecraftpe"
+    },
+    {
+      "rank": 2,
+      "appId": "com.rockstargames.gtasa"
+    },
+    {
+      "rank": 3,
+      "appId": "it.rortos.realflightsimulator"
+    },
+    {
+      "rank": 4,
+      "appId": "com.squareenixmontreal.hitmansniperandroid"
+    },
+    {
+      "rank": 5,
+      "appId": "com.avecreation.drivingzonegermanypro"
+    },
+    {
+      "rank": 6,
+      "appId": "com.notdoppler.earntodie"
+    },
+    {
+      "rank": 7,
+      "appId": "nz.co.codepoint.minimetro"
+    },
+    {
+      "rank": 8,
+      "appId": "com.playdigious.littlenightmare"
+    },
+    {
+      "rank": 9,
+      "appId": "com.agaming.thesun.origin"
+    },
+    {
+      "rank": 10,
+      "appId": "com.rockstargames.gtavc"
+    },
+    {
+      "rank": 11,
+      "appId": "com.agaming.zona.shadow.of.limansk.redux"
+    },
+    {
+      "rank": 12,
+      "appId": "mobi.bestfreegames.bike.mayhem.extreme.mountain.racing"
+    },
+    {
+      "rank": 13,
+      "appId": "com.feralinteractive.hitmanabsolution_android"
+    },
+    {
+      "rank": 14,
+      "appId": "com.TwoStarGames.ChooChooCharles"
+    },
+    {
+      "rank": 15,
+      "appId": "com.rupee5.app"
+    },
+    {
+      "rank": 16,
+      "appId": "com.pockettrend.neomonsters"
+    },
+    {
+      "rank": 17,
+      "appId": "com.playdigious.deadcells.mobile"
+    },
+    {
+      "rank": 18,
+      "appId": "com.zigzagame.evertale"
+    },
+    {
+      "rank": 19,
+      "appId": "com.feralinteractive.tombraider_android"
+    },
+    {
+      "rank": 20,
+      "appId": "com.playdigious.sor4"
+    },
+    {
+      "rank": 21,
+      "appId": "com.Zonmob.Stickman.FightingGames.ShadowOfDeath"
+    },
+    {
+      "rank": 22,
+      "appId": "com.rockstar.maxpayne"
+    },
+    {
+      "rank": 23,
+      "appId": "com.oxiwyle.modernage3premium"
+    },
+    {
+      "rank": 24,
+      "appId": "com.rubberbandgames.wobblylifev2"
+    },
+    {
+      "rank": 25,
+      "appId": "com.feralinteractive.gridas"
+    },
+    {
+      "rank": 26,
+      "appId": "com.QuanticBit.NeonValley"
+    },
+    {
+      "rank": 27,
+      "appId": "com.BMTechnology.EuropeUSTruckSimulator"
+    },
+    {
+      "rank": 28,
+      "appId": "com.nekki.vector.paid"
+    },
+    {
+      "rank": 29,
+      "appId": "com.agaming.reporter"
+    },
+    {
+      "rank": 30,
+      "appId": "com.giantssoftware.fs20.google"
+    },
+    {
+      "rank": 31,
+      "appId": "com.FireproofStudios.TheRoom"
+    },
+    {
+      "rank": 32,
+      "appId": "com.chucklefish.stardewvalley"
+    },
+    {
+      "rank": 33,
+      "appId": "com.strayfawnstudio.gambonanza"
+    },
+    {
+      "rank": 34,
+      "appId": "com.playdigious.potionpermit"
+    },
+    {
+      "rank": 35,
+      "appId": "com.playstack.balatro.android"
+    },
+    {
+      "rank": 36,
+      "appId": "com.playdigious.pol"
+    },
+    {
+      "rank": 37,
+      "appId": "com.imcrazy.ds2"
+    },
+    {
+      "rank": 38,
+      "appId": "com.playdead.limbo.full"
+    },
+    {
+      "rank": 39,
+      "appId": "com.xd.tabs.google"
+    },
+    {
+      "rank": 40,
+      "appId": "com.and.games505.TerrariaPaid"
+    },
+    {
+      "rank": 41,
+      "appId": "com.nekki.shadowfight2.paid"
+    },
+    {
+      "rank": 42,
+      "appId": "com.unknownworlds.subnautica"
+    },
+    {
+      "rank": 43,
+      "appId": "com.and.games505.humanfallflat"
+    },
+    {
+      "rank": 44,
+      "appId": "com.pgstudio.survival.evo.pro"
+    },
+    {
+      "rank": 45,
+      "appId": "com.pid.caravansandwitch"
+    },
+    {
+      "rank": 46,
+      "appId": "com.coffeestain.goatsimulator3"
+    },
+    {
+      "rank": 47,
+      "appId": "com.fundaygames.scritchyscratchy"
+    },
+    {
+      "rank": 48,
+      "appId": "com.noodlecake.gettingoverit"
+    },
+    {
+      "rank": 49,
+      "appId": "com.doghowlgames.EasyDeliveryCo"
+    },
+    {
+      "rank": 50,
+      "appId": "com.drycactus.polybridge2"
+    },
+    {
+      "rank": 51,
+      "appId": "com.ekindiegames.ElectricTrainsPro"
+    },
+    {
+      "rank": 52,
+      "appId": "com.leosfortune"
+    },
+    {
+      "rank": 53,
+      "appId": "brownmonster.app.game.rushrally3"
+    },
+    {
+      "rank": 54,
+      "appId": "es.brokenrul.oldmansjourney"
+    }
+  ]
+}

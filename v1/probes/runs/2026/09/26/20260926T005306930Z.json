@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "runId": "20260926T005306930Z",
+  "collectorVersion": "0.1.0",
+  "startedAt": "2026-09-26T00:53:06.930Z",
+  "finishedAt": "2026-09-26T00:55:41.249Z",
+  "targets": [
+    {
+      "targetKey": "apple:IN:apps:top-free:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T00:53:06.932Z",
+      "finishedAt": "2026-09-26T00:53:10.340Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/apple/IN/apps/top-free/2026/09/26/20260926T005307867Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "apple:IN:apps:top-paid:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T00:53:06.932Z",
+      "finishedAt": "2026-09-26T00:53:10.171Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/apple/IN/apps/top-paid/2026/09/26/20260926T005309000Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:IN:apps:top-free:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T00:53:06.932Z",
+      "finishedAt": "2026-09-26T00:55:33.234Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/apps/top-free/2026/09/26/20260926T005307428Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:IN:apps:top-paid:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-26T00:53:06.932Z",
+      "finishedAt": "2026-09-26T00:54:11.203Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/apps/top-paid/2026/09/26/20260926T005307290Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:35/100"
+      ]
+    },
+    {
+      "targetKey": "google-play:IN:apps:top-grossing:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T00:53:06.932Z",
+      "finishedAt": "2026-09-26T00:55:39.264Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/apps/top-grossing/2026/09/26/20260926T005307446Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:IN:games:top-free:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-free",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T00:53:06.932Z",
+      "finishedAt": "2026-09-26T00:55:38.286Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/games/top-free/2026/09/26/20260926T005308293Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:IN:games:top-paid:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-paid",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-26T00:53:06.932Z",
+      "finishedAt": "2026-09-26T00:54:49.221Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/games/top-paid/2026/09/26/20260926T005308218Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:54/100"
+      ]
+    },
+    {
+      "targetKey": "google-play:IN:games:top-grossing:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T00:53:06.932Z",
+      "finishedAt": "2026-09-26T00:55:41.249Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/IN/games/top-grossing/2026/09/26/20260926T005308312Z.json",
+      "error": null,
+      "flags": []
+    }
+  ]
+}
