@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "runId": "20260926T121507870Z",
+  "collectorVersion": "0.1.0",
+  "startedAt": "2026-09-26T12:15:07.870Z",
+  "finishedAt": "2026-09-26T12:17:49.849Z",
+  "targets": [
+    {
+      "targetKey": "apple:BR:apps:top-free:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "BR",
+        "marketTimeZone": "America/Sao_Paulo",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T12:15:07.871Z",
+      "finishedAt": "2026-09-26T12:15:11.724Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/apple/BR/apps/top-free/2026/09/26/20260926T121510485Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "apple:BR:apps:top-paid:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "BR",
+        "marketTimeZone": "America/Sao_Paulo",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T12:15:07.871Z",
+      "finishedAt": "2026-09-26T12:15:11.714Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/apple/BR/apps/top-paid/2026/09/26/20260926T121508762Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:BR:apps:top-free:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "BR",
+        "marketTimeZone": "America/Sao_Paulo",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T12:15:07.871Z",
+      "finishedAt": "2026-09-26T12:17:35.390Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/BR/apps/top-free/2026/09/26/20260926T121508288Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:BR:apps:top-paid:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "BR",
+        "marketTimeZone": "America/Sao_Paulo",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-26T12:15:07.871Z",
+      "finishedAt": "2026-09-26T12:15:52.687Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/BR/apps/top-paid/2026/09/26/20260926T121508184Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:25/100",
+        "metadata_integrity:optional-section-parse"
+      ]
+    },
+    {
+      "targetKey": "google-play:BR:apps:top-grossing:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "BR",
+        "marketTimeZone": "America/Sao_Paulo",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T12:15:07.872Z",
+      "finishedAt": "2026-09-26T12:17:43.766Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/BR/apps/top-grossing/2026/09/26/20260926T121508360Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:BR:games:top-free:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "BR",
+        "marketTimeZone": "America/Sao_Paulo",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-free",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T12:15:07.872Z",
+      "finishedAt": "2026-09-26T12:17:46.782Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/BR/games/top-free/2026/09/26/20260926T121509252Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:BR:games:top-paid:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "BR",
+        "marketTimeZone": "America/Sao_Paulo",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-paid",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T12:15:07.872Z",
+      "finishedAt": "2026-09-26T12:17:49.849Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/BR/games/top-paid/2026/09/26/20260926T121509355Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:BR:games:top-grossing:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "BR",
+        "marketTimeZone": "America/Sao_Paulo",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "probe"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-26T12:15:07.872Z",
+      "finishedAt": "2026-09-26T12:17:47.766Z",
+      "attempts": 1,
+      "snapshotPath": "probes/snapshots/google-play/BR/games/top-grossing/2026/09/26/20260926T121509271Z.json",
+      "error": null,
+      "flags": []
+    }
+  ]
+}
