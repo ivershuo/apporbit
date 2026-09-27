@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-jp-games-top-paid-all-games-20260927T221213239Z",
+  "store": "google-play",
+  "market": "JP",
+  "scope": "games",
+  "chart": "top-paid",
+  "normalizedCategory": "all-games",
+  "storeCategory": "GAME",
+  "capturedAt": "2026-09-27T22:12:13.239Z",
+  "observationDate": "2026-09-27",
+  "marketTimeZone": "Asia/Tokyo",
+  "marketObservationDate": "2026-09-28",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 85,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/games?hl=en&gl=JP",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.2.0",
+    "payloadSha256": "0fac097a01d856d6430d55608ce027e9443e9eb08efaad3e5bef210f56801bb6"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:85/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.square_enix.android_googleplay.Tornekoj"
+    },
+    {
+      "rank": 2,
+      "appId": "jp.co.level5.yws1"
+    },
+    {
+      "rank": 3,
+      "appId": "com.mojang.minecraftpe"
+    },
+    {
+      "rank": 4,
+      "appId": "com.square_enix.android_googleplay.dq5j"
+    },
+    {
+      "rank": 5,
+      "appId": "jp.co.sundenshi.toaru2s"
+    },
+    {
+      "rank": 6,
+      "appId": "com.mintrocket.drmobile"
+    },
+    {
+      "rank": 7,
+      "appId": "com.square_enix.android_googleplay.DQM2SPjp"
+    },
+    {
+      "rank": 8,
+      "appId": "com.ironhidegames.android.kingdomrush6.genesis"
+    },
+    {
+      "rank": 9,
+      "appId": "com.prpr.musedash"
+    },
+    {
+      "rank": 10,
+      "appId": "com.aladdinx.suikagame"
+    },
+    {
+      "rank": 11,
+      "appId": "jp.sammynet.googleplay.cp0011"
+    },
+    {
+      "rank": 12,
+      "appId": "com.GameCoaster.DungeonSquad"
+    },
+    {
+      "rank": 13,
+      "appId": "com.square_enix.android_googleplay.DQMTerryjp"
+    },
+    {
+      "rank": 14,
+      "appId": "net.commseed.psvvv2"
+    },
+    {
+      "rank": 15,
+      "appId": "com.SpikeChunsoft.ShirenTheWanderer6Plus.ww"
+    },
+    {
+      "rank": 16,
+      "appId": "com.ssicosm.dungeon_princess"
+    },
+    {
+      "rank": 17,
+      "appId": "com.humble.SlayTheSpire"
+    },
+    {
+      "rank": 18,
+      "appId": "com.batomon.showdown"
+    },
+    {
+      "rank": 19,
+      "appId": "net.commseed.ps_ssg5"
+    },
+    {
+      "rank": 20,
+      "appId": "com.square_enix.android_googleplay.chrono"
+    },
+    {
+      "rank": 21,
+      "appId": "com.square_enix.android_googleplay.dq4j"
+    },
+    {
+      "rank": 22,
+      "appId": "com.square_enix.android_googleplay.DQMTerryRjp"
+    },
+    {
+      "rank": 23,
+      "appId": "com.Level5.LT1RJP"
+    },
+    {
+      "rank": 24,
+      "appId": "com.chucklefish.stardewvalley"
+    },
+    {
+      "rank": 25,
+      "appId": "com.GameCoaster.DungeonWithin"
+    },
+    {
+      "rank": 26,
+      "appId": "com.Level5.LT2RJP"
+    },
+    {
+      "rank": 27,
+      "appId": "jp.co.level5.fli"
+    },
+    {
+      "rank": 28,
+      "appId": "com.mintmouse.rusty_axe"
+    },
+    {
+      "rank": 29,
+      "appId": "kemco.rideonjapan.mareniabarpremium"
+    },
+    {
+      "rank": 30,
+      "appId": "com.square_enix.android_googleplay.dq6"
+    },
+    {
+      "rank": 31,
+      "appId": "kemco.execreate.alphadiagenesis"
+    },
+    {
+      "rank": 32,
+      "appId": "com.universal777.magireco"
+    },
+    {
+      "rank": 33,
+      "appId": "com.square_enix.android_googleplay.FFPR6"
+    },
+    {
+      "rank": 34,
+      "appId": "com.playstack.balatro.android"
+    },
+    {
+      "rank": 35,
+      "appId": "com.square_enix.android_googleplay.DragonQuestMonsters3jp"
+    },
+    {
+      "rank": 36,
+      "appId": "nz.co.codepoint.minimetro"
+    },
+    {
+      "rank": 37,
+      "appId": "kanatamikado.ae.ThDungeonR"
+    },
+    {
+      "rank": 38,
+      "appId": "com.paondp.simjsy"
+    },
+    {
+      "rank": 39,
+      "appId": "com.square_enix.android_googleplay.romancingsaga2_jp"
+    },
+    {
+      "rank": 40,
+      "appId": "com.playwithfurcifer.bpb.android"
+    },
+    {
+      "rank": 41,
+      "appId": "com.fizzd.connectedworlds"
+    },
+    {
+      "rank": 42,
+      "appId": "com.square_enix.android_googleplay.SaGaFrontier2Remasteredjp"
+    },
+    {
+      "rank": 43,
+      "appId": "net.commseed.pssinoni3"
+    },
+    {
+      "rank": 44,
+      "appId": "jp.co.sundenshi.cafeterra1p"
+    },
+    {
+      "rank": 45,
+      "appId": "com.square_enix.FFIXjp.android_googleplay"
+    },
+    {
+      "rank": 46,
+      "appId": "jp.dorasu.apps.revuestarlight"
+    },
+    {
+      "rank": 47,
+      "appId": "com.square_enix.android_googleplay.RomancingSaGa3ww"
+    },
+    {
+      "rank": 48,
+      "appId": "com.Level5.LT3RJP"
+    },
+    {
+      "rank": 49,
+      "appId": "jp.co.spikechunsoft.android.terrariajp"
+    },
+    {
+      "rank": 50,
+      "appId": "com.nintendo.zasa"
+    },
+    {
+      "rank": 51,
+      "appId": "com.slggames.hgsg.jp"
+    },
+    {
+      "rank": 52,
+      "appId": "com.shueisha_games.umdc"
+    },
+    {
+      "rank": 53,
+      "appId": "com.square_enix.android_googleplay.FFPR5"
+    },
+    {
+      "rank": 54,
+      "appId": "com.square_enix.android_googleplay.FFVIII"
+    },
+    {
+      "rank": 55,
+      "appId": "com.strayfawnstudio.gambonanza"
+    },
+    {
+      "rank": 56,
+      "appId": "com.square_enix.android_googleplay.FFVII"
+    },
+    {
+      "rank": 57,
+      "appId": "com.PLAYISM.TheExit8"
+    },
+    {
+      "rank": 58,
+      "appId": "com.PanikArcade.CloverPit"
+    },
+    {
+      "rank": 59,
+      "appId": "jp.kiteretsu.zookeeper_dx"
+    },
+    {
+      "rank": 60,
+      "appId": "com.fundaygames.scritchyscratchy"
+    },
+    {
+      "rank": 61,
+      "appId": "com.square_enix.android_googleplay.RomancingSaGaMinstrelSongjp"
+    },
+    {
+      "rank": 62,
+      "appId": "com.square_enix.android_googleplay.ValkyrieProfilej"
+    },
+    {
+      "rank": 63,
+      "appId": "com.square_enix.android_googleplay.SaGaEmeraldBeyondj"
+    },
+    {
+      "rank": 64,
+      "appId": "com.square_enix.android_googleplay.paranoma"
+    },
+    {
+      "rank": 65,
+      "appId": "com.square_enix.android_googleplay.SagaCollection_Sjp"
+    },
+    {
+      "rank": 66,
+      "appId": "net.kairosoft.android.gamedev3"
+    },
+    {
+      "rank": 67,
+      "appId": "com.nino.tulpa.google"
+    },
+    {
+      "rank": 68,
+      "appId": "com.square_enix.android_googleplay.dq10offline"
+    },
+    {
+      "rank": 69,
+      "appId": "com.square_enix.android_googleplay.SaGaFrontierRemastered_jp"
+    },
+    {
+      "rank": 70,
+      "appId": "net.kairosoft.android.baseball_ja"
+    },
+    {
+      "rank": 71,
+      "appId": "com.square_enix.android_googleplay.FFIII_GP"
+    },
+    {
+      "rank": 72,
+      "appId": "net.kairosoft.android.bouken2"
+    },
+    {
+      "rank": 73,
+      "appId": "jp.co.netfun.chibariyo2plus.opt"
+    },
+    {
+      "rank": 74,
+      "appId": "com.playdigious.potionpermit"
+    },
+    {
+      "rank": 75,
+      "appId": "com.xd.tabs.google"
+    },
+    {
+      "rank": 76,
+      "appId": "net.kairosoft.android.horse_ja"
+    },
+    {
+      "rank": 77,
+      "appId": "com.noodlecake.gettingoverit"
+    },
+    {
+      "rank": 78,
+      "appId": "jp.co.koeitecmo.nobu_bf_gp"
+    },
+    {
+      "rank": 79,
+      "appId": "net.kairosoft.android.sushi_ja"
+    },
+    {
+      "rank": 80,
+      "appId": "net.kairosoft.android.dorayaki"
+    },
+    {
+      "rank": 81,
+      "appId": "net.kairosoft.android.ninja_ja"
+    },
+    {
+      "rank": 82,
+      "appId": "com.playdigious.deadcells.mobile"
+    },
+    {
+      "rank": 83,
+      "appId": "com.playdigious.littlenightmare"
+    },
+    {
+      "rank": 84,
+      "appId": "com.playdead.limbo.full"
+    },
+    {
+      "rank": 85,
+      "appId": "com.pid.caravansandwitch"
+    }
+  ]
+}
