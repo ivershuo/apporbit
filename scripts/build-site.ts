@@ -3,7 +3,8 @@ import path from "node:path";
 
 import { SnapshotSchema } from "../src/domain.js";
 import { loadCapabilities, loadCatalog, loadRuns } from "./site-data.js";
-import { buildCatalogStats, compactMetadata, compactRuns } from "./site-output.js";
+import { buildCatalogStats, compactMetadata, compactRuns, publishedDataPage } from "./site-output.js";
+import { isPublished } from "../src/publication.js";
 
 const projectRoot = process.cwd();
 const siteRoot = path.join(projectRoot, "site");
@@ -92,8 +93,12 @@ async function build(): Promise<void> {
   const [runs, catalog, capabilities] = await Promise.all([
     loadRuns(dataRoot),
     loadCatalog(dataRoot),
-    loadCapabilities(projectRoot)
+    loadCapabilities(projectRoot, dataRoot)
   ]);
+  if (await isPublished(dataRoot)) {
+    const dataPage = path.join(outputRoot, "data.html");
+    await writeFile(dataPage, publishedDataPage(await readFile(dataPage, "utf8")));
+  }
   const snapshotPaths = [
     ...new Set(
       runs.flatMap((run) =>

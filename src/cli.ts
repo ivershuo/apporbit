@@ -17,6 +17,7 @@ import { runCollection } from "./pipeline.js";
 import { evaluateRunHealth, type RunHealth } from "./run-health.js";
 import { schemaDocuments } from "./schema-documents.js";
 import { DataStore } from "./storage.js";
+import { isPublished, publicationTargets } from "./publication.js";
 
 type Arguments = Record<string, string | boolean>;
 
@@ -123,10 +124,19 @@ async function collect(cwd: string, args: Arguments): Promise<void> {
   );
   const outputRoot = path.resolve(cwd, stringArgument(args, "output") ?? ".local-data/v1");
   const minimumUsableRatio = ratioArgument(args, "minimum-usable-ratio");
-  const targets = filterTargets(await loadTargets(configPath), args);
+  const published = await isPublished(outputRoot);
+  if (published && stringArgument(args, "publication-mode") === "probe") {
+    throw new Error("This dataset has been published; probe writes are disabled. Use a separate output directory for probes.");
+  }
+  const targets = await publicationTargets(outputRoot, filterTargets(await loadTargets(configPath), args));
   if (targets.length === 0) throw new Error("target filters matched no configured targets");
 
   const capabilities = CapabilitiesManifestSchema.parse(await readJson(capabilitiesPath));
+  if (published) {
+    for (const capability of capabilities.capabilities) {
+      if (capability.status === "probe") capability.status = "supported";
+    }
+  }
   const store = new DataStore(outputRoot);
   await store.writeMutableJson("capabilities.json", capabilities);
   for (const [fileName, schema] of Object.entries(schemaDocuments)) {

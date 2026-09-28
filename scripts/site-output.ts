@@ -1,6 +1,12 @@
 import type { AppMetadataObservation } from "../src/domain.js";
 import type { RunWithPath } from "./site-data.js";
 
+export function publishedDataPage(html: string): string {
+  return html.replaceAll("/tree/data/v1/probes/", "/tree/data/v1/")
+    .replace("Versioned root for all published and probe data", "Versioned root for published data")
+    .replace("Supported and probe chart combinations", "Supported chart combinations");
+}
+
 export function compactRuns(runs: RunWithPath[]) {
   return runs.map((run) => ({
     runId: run.runId,

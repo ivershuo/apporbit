@@ -68,6 +68,7 @@ jobs:
       - name: Check out source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: main
           fetch-depth: 1
       - name: Install pnpm
         uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
@@ -97,7 +98,7 @@ jobs:
           fi
           echo "directory=$data_dir" >> "$GITHUB_OUTPUT"
 
-      - name: Run probe collection
+      - name: Run collection in the dataset's publication mode
         id: collect
         continue-on-error: true
         shell: bash
@@ -111,7 +112,7 @@ jobs:
           APPORBIT_CONTACT_URL: ${{ github.server_url }}/${{ github.repository }}
         run: |
           set -euo pipefail
-          args=(--output "$DATA_DIR/v1" --publication-mode probe)
+          args=(--output "$DATA_DIR/v1")
           [[ -z "$INPUT_STORE" || "$INPUT_STORE" == "all" ]] || args+=(--store "$INPUT_STORE")
           [[ -z "$INPUT_MARKET" ]] || args+=(--market "$INPUT_MARKET")
           [[ -z "$INPUT_SCOPE" || "$INPUT_SCOPE" == "all" ]] || args+=(--scope "$INPUT_SCOPE")

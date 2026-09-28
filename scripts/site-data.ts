@@ -1,5 +1,6 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
+import { isPublished } from "../src/publication.js";
 
 import {
   AppMetadataObservationSchema,
@@ -78,7 +79,13 @@ export async function loadCatalog(
   return catalog;
 }
 
-export async function loadCapabilities(projectRoot: string): Promise<unknown> {
+export async function loadCapabilities(projectRoot: string, dataRoot?: string): Promise<unknown> {
   const file = path.join(projectRoot, "config/capabilities.json");
-  return CapabilitiesManifestSchema.parse(JSON.parse(await readFile(file, "utf8")));
+  const capabilities = CapabilitiesManifestSchema.parse(JSON.parse(await readFile(file, "utf8")));
+  if (dataRoot && await isPublished(dataRoot)) {
+    for (const capability of capabilities.capabilities) {
+      if (capability.status === "probe") capability.status = "supported";
+    }
+  }
+  return capabilities;
 }

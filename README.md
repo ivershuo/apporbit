@@ -37,6 +37,41 @@ non-valid target remains visible in the run manifest and GitHub Step Summary. Us
 `--fail-on-any-error` (or `pnpm collect:full:strict`) when strict all-target success is
 required instead.
 
+## Automatic promotion to published data
+
+The `Migrate probes to publish` workflow runs automatically when its migration
+implementation is merged into `main`. It also supports manual reruns for recovery.
+There is no need to pause schedules, edit configuration, move files, or update pointers.
+
+The migration and all collection workflows share the same concurrency group. In an
+isolated directory, the migration validates the complete `data` branch, promotes all
+probe snapshots, quarantine files, run manifests and metadata events, reconstructs
+the metadata deduplication state and valid-only latest pointers, and builds the site.
+Snapshot and metadata bytes, IDs, timestamps, errors, and quality statuses are retained.
+Promoted run manifests update only their target publication modes and snapshot paths.
+Conflicts, malformed records, missing references, source changes and build errors stop
+publication. Unknown probe files and symlinks also stop migration rather than being lost.
+
+Only after verification does one atomic Git push update `data` and create the backup
+branch `data-backup/probe-to-publish-v1` at the original commit. A concurrent write or
+backup conflict rejects the entire push. The migration report and source/output file
+checksums are stored at `v1/migrations/probe-to-publish-v1.json`.
+
+This marker is the publication switch: collectors automatically use `publish`,
+verified capability entries become `supported`, and website data links point at the
+published paths. The checked-in probe configuration remains the baseline for new,
+unmigrated data directories. Explicit probe writes to the published directory are
+rejected before modifying it; use a separate directory for future experiments.
+Existing schedules, workflow names, quality gates, and page behavior otherwise remain
+unchanged. Successful migration triggers the existing Pages deployment workflow.
+
+Rerunning migration verifies the published history and builds the site without another
+data commit or backup. A Pages deployment failure does not undo or repeat the migration;
+the next collection completion or a migration rerun triggers deployment again. If
+rollback is required, restore the **entire** pre-migration tree from the backup in a
+new `data` commit; removing only the marker would mix publication modes. The workflow
+does not force-push or rewrite data history.
+
 ## Local website
 
 After collecting data, start the read-only local server:

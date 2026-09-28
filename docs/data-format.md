@@ -8,6 +8,16 @@ Published snapshots and run manifests are immutable. Writing different bytes to 
 
 Probe data lives below `probes/`. It is evidence used to validate coverage and reliability, not a supported public dataset, and cannot move a published latest pointer.
 
+The one-time `probe-to-publish-v1` migration promotes validated probe history into
+the published namespace. Snapshot and metadata event contents are unchanged; new
+run manifest copies update their publication mode and snapshot references. The
+original dataset remains in Git history and on the migration backup branch. The
+checksum report at `migrations/probe-to-publish-v1.json` also enables published
+collection and supported capability labels. Historical quality statuses and
+`previousSnapshotId` fields are retained; migration does not claim that historical
+probe runs performed cross-run validation. Latest pointers are reconstructed only
+from valid target outcomes, never from quarantined files or partial outcomes.
+
 ## Key paths
 
 ```text

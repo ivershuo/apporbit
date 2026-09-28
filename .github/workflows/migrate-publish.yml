@@ -1,0 +1,78 @@
+name: Migrate probes to publish
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/migrate-publish.yml"
+      - "src/probe-migration.ts"
+      - "scripts/migrate-probes.ts"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Exactly the same lock as every scheduled/manual collection writer.
+concurrency:
+  group: apporbit-data-collection
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out current source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Install pnpm
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+        with:
+          version: 10.21.0
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "22.x"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - name: Prepare and verify complete migration in isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          data_dir="$RUNNER_TEMP/apporbit-migration-data"
+          staged_dir="$RUNNER_TEMP/apporbit-migration-v1"
+          git fetch origin refs/heads/data
+          base_commit="$(git rev-parse FETCH_HEAD)"
+          git worktree add --detach "$data_dir" "$base_commit"
+          pnpm data:migrate "$data_dir/v1" "$staged_dir" "$base_commit"
+          APPORBIT_DATA_DIR="$staged_dir" pnpm site:build
+          if [[ -f "$data_dir/v1/migrations/probe-to-publish-v1.json" ]]; then
+            echo "Migration is already complete. Verified dataset and static build; no data changes." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          backup_refs="$(git ls-remote origin refs/heads/data-backup/probe-to-publish-v1)"
+          if [[ -n "$backup_refs" ]]; then
+            echo "Backup exists without a migration marker; refusing to overwrite it."
+            exit 1
+          fi
+          # Source and live branch are untouched until all validation/builds pass.
+          rm -rf "$data_dir/v1"
+          mv "$staged_dir" "$data_dir/v1"
+          git -C "$data_dir" config user.name "apporbit-bot"
+          git -C "$data_dir" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$data_dir" add --all v1
+          git -C "$data_dir" commit -m "data: atomically migrate probe history to publish"
+          # HEAD has exactly the fetched source as its parent. Leases require the
+          # source ref to be unchanged and the backup ref to be absent.
+          # A competing writer or conflicting backup rejects both updates.
+          [[ "$(git -C "$data_dir" rev-parse HEAD^)" == "$base_commit" ]]
+          git -C "$data_dir" push --atomic \
+            --force-with-lease="refs/heads/data:$base_commit" \
+            --force-with-lease=refs/heads/data-backup/probe-to-publish-v1: origin \
+            HEAD:refs/heads/data \
+            "$base_commit":refs/heads/data-backup/probe-to-publish-v1
+          echo "Migration committed atomically with backup data-backup/probe-to-publish-v1. Collection now publishes automatically." >> "$GITHUB_STEP_SUMMARY"

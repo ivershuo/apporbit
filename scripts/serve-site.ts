@@ -1,10 +1,11 @@
 import { createReadStream } from "node:fs";
-import { stat } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import { createServer, type ServerResponse } from "node:http";
 import path from "node:path";
 
 import { loadCapabilities, loadCatalog, loadRuns } from "./site-data.js";
-import { buildCatalogStats, compactMetadata, compactRuns } from "./site-output.js";
+import { buildCatalogStats, compactMetadata, compactRuns, publishedDataPage } from "./site-output.js";
+import { isPublished } from "../src/publication.js";
 
 const projectRoot = process.cwd();
 const siteRoot = path.resolve(projectRoot, "site");
@@ -103,7 +104,7 @@ const server = createServer(async (request, response) => {
     if (url.pathname === "/api/bootstrap.json") {
       const [runs, capabilities] = await Promise.all([
         loadRuns(dataRoot),
-        loadCapabilities(projectRoot)
+        loadCapabilities(projectRoot, dataRoot)
       ]);
       sendJson(response, 200, {
         dataRootLabel: process.env.APPORBIT_DATA_DIR ? "APPORBIT_DATA_DIR" : ".local-data/v1",
@@ -153,6 +154,11 @@ const server = createServer(async (request, response) => {
     const staticFile = staticFiles[url.pathname];
     if (!staticFile) {
       sendJson(response, 404, { error: "not_found" });
+      return;
+    }
+    if (url.pathname === "/data.html" && await isPublished(dataRoot)) {
+      response.writeHead(200, responseHeaders(staticFile.type));
+      response.end(publishedDataPage(await readFile(staticFile.path, "utf8")));
       return;
     }
     await sendFile(response, staticFile.path, staticFile.type);
