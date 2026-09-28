@@ -119,15 +119,35 @@ jobs:
           [[ -z "$INPUT_CHART" || "$INPUT_CHART" == "all" ]] || args+=(--chart "$INPUT_CHART")
           pnpm collect -- "${args[@]}" --minimum-usable-ratio "$INPUT_MINIMUM_USABLE_RATIO"
 
+      - name: Build read-only agent views
+        id: agent_views
+        if: always() && steps.data.outcome == 'success'
+        continue-on-error: true
+        env:
+          APPORBIT_DATA_DIR: ${{ steps.data.outputs.directory }}/v1
+        run: |
+          if [[ -f "$APPORBIT_DATA_DIR/migrations/probe-to-publish-v1.json" ]]; then
+            node --import tsx scripts/build-agent-views.ts
+          else
+            echo "Agent views are available after publication."
+          fi
+
       - name: Commit data transaction
         shell: bash
         env:
           DATA_DIR: ${{ steps.data.outputs.directory }}
+          AGENT_VIEWS_OUTCOME: ${{ steps.agent_views.outcome }}
         run: |
           set -euo pipefail
           git -C "$DATA_DIR" config user.name "apporbit-bot"
           git -C "$DATA_DIR" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git -C "$DATA_DIR" add v1
+          if [[ "$AGENT_VIEWS_OUTCOME" == "success" ]]; then
+            git -C "$DATA_DIR" add v1
+          else
+            git -C "$DATA_DIR" add --all -- v1 \
+              ':(exclude)v1/views/agent-index-v1.json' \
+              ':(exclude)v1/views/agent-catalog-v1/**'
+          fi
           if git -C "$DATA_DIR" diff --cached --quiet; then
             echo "No data changes to commit."
             exit 0
@@ -138,7 +158,7 @@ jobs:
           echo "Data checkout size: ${size_mb} MB (review split at 750 MB)." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Enforce collection quality gate after preserving its manifest
-        if: steps.collect.outcome != 'success'
+        if: steps.collect.outcome != 'success' || steps.agent_views.outcome != 'success'
         run: |
-          echo "The collector crashed or usable target coverage fell below the configured threshold. Any run manifest produced was committed to the data branch." >> "$GITHUB_STEP_SUMMARY"
+          echo "Collection quality or agent-view generation failed. Any run manifest produced was committed to the data branch." >> "$GITHUB_STEP_SUMMARY"
           exit 1

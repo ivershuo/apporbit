@@ -28,6 +28,8 @@ v1/
   runs/YYYY/MM/DD/<run-id>.json
   quarantine/...
   metadata/events/YYYY/MM/DD/<run-id>.ndjson
+  views/agent-index-v1.json
+  views/agent-catalog-v1/<store>/<market>.json
   probes/snapshots/...
   probes/quarantine/...
   probes/runs/YYYY/MM/DD/<run-id>.json
@@ -35,6 +37,8 @@ v1/
   schemas/snapshot-v1.schema.json
   schemas/run-v1.schema.json
 ```
+
+The `views/agent-*` files are replaceable derived views for direct GitHub data-branch access by AI Agents. The index lists compact published run outcomes and snapshot paths. Each market catalog contains the latest full metadata observation per App ID. Both are rebuilt from published run manifests and metadata events by `pnpm agent:views`; they are not independent evidence. Their absence means agent views have not yet been generated for that data commit.
 
 ## Snapshot semantics
 
