@@ -30,6 +30,7 @@ import {
   unique
 } from "./shared.js";
 import { marketsByScale } from "./market-order.js";
+import { chartQueryParams } from "./url-state.js";
 
 const state = {
   dataset: null,
@@ -78,10 +79,8 @@ function readQuery() {
 }
 
 function writeQuery() {
-  const query = new URLSearchParams();
-  for (const [key, value] of Object.entries(state.filters)) {
-    if (value && !(key === "date" && value === "latest")) query.set(key, value);
-  }
+  const query = chartQueryParams(state.filters);
+  if (state.filters.date && state.filters.date !== "latest") query.set("date", state.filters.date);
   history.replaceState(null, "", `${location.pathname}${query.size ? `?${query}` : ""}${location.hash}`);
 }
 

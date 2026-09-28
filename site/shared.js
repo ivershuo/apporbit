@@ -1,3 +1,5 @@
+import { appDetailQueryParams } from "./url-state.js";
+
 const snapshotCache = new Map();
 const marketCatalogCache = new Map();
 const appMetadataCache = new Map();
@@ -290,14 +292,7 @@ export function changePresentation(item, hasBaseline = true) {
 }
 
 export function appDetailUrl(target, appId) {
-  const query = new URLSearchParams({
-    store: target.store,
-    market: target.market,
-    scope: target.scope,
-    chart: target.chart,
-    category: target.normalizedCategory,
-    id: appId
-  });
+  const query = appDetailQueryParams(target, appId);
   return siteUrl(`app.html?${query}`);
 }
 

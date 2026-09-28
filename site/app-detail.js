@@ -27,6 +27,7 @@ import {
   utcDateMinus
 } from "./shared.js";
 import { marketsByScale } from "./market-order.js";
+import { appDetailQueryParams } from "./url-state.js";
 
 const query = new URLSearchParams(location.search);
 const state = {
@@ -35,7 +36,6 @@ const state = {
   market: query.get("market") ?? "US",
   scope: query.get("scope") ?? "apps",
   chart: query.get("chart") ?? "top-free",
-  category: query.get("category") ?? "all-apps",
   range: "90",
   dataset: null,
   histories: new Map(),
@@ -145,8 +145,8 @@ function selectedTarget() {
 }
 
 function writeQuery() {
-  const next = new URLSearchParams({ store: state.store, market: state.market, scope: state.scope, chart: state.chart, category: state.category, id: state.appId });
-  history.replaceState(null, "", `${location.pathname}?${next}`);
+  const next = appDetailQueryParams(state, state.appId);
+  history.replaceState(null, "", `${location.pathname}${next.size ? `?${next}` : ""}${location.hash}`);
 }
 
 function syncFilters() {
@@ -291,7 +291,7 @@ async function render() {
     return;
   }
   if (!selected) {
-    const requestedTarget = { store: state.store, market: state.market, scope: state.scope, chart: state.chart, normalizedCategory: state.category };
+    const requestedTarget = { store: state.store, market: state.market, scope: state.scope, chart: state.chart, normalizedCategory: state.scope === "games" ? "all-games" : "all-apps" };
     const metadata = await loadAppMetadata(state.store, state.market, state.appId);
     renderIdentity(requestedTarget, metadata);
     text(nodes.current_rank, "—");
