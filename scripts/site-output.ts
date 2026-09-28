@@ -3,6 +3,7 @@ import type { RunWithPath } from "./site-data.js";
 
 export function publishedDataPage(html: string): string {
   return html.replaceAll("/tree/data/v1/probes/", "/tree/data/v1/")
+    .replace("/blob/main/config/capabilities.json", "/blob/data/v1/capabilities.json")
     .replace("Versioned root for all published and probe data", "Versioned root for published data")
     .replace("Supported and probe chart combinations", "Supported chart combinations");
 }

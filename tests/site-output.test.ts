@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { AppMetadataObservationSchema } from "../src/domain.js";
-import { buildCatalogStats, compactMetadata, compactRuns } from "../scripts/site-output.js";
+import { buildCatalogStats, compactMetadata, compactRuns, publishedDataPage } from "../scripts/site-output.js";
 
 function record(market: string, overrides: Record<string, unknown> = {}) {
   return AppMetadataObservationSchema.parse({
@@ -24,6 +24,10 @@ function record(market: string, overrides: Record<string, unknown> = {}) {
 }
 
 describe("static site output", () => {
+  it("links published coverage to the data branch manifest", () => {
+    expect(publishedDataPage('href="https://github.com/ivershuo/apporbit/blob/main/config/capabilities.json"'))
+      .toContain('/blob/data/v1/capabilities.json');
+  });
   it("keeps heavy detail fields out of market catalog summaries", () => {
     const summary = compactMetadata(record("US"));
 

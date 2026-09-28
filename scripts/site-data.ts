@@ -32,7 +32,9 @@ async function walkFiles(directory: string, suffix: string): Promise<string[]> {
 }
 
 export async function loadRuns(dataRoot: string): Promise<RunWithPath[]> {
-  const roots = [path.join(dataRoot, "probes/runs"), path.join(dataRoot, "runs")];
+  const roots = await isPublished(dataRoot)
+    ? [path.join(dataRoot, "runs")]
+    : [path.join(dataRoot, "probes/runs"), path.join(dataRoot, "runs")];
   const files = (await Promise.all(roots.map((root) => walkFiles(root, ".json")))).flat();
   const runs: RunWithPath[] = [];
   for (const file of files) {
@@ -52,10 +54,9 @@ export async function loadRuns(dataRoot: string): Promise<RunWithPath[]> {
 export async function loadCatalog(
   dataRoot: string
 ): Promise<Record<string, AppMetadataObservation>> {
-  const roots = [
-    path.join(dataRoot, "probes/metadata/events"),
-    path.join(dataRoot, "metadata/events")
-  ];
+  const roots = await isPublished(dataRoot)
+    ? [path.join(dataRoot, "metadata/events")]
+    : [path.join(dataRoot, "probes/metadata/events"), path.join(dataRoot, "metadata/events")];
   const files = (await Promise.all(roots.map((root) => walkFiles(root, ".ndjson"))))
     .flat()
     .sort();

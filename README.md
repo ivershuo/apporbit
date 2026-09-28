@@ -39,9 +39,10 @@ required instead.
 
 ## Automatic promotion to published data
 
-The `Migrate probes to publish` workflow runs automatically when its migration
-implementation is merged into `main`. It also supports manual reruns for recovery.
-There is no need to pause schedules, edit configuration, move files, or update pointers.
+The probe history was promoted on 2026-09-28 in data commit `fefa501`. The
+`Migrate probes to publish` workflow also supports manual reruns for verification
+and recovery. No schedule pause, configuration edit, manual file move, or pointer
+update was needed.
 
 The migration and all collection workflows share the same concurrency group. In an
 isolated directory, the migration validates the complete `data` branch, promotes all
@@ -59,8 +60,9 @@ checksums are stored at `v1/migrations/probe-to-publish-v1.json`.
 
 This marker is the publication switch: collectors automatically use `publish`,
 verified capability entries become `supported`, and website data links point at the
-published paths. The checked-in probe configuration remains the baseline for new,
-unmigrated data directories. Explicit probe writes to the published directory are
+published paths and data-branch capabilities. The checked-in probe configuration
+remains the baseline for new, unmigrated data directories. Explicit probe writes to
+the published directory are
 rejected before modifying it; use a separate directory for future experiments.
 Existing schedules, workflow names, quality gates, and page behavior otherwise remain
 unchanged. Successful migration triggers the existing Pages deployment workflow.
