@@ -17,7 +17,7 @@
     "schema:generate": "node --import tsx scripts/generate-schemas.ts",
     "schema:check": "node --import tsx src/cli.ts schema-check",
     "site:build": "node --import tsx scripts/build-site.ts",
-    "agent:views": "node --import tsx scripts/build-agent-views.ts",
+    "agent:index": "node --import tsx scripts/build-agent-index.ts",
     "data:migrate": "node --import tsx scripts/migrate-probes.ts",
     "site:dev": "node --import tsx scripts/serve-site.ts",
     "test": "vitest run",
