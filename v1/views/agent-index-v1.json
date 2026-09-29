@@ -1,7 +1,86 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-29T23:04:10.943Z",
+  "generatedAt": "2026-09-29T23:43:11.134Z",
   "runs": [
+    {
+      "runId": "20260929T234308998Z",
+      "startedAt": "2026-09-29T23:43:08.998Z",
+      "finishedAt": "2026-09-29T23:43:11.134Z",
+      "targets": [
+        {
+          "targetKey": "apple:CN:apps:top-free:all-apps",
+          "target": {
+            "store": "apple",
+            "market": "CN",
+            "marketTimeZone": "Asia/Shanghai",
+            "language": "en",
+            "scope": "apps",
+            "chart": "top-free",
+            "normalizedCategory": "all-apps",
+            "storeCategory": null,
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "valid",
+          "finishedAt": "2026-09-29T23:43:11.118Z",
+          "snapshotPath": "snapshots/apple/CN/apps/top-free/2026/09/30/20260929T234310133Z.json"
+        },
+        {
+          "targetKey": "apple:CN:apps:top-paid:all-apps",
+          "target": {
+            "store": "apple",
+            "market": "CN",
+            "marketTimeZone": "Asia/Shanghai",
+            "language": "en",
+            "scope": "apps",
+            "chart": "top-paid",
+            "normalizedCategory": "all-apps",
+            "storeCategory": null,
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "partial",
+          "finishedAt": "2026-09-29T23:43:11.128Z",
+          "snapshotPath": "snapshots/apple/CN/apps/top-paid/2026/09/30/20260929T234310071Z.json"
+        },
+        {
+          "targetKey": "apple:CN:games:top-free:all-games",
+          "target": {
+            "store": "apple",
+            "market": "CN",
+            "marketTimeZone": "Asia/Shanghai",
+            "language": "en",
+            "scope": "games",
+            "chart": "top-free",
+            "normalizedCategory": "all-games",
+            "storeCategory": "6014",
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "partial",
+          "finishedAt": "2026-09-29T23:43:10.953Z",
+          "snapshotPath": "snapshots/apple/CN/games/top-free/2026/09/30/20260929T234309898Z.json"
+        },
+        {
+          "targetKey": "apple:CN:games:top-paid:all-games",
+          "target": {
+            "store": "apple",
+            "market": "CN",
+            "marketTimeZone": "Asia/Shanghai",
+            "language": "en",
+            "scope": "games",
+            "chart": "top-paid",
+            "normalizedCategory": "all-games",
+            "storeCategory": "6014",
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "valid",
+          "finishedAt": "2026-09-29T23:43:11.134Z",
+          "snapshotPath": "snapshots/apple/CN/games/top-paid/2026/09/30/20260929T234309920Z.json"
+        }
+      ]
+    },
     {
       "runId": "20260929T225834784Z",
       "startedAt": "2026-09-29T22:58:34.784Z",
