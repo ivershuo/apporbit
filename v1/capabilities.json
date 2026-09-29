@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-18T00:00:00Z",
+  "updatedAt": "2026-09-29T15:16:19Z",
   "capabilities": [
     {
       "store": "apple",
@@ -52,9 +52,39 @@
       "store": "apple",
       "scope": "games",
       "chart": "top-free",
-      "markets": [],
-      "status": "unsupported",
-      "notes": "Apps/Games separation has not been verified against the Apple RSS endpoint."
+      "markets": [
+        "US",
+        "CN",
+        "JP",
+        "KR",
+        "GB",
+        "DE",
+        "BR",
+        "IN",
+        "ID",
+        "VN"
+      ],
+      "status": "supported",
+      "notes": "Apple iTunes category RSS (Games 6014); Top 100 coverage and long-term reliability require continued verification."
+    },
+    {
+      "store": "apple",
+      "scope": "games",
+      "chart": "top-paid",
+      "markets": [
+        "US",
+        "CN",
+        "JP",
+        "KR",
+        "GB",
+        "DE",
+        "BR",
+        "IN",
+        "ID",
+        "VN"
+      ],
+      "status": "supported",
+      "notes": "Apple iTunes category RSS (Games 6014); some markets may return fewer than 100 entries."
     },
     {
       "store": "google-play",
