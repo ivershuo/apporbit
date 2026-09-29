@@ -31,6 +31,14 @@ describe("GitHub data skill", () => {
     expect(bundledFormat).toBe(repositoryFormat);
   });
 
+  it("ships the repository license with the standalone skill", async () => {
+    const [repositoryLicense, bundledLicense] = await Promise.all([
+      readFile(path.resolve("LICENSE"), "utf8"),
+      readFile(path.resolve("skills/apporbit/LICENSE"), "utf8")
+    ]);
+    expect(bundledLicense).toBe(repositoryLicense);
+  });
+
   it("reads GitHub-style snapshots, enriches from site metadata, and returns specific page links", async () => {
     const root = await mkdtemp(path.join(os.tmpdir(), "apporbit-agent-skill-"));
     roots.push(root);

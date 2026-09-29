@@ -6,6 +6,8 @@ Keep a portable, read-only skill in `skills/apporbit/`. Its helper reads the run
 
 The skill bundles a complete copy of `docs/data-format.md` at `references/data-format.md`. Its instructions require the agent to read that copy before interpreting records. A test keeps the two copies identical at release time, so an installed skill does not depend on the repository checkout or ask the end user to read technical documentation. The reference links to the published schemas when exact field types are needed. If the installed copy disagrees with the actual data, the agent checks the latest official remote format and matching schemas, then uses documented raw records when the helper is incompatible. Unresolved mismatches stop the analysis.
 
+The skill's `metadata.version` is its own release version, independent of the application version and the dataset's `schemaVersion` or `generatedAt`. Update it with each skill release and use the same version in the release tag or any future npm distribution. The skill bundles the repository's MIT notice; published data retains its separate ODbL notice.
+
 ## Why a derived view is needed
 
 `v1/manifests/latest.json` answers only the newest *valid* snapshot per target. Historical comparisons need run manifests. Asking every agent to enumerate the GitHub tree and download each run would be slow and would use GitHub API rate limits. The collection workflow generates one replaceable view in the same `data` commit as the source records:
