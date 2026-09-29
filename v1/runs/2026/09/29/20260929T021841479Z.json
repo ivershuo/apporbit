@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "runId": "20260929T021841479Z",
+  "collectorVersion": "0.1.0",
+  "startedAt": "2026-09-29T02:18:41.479Z",
+  "finishedAt": "2026-09-29T02:21:18.216Z",
+  "targets": [
+    {
+      "targetKey": "apple:IN:apps:top-free:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "publish"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-29T02:18:41.482Z",
+      "finishedAt": "2026-09-29T02:18:52.093Z",
+      "attempts": 1,
+      "snapshotPath": "snapshots/apple/IN/apps/top-free/2026/09/29/20260929T021850913Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "apple:IN:apps:top-paid:all-apps",
+      "target": {
+        "store": "apple",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": null,
+        "expectedCount": 100,
+        "publicationMode": "publish"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-29T02:18:41.482Z",
+      "finishedAt": "2026-09-29T02:18:51.978Z",
+      "attempts": 1,
+      "snapshotPath": "snapshots/apple/IN/apps/top-paid/2026/09/29/20260929T021843265Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:97/100"
+      ]
+    },
+    {
+      "targetKey": "google-play:IN:apps:top-free:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-free",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "publish"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-29T02:18:41.482Z",
+      "finishedAt": "2026-09-29T02:21:13.160Z",
+      "attempts": 1,
+      "snapshotPath": "snapshots/google-play/IN/apps/top-free/2026/09/29/20260929T021841958Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:IN:apps:top-paid:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-paid",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "publish"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-29T02:18:41.482Z",
+      "finishedAt": "2026-09-29T02:19:52.138Z",
+      "attempts": 1,
+      "snapshotPath": "snapshots/google-play/IN/apps/top-paid/2026/09/29/20260929T021841787Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:32/100",
+        "metadata_integrity:optional-section-parse"
+      ]
+    },
+    {
+      "targetKey": "google-play:IN:apps:top-grossing:all-apps",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "apps",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-apps",
+        "storeCategory": "APPLICATION",
+        "expectedCount": 100,
+        "publicationMode": "publish"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-29T02:18:41.482Z",
+      "finishedAt": "2026-09-29T02:21:17.176Z",
+      "attempts": 1,
+      "snapshotPath": "snapshots/google-play/IN/apps/top-grossing/2026/09/29/20260929T021842841Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:IN:games:top-free:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-free",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "publish"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-29T02:18:41.483Z",
+      "finishedAt": "2026-09-29T02:21:16.150Z",
+      "attempts": 1,
+      "snapshotPath": "snapshots/google-play/IN/games/top-free/2026/09/29/20260929T021842869Z.json",
+      "error": null,
+      "flags": []
+    },
+    {
+      "targetKey": "google-play:IN:games:top-paid:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-paid",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "publish"
+      },
+      "status": "partial",
+      "startedAt": "2026-09-29T02:18:41.483Z",
+      "finishedAt": "2026-09-29T02:20:13.138Z",
+      "attempts": 1,
+      "snapshotPath": "snapshots/google-play/IN/games/top-paid/2026/09/29/20260929T021841841Z.json",
+      "error": null,
+      "flags": [
+        "count_below_expected:45/100"
+      ]
+    },
+    {
+      "targetKey": "google-play:IN:games:top-grossing:all-games",
+      "target": {
+        "store": "google-play",
+        "market": "IN",
+        "marketTimeZone": "Asia/Kolkata",
+        "language": "en",
+        "scope": "games",
+        "chart": "top-grossing",
+        "normalizedCategory": "all-games",
+        "storeCategory": "GAME",
+        "expectedCount": 100,
+        "publicationMode": "publish"
+      },
+      "status": "valid",
+      "startedAt": "2026-09-29T02:18:41.483Z",
+      "finishedAt": "2026-09-29T02:21:18.216Z",
+      "attempts": 1,
+      "snapshotPath": "snapshots/google-play/IN/games/top-grossing/2026/09/29/20260929T021842918Z.json",
+      "error": null,
+      "flags": []
+    }
+  ]
+}
