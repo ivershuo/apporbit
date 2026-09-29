@@ -1,7 +1,50 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T23:54:45.545Z",
+  "generatedAt": "2026-09-29T00:21:54.618Z",
   "runs": [
+    {
+      "runId": "20260929T002151491Z",
+      "startedAt": "2026-09-29T00:21:51.491Z",
+      "finishedAt": "2026-09-29T00:21:54.618Z",
+      "targets": [
+        {
+          "targetKey": "apple:CN:apps:top-free:all-apps",
+          "target": {
+            "store": "apple",
+            "market": "CN",
+            "marketTimeZone": "Asia/Shanghai",
+            "language": "en",
+            "scope": "apps",
+            "chart": "top-free",
+            "normalizedCategory": "all-apps",
+            "storeCategory": null,
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "valid",
+          "finishedAt": "2026-09-29T00:21:54.314Z",
+          "snapshotPath": "snapshots/apple/CN/apps/top-free/2026/09/29/20260929T002153249Z.json"
+        },
+        {
+          "targetKey": "apple:CN:apps:top-paid:all-apps",
+          "target": {
+            "store": "apple",
+            "market": "CN",
+            "marketTimeZone": "Asia/Shanghai",
+            "language": "en",
+            "scope": "apps",
+            "chart": "top-paid",
+            "normalizedCategory": "all-apps",
+            "storeCategory": null,
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "partial",
+          "finishedAt": "2026-09-29T00:21:54.618Z",
+          "snapshotPath": "snapshots/apple/CN/apps/top-paid/2026/09/29/20260929T002152594Z.json"
+        }
+      ]
+    },
     {
       "runId": "20260928T234948139Z",
       "startedAt": "2026-09-28T23:49:48.139Z",
