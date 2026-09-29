@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Install the AppOrbit skill to explore historical app rankings with your AI agent."><meta name="color-scheme" content="light">
+    <link rel="icon" type="image/svg+xml" href="/orbit-mark.svg">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; img-src 'self' data: https:; base-uri 'none'; form-action 'none'">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/theme.css"><title>Skill · AppOrbit</title>
+  </head>
+  <body data-page="skill">
+    <header class="site-header"><div class="site-header__inner"><a class="wordmark" href="/" aria-label="AppOrbit home"><img class="wordmark__mark" src="/orbit-mark.svg" width="38" height="38" alt=""><span>AppOrbit</span></a><button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button><nav class="primary-nav" id="primary-nav" aria-label="Primary navigation"><a href="/">Charts</a><a href="/trending.html">Trending</a><a href="/data.html">Data</a><a href="/skill.html" aria-current="page">Skill</a><a href="/about.html">About</a></nav><a class="github-link" href="https://github.com/ivershuo/apporbit" target="_blank" rel="noreferrer" aria-label="Open the AppOrbit open-source repository on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.82a9.6 9.6 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg><span>GitHub</span><span aria-hidden="true">↗</span></a></div></header>
+    <main class="page document-page skill-page">
+      <header class="document-hero"><p class="kicker">FOR AI AGENTS</p><h1>Explore AppOrbit with your agent.</h1><p>Install the AppOrbit skill to ask an AI agent about published App Store and Google Play rankings, changes, app details, and market coverage.</p></header>
+      <section class="document-section skill-install" id="install" aria-labelledby="install-title">
+        <div class="skill-install__heading"><h2 id="install-title">Install the skill</h2><span>Node.js 22.12+ · HTTPS to GitHub</span></div>
+        <p>Run this command in a terminal. Choose your AI agent and installation scope if prompted.</p>
+        <div class="skill-command"><code>npx skills add ivershuo/apporbit --skill apporbit</code><button type="button" data-copy-command aria-live="polite">Copy command</button></div>
+        <p class="skill-install__note">To target one agent, add <code>-a codex</code> as an example and replace <code>codex</code> with its agent ID. Add <code>-g</code> to install globally. See the <a href="https://www.skills.sh/docs/cli" target="_blank" rel="noreferrer">supported agent IDs</a> and <a href="https://www.skills.sh/ivershuo/apporbit/apporbit" target="_blank" rel="noreferrer">AppOrbit skill listing</a>.</p>
+      </section>
+      <div class="skill-steps">
+        <article><h2>Ask about rankings and movement</h2><p>Start a new conversation with your agent and ask a question in natural language. The skill can find observed charts, compare complete snapshots, and link the exact sources.</p><p class="skill-example">“Show the latest observed top 10 free apps in the US App Store, with capture times and source links.”</p><p class="skill-example">“Which apps climbed most in the US Google Play free chart between the last two complete observations?”</p></article>
+        <article><h2>Understand the answer</h2><p>The skill reads ranking records from AppOrbit’s public GitHub data branch and may use website metadata for app names and details. It also reports available market coverage and app matches.</p><p class="skill-example">“Which markets have published ranking history?”</p><p class="skill-example">“Find this app and show its latest observed details.”</p></article>
+      </div>
+      <section class="document-section skill-resources" aria-labelledby="skill-resources-title"><h2 id="skill-resources-title">Sources and documentation</h2><ul><li><a href="https://github.com/ivershuo/apporbit/tree/main/skills/apporbit" target="_blank" rel="noreferrer">Skill source ↗</a></li><li><a href="https://github.com/ivershuo/apporbit/blob/main/docs/data-format.md" target="_blank" rel="noreferrer">Data format ↗</a></li><li><a href="/data.html">Explore the dataset →</a></li></ul></section>
+    </main>
+    <footer class="site-footer"><a class="wordmark wordmark--small" href="/">AppOrbit</a><p>Code under MIT · Database under ODbL 1.0</p><div class="footer-actions"><a href="https://github.com/ivershuo/apporbit" target="_blank" rel="noreferrer">View on GitHub ↗</a><button class="timezone-toggle" id="timezone-toggle" type="button" aria-pressed="false">Times: UTC</button></div></footer>
+    <script type="module" src="/static-page.js"></script>
+  </body>
+</html>

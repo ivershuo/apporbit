@@ -124,7 +124,7 @@ The repository uses `main` for source code and documentation. Dataset files can 
 
 The read-only [AppOrbit skill](./skills/apporbit/SKILL.md) queries the public GitHub `data` branch directly for chart rankings, changes, and coverage. When useful, it reads metadata and provides specific chart or app links from [the website](https://apporbit.ooxxz.com/). Its [design note](./docs/agent-skill-design.md) explains the sources and quality rules. The published run index is refreshed by the collection workflow; for a local published `v1` directory, run `APPORBIT_DATA_DIR=/absolute/path/to/v1 pnpm agent:index`.
 
-Install the skill for Codex with `npx skills add ivershuo/apporbit --skill apporbit -g -a codex`. The same repository source can be installed for other supported agents by changing the `-a` value.
+Install the skill with `npx skills add ivershuo/apporbit --skill apporbit`, then follow the installer to select a supported agent and installation scope when prompted. To install globally for Codex specifically, use `npx skills add ivershuo/apporbit --skill apporbit -g -a codex`.
 
 ## Repository map
 
