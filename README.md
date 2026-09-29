@@ -10,7 +10,7 @@ AppOrbit collects App Store and Google Play ranking observations and presents th
 - Run manifests, validation results, and generated JSON Schemas
 - A local website for exploring charts, app details, trends, and coverage
 
-Apple rankings use the Marketing Tools RSS feed with iTunes Lookup enrichment. Google Play collection is isolated behind a replaceable adapter. Collection runs in two explicit stages: every ranking response is timestamped, validated, and persisted before metadata enrichment starts. Google Play detail requests share a 3 requests/second limiter and are deduplicated by market and App ID within each run. App icons are stored as source URLs; image binaries are not included in the dataset.
+Apple Apps rankings use Marketing Tools RSS v2. Apple Games rankings use the iTunes category RSS feed for Games (`6014`), since the v2 generator does not expose category charts; both use iTunes Lookup enrichment. Games history begins with the first successful collection, with no synthetic backfill. Google Play collection is isolated behind a replaceable adapter. Collection runs in two explicit stages: every ranking response is timestamped, validated, and persisted before metadata enrichment starts. Google Play detail requests share a 3 requests/second limiter and are deduplicated by market and App ID within each run. App icons are stored as source URLs; image binaries are not included in the dataset.
 
 ## Requirements
 

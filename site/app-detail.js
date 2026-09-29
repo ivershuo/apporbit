@@ -316,9 +316,26 @@ async function render() {
   const points = dailyRankPoints(snapshots, state.appId);
   const currentOutcome = outcomeForDate(selected.history, "latest", false);
   if (!currentOutcome) {
-    text(nodes.current_rank, "—");
+    const partialOutcome = outcomeForDate(selected.history);
+    const partial = partialOutcome ? await loadSnapshot(partialOutcome.snapshotPath) : null;
+    const entry = partial?.entries.find((item) => item.appId === state.appId);
+    text(nodes.current_rank, entry ? `#${entry.rank}` : "—");
+    text(nodes.current_rank_note, partial
+      ? `${marketLabel(selected.target.market)} · ${entry ? "Partial chart" : "Not present on partial chart"} (${partial.actualCount}/${partial.expectedCount}) · ${formatTime(partial.capturedAt)}`
+      : `No ${chartLabel(state.chart)} data is available for ${marketLabel(state.market)}.`);
+    text(nodes.highest_rank, "—");
+    text(nodes.top_ten_days, "—");
+    text(nodes.first_seen, partial ? formatDate(partial.capturedAt.slice(0, 10)) : "—");
+    text(nodes.best_observed, "—");
+    text(nodes.best_observed_note, "No complete ranking history");
+    text(nodes.biggest_jump, "—");
+    text(nodes.biggest_jump_note, "No complete ranking history");
     renderRankChart(nodes.app_rank_chart, []);
     renderHistory([]);
+    text(nodes.history_context, `${storeLabel(state.store)} · ${marketLabel(state.market)} · ${chartLabel(state.chart)} · complete charts only`);
+    await renderMarkets(selected.target);
+    if (partial) renderProvenance(partial, null, metadata);
+    else nodes.app_provenance_list.replaceChildren();
     return;
   }
   const previousOutcome = previousValidOutcome(selected.history, currentOutcome);
