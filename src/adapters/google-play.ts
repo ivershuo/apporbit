@@ -17,7 +17,7 @@ import { collectorUserAgent } from "../http.js";
 import { COLLECTOR_VERSION } from "../version.js";
 import type { AdapterObservation, MetadataEnrichment, StoreAdapter } from "./types.js";
 
-const GOOGLE_ADAPTER_VERSION = "@mradex77/google-play-scraper@1.2.0";
+const GOOGLE_ADAPTER_VERSION = "@mradex77/google-play-scraper@1.3.0";
 type GooglePlayClient = Pick<ReturnType<typeof createClient>, "list" | "app">;
 export const GOOGLE_PLAY_REQUESTS_PER_SECOND = 3;
 const DETAIL_CONCURRENCY_PER_TARGET = 5;
