@@ -4,10 +4,11 @@ import { collectorUserAgent } from "../http.js";
 import { COLLECTOR_VERSION } from "../version.js";
 import type { AdapterObservation, MetadataEnrichment, StoreAdapter } from "./types.js";
 
-const APPLE_ADAPTER_VERSION = "apple-rss-v3+itunes-lookup";
+const APPLE_ADAPTER_VERSION = "apple-rss-v4+itunes-lookup";
 const MAX_RSS_RESPONSE_BYTES = 2_000_000;
 const MAX_LOOKUP_RESPONSE_BYTES = 8_000_000;
 const LOOKUP_BATCH_SIZE = 50;
+const APPLE_GAMES_GENRE_ID = "6014";
 
 interface AppleItem {
   id: string;
@@ -21,6 +22,18 @@ interface AppleItem {
 interface ApplePayload {
   feed?: {
     results?: AppleItem[];
+  };
+}
+
+interface AppleCategoryPayload {
+  feed?: {
+    entry?: Array<{
+      "im:name"?: { label?: string };
+      "im:artist"?: { label?: string };
+      "im:image"?: Array<{ label?: string }>;
+      id?: { label?: string; attributes?: { "im:id"?: string } };
+      category?: { attributes?: { "im:id"?: string; label?: string } };
+    }>;
   };
 }
 
@@ -73,6 +86,38 @@ function feedName(target: Target): "top-free" | "top-paid" {
     return target.chart;
   }
   throw new Error(`Apple chart is not supported by the RSS adapter: ${target.chart}`);
+}
+
+function legacyFeedName(target: Target): "topfreeapplications" | "toppaidapplications" {
+  return feedName(target) === "top-free" ? "topfreeapplications" : "toppaidapplications";
+}
+
+function categoryFeedItems(payload: AppleCategoryPayload): AppleItem[] {
+  const entries = payload.feed?.entry;
+  if (!Array.isArray(entries)) {
+    throw new Error("Apple category RSS payload is missing feed.entry");
+  }
+  return entries.map((entry, index) => {
+    const id = entry.id?.attributes?.["im:id"];
+    const name = entry["im:name"]?.label;
+    const artistName = entry["im:artist"]?.label;
+    const artworkUrl100 = entry["im:image"]?.at(-1)?.label;
+    const url = entry.id?.label;
+    if (entry.category?.attributes?.["im:id"] !== APPLE_GAMES_GENRE_ID) {
+      throw new Error(`Apple category RSS entry ${index + 1} is not a game`);
+    }
+    if (!id || !name || !artistName || !artworkUrl100 || !url) {
+      throw new Error(`Apple category RSS entry ${index + 1} is missing required fields`);
+    }
+    return {
+      id,
+      name,
+      artistName,
+      artworkUrl100,
+      url,
+      genres: [{ genreId: APPLE_GAMES_GENRE_ID, name: entry.category.attributes.label ?? "Games" }]
+    };
+  });
 }
 
 function isJsonResponse(contentType: string): boolean {
@@ -162,13 +207,14 @@ export class AppleAdapter implements StoreAdapter {
     if (target.store !== "apple") {
       throw new Error("AppleAdapter received a non-Apple target");
     }
-    if (target.scope !== "apps") {
-      throw new Error("Apple Games charts are not verified and remain unsupported");
-    }
-
-    const url = `https://rss.marketingtools.apple.com/api/v2/${target.market.toLowerCase()}/apps/${feedName(target)}/${target.expectedCount}/apps.json`;
-    const rss = await fetchJsonWithRetry<ApplePayload>(url, MAX_RSS_RESPONSE_BYTES);
-    const items = rss.payload.feed?.results;
+    const games = target.scope === "games";
+    const url = games
+      ? `https://itunes.apple.com/${target.market.toLowerCase()}/rss/${legacyFeedName(target)}/limit=${target.expectedCount}/genre=${APPLE_GAMES_GENRE_ID}/json`
+      : `https://rss.marketingtools.apple.com/api/v2/${target.market.toLowerCase()}/apps/${feedName(target)}/${target.expectedCount}/apps.json`;
+    const rss = await fetchJsonWithRetry<ApplePayload | AppleCategoryPayload>(url, MAX_RSS_RESPONSE_BYTES);
+    const items = games
+      ? categoryFeedItems(rss.payload as AppleCategoryPayload)
+      : (rss.payload as ApplePayload).feed?.results;
     if (!Array.isArray(items)) {
       throw new Error("Apple RSS payload is missing feed.results");
     }
@@ -188,7 +234,7 @@ export class AppleAdapter implements StoreAdapter {
       } satisfies AppleEnrichmentContext,
       source: {
         type: "apple-rss",
-        method: "rss-marketing-tools-v2",
+        method: games ? "itunes-rss-category" : "rss-marketing-tools-v2",
         url,
         collectorVersion: COLLECTOR_VERSION,
         adapterVersion: APPLE_ADAPTER_VERSION,

@@ -114,3 +114,76 @@ describe("Apple adapter metadata enrichment", () => {
     });
   });
 });
+
+describe("Apple Games category RSS", () => {
+  const target = TargetSchema.parse({
+    store: "apple",
+    market: "US",
+    marketTimeZone: "America/New_York",
+    language: "en",
+    scope: "games",
+    chart: "top-free",
+    normalizedCategory: "all-games",
+    storeCategory: "6014",
+    expectedCount: 1,
+    publicationMode: "probe"
+  });
+
+  function categoryEntry(genreId = "6014") {
+    return {
+      "im:name": { label: "Example Game" },
+      "im:artist": { label: "Game Studio" },
+      "im:image": [{ label: "https://example.com/icon-53.png" }, { label: "https://example.com/icon-100.png" }],
+      id: { label: "https://apps.apple.com/us/app/example-game/id123", attributes: { "im:id": "123" } },
+      category: { attributes: { "im:id": genreId, label: "Games" } }
+    };
+  }
+
+  it("uses Apple's Games chart and retains its rank and metadata", async () => {
+    const fetchMock = vi.fn(async (input: string | URL | Request) => {
+      if (String(input).startsWith("https://itunes.apple.com/lookup?")) {
+        return jsonResponse({ resultCount: 0, results: [] });
+      }
+      return new Response(JSON.stringify({ feed: { entry: [categoryEntry()] } }), {
+        status: 200,
+        headers: { "content-type": "text/javascript; charset=UTF-8" }
+      });
+    });
+    vi.stubGlobal("fetch", fetchMock);
+
+    const adapter = new AppleAdapter();
+    const observation = await adapter.collectRanking(target);
+    expect(fetchMock).toHaveBeenCalledWith(
+      "https://itunes.apple.com/us/rss/topfreeapplications/limit=1/genre=6014/json",
+      expect.any(Object)
+    );
+    expect(observation.source).toMatchObject({ type: "apple-rss", method: "itunes-rss-category" });
+    expect(observation.entries).toEqual([{ rank: 1, appId: "123" }]);
+    const enrichment = await adapter.enrichMetadata(observation);
+    expect(enrichment.metadata[0]).toMatchObject({
+      store: "apple",
+      market: "US",
+      appId: "123",
+      name: "Example Game",
+      developer: "Game Studio",
+      iconUrl: "https://example.com/icon-100.png",
+      storeCategories: ["Games"],
+      primaryGenreId: "6014"
+    });
+  });
+
+  it("rejects a category feed that is not a Games chart", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => jsonResponse({ feed: { entry: [categoryEntry("6007")] } })));
+    await expect(new AppleAdapter().collectRanking(target)).rejects.toThrow("is not a game");
+  });
+
+  it("uses the paid Games feed for the top-paid chart", async () => {
+    const fetchMock = vi.fn(async () => jsonResponse({ feed: { entry: [categoryEntry()] } }));
+    vi.stubGlobal("fetch", fetchMock);
+    await new AppleAdapter().collectRanking({ ...target, chart: "top-paid" });
+    expect(fetchMock).toHaveBeenCalledWith(
+      "https://itunes.apple.com/us/rss/toppaidapplications/limit=1/genre=6014/json",
+      expect.any(Object)
+    );
+  });
+});

@@ -10,7 +10,7 @@ AppOrbit collects App Store and Google Play ranking observations and presents th
 - Run manifests, validation results, and generated JSON Schemas
 - A local website for exploring charts, app details, trends, and coverage
 
-Apple rankings use the Marketing Tools RSS feed with iTunes Lookup enrichment. Google Play collection is isolated behind a replaceable adapter. Collection runs in two explicit stages: every ranking response is timestamped, validated, and persisted before metadata enrichment starts. Google Play detail requests share a 3 requests/second limiter and are deduplicated by market and App ID within each run. App icons are stored as source URLs; image binaries are not included in the dataset.
+Apple Apps rankings use Marketing Tools RSS v2. Apple Games rankings use the iTunes category RSS feed for Games (`6014`), since the v2 generator does not expose category charts; both use iTunes Lookup enrichment. Games history begins with the first successful collection, with no synthetic backfill. Google Play collection is isolated behind a replaceable adapter. Collection runs in two explicit stages: every ranking response is timestamped, validated, and persisted before metadata enrichment starts. Google Play detail requests share a 3 requests/second limiter and are deduplicated by market and App ID within each run. App icons are stored as source URLs; image binaries are not included in the dataset.
 
 ## Requirements
 
@@ -119,6 +119,12 @@ The output directory is `dist/pages`.
 ## Data layout
 
 The repository uses `main` for source code and documentation. Dataset files can be published from the orphan `data` branch under `v1/`. See [docs/data-format.md](./docs/data-format.md) for paths, record fields, and time semantics.
+
+## AI Agent access
+
+The read-only [AppOrbit skill](./skills/apporbit/SKILL.md) queries the public GitHub `data` branch directly for chart rankings, changes, and coverage. When useful, it reads metadata and provides specific chart or app links from [the website](https://apporbit.ooxxz.com/). Its [design note](./docs/agent-skill-design.md) explains the sources and quality rules. The published run index is refreshed by the collection workflow; for a local published `v1` directory, run `APPORBIT_DATA_DIR=/absolute/path/to/v1 pnpm agent:index`.
+
+Install the skill with `npx skills add ivershuo/apporbit --skill apporbit`, then follow the installer to select a supported agent and installation scope when prompted. To install globally for Codex specifically, use `npx skills add ivershuo/apporbit --skill apporbit -g -a codex`.
 
 ## Repository map
 
