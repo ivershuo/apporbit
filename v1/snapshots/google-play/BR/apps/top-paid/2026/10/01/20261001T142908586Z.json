@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-br-apps-top-paid-all-apps-20261001T142908586Z",
+  "store": "google-play",
+  "market": "BR",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-01T14:29:08.586Z",
+  "observationDate": "2026-10-01",
+  "marketTimeZone": "America/Sao_Paulo",
+  "marketObservationDate": "2026-10-01",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 21,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=BR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "c33d42781539e9016893841449c278cbea6df209dd7b8294bd46b16fa225d87b"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:21/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.orealsensiff.pro.com"
+    },
+    {
+      "rank": 2,
+      "appId": "com.jndapp.oneui.widgets.pack"
+    },
+    {
+      "rank": 3,
+      "appId": "com.booster.gfxpro"
+    },
+    {
+      "rank": 4,
+      "appId": "com.dedealbano.padlab"
+    },
+    {
+      "rank": 5,
+      "appId": "com.panda.mouse"
+    },
+    {
+      "rank": 6,
+      "appId": "org.prowl.torque"
+    },
+    {
+      "rank": 7,
+      "appId": "com.extreamsd.aemobile"
+    },
+    {
+      "rank": 8,
+      "appId": "com.iliturgia"
+    },
+    {
+      "rank": 9,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 10,
+      "appId": "com.nerdykidapps21.carequalizermc"
+    },
+    {
+      "rank": 11,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 12,
+      "appId": "com.h4xhdv.ffh4xraistarmacrofire"
+    },
+    {
+      "rank": 13,
+      "appId": "com.geradordesensi.app"
+    },
+    {
+      "rank": 14,
+      "appId": "com.g19mobile.gameboosterplus"
+    },
+    {
+      "rank": 15,
+      "appId": "com.appsgenz.launcherios.pro"
+    },
+    {
+      "rank": 16,
+      "appId": "com.appslab.nothing.widgetspro"
+    },
+    {
+      "rank": 17,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 18,
+      "appId": "com.zoxo.realsensiff"
+    },
+    {
+      "rank": 19,
+      "appId": "inc.trilokia.pubgfxtool"
+    },
+    {
+      "rank": 20,
+      "appId": "com.minimaa.minimal.detox.launcher"
+    },
+    {
+      "rank": 21,
+      "appId": "net.dinglisch.android.taskerm"
+    }
+  ]
+}
