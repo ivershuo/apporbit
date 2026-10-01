@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20261001T085643975Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-01T08:56:43.975Z",
+  "observationDate": "2026-10-01",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-10-01",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 22,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "9deb5661ca980911f33a5580610e7a753458d7f6fa2157ad5fc84e548f5fbe42"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:22/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 4,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 5,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 6,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 7,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 8,
+      "appId": "de.hwn.community"
+    },
+    {
+      "rank": 9,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 10,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 11,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 12,
+      "appId": "com.jndapp.oneui.widgets.pack"
+    },
+    {
+      "rank": 13,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 14,
+      "appId": "com.watchfacestudio.per32"
+    },
+    {
+      "rank": 15,
+      "appId": "com.olomowostudio.managerforkukirin"
+    },
+    {
+      "rank": 16,
+      "appId": "com.appslab.nothing.widgetspro"
+    },
+    {
+      "rank": 17,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 18,
+      "appId": "de.koellenGolf.dgvPlatzreife"
+    },
+    {
+      "rank": 19,
+      "appId": "com.klett.blitzrechnen.schulversion"
+    },
+    {
+      "rank": 20,
+      "appId": "com.photopills.android.photopills"
+    },
+    {
+      "rank": 21,
+      "appId": "com.mobiteka.maps"
+    },
+    {
+      "rank": 22,
+      "appId": "de.dihk.ihk.gewo"
+    }
+  ]
+}
