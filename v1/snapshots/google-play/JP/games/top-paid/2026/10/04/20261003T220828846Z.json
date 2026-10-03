@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-jp-games-top-paid-all-games-20261003T220828846Z",
+  "store": "google-play",
+  "market": "JP",
+  "scope": "games",
+  "chart": "top-paid",
+  "normalizedCategory": "all-games",
+  "storeCategory": "GAME",
+  "capturedAt": "2026-10-03T22:08:28.846Z",
+  "observationDate": "2026-10-03",
+  "marketTimeZone": "Asia/Tokyo",
+  "marketObservationDate": "2026-10-04",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 87,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/games?hl=en&gl=JP",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "102220020cd6a4e32985f253dabedbe7df7b5d817ed0b85c3be1b329cf1c0871"
+  },
+  "validation": {
+    "previousSnapshotId": "google-play-jp-games-top-paid-all-games-20260930T230051809Z",
+    "flags": [
+      "count_below_expected:87/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "jp.co.level5.yws1"
+    },
+    {
+      "rank": 2,
+      "appId": "com.mojang.minecraftpe"
+    },
+    {
+      "rank": 3,
+      "appId": "com.square_enix.android_googleplay.Tornekoj"
+    },
+    {
+      "rank": 4,
+      "appId": "com.prpr.musedash"
+    },
+    {
+      "rank": 5,
+      "appId": "jp.co.sundenshi.toaru2s"
+    },
+    {
+      "rank": 6,
+      "appId": "com.GameCoaster.DungeonWithin"
+    },
+    {
+      "rank": 7,
+      "appId": "com.aladdinx.suikagame"
+    },
+    {
+      "rank": 8,
+      "appId": "com.humble.SlayTheSpire"
+    },
+    {
+      "rank": 9,
+      "appId": "jp.sammynet.googleplay.cp0011"
+    },
+    {
+      "rank": 10,
+      "appId": "com.batomon.showdown"
+    },
+    {
+      "rank": 11,
+      "appId": "com.ssicosm.dungeon_princess"
+    },
+    {
+      "rank": 12,
+      "appId": "com.SpikeChunsoft.ShirenTheWanderer6Plus.ww"
+    },
+    {
+      "rank": 13,
+      "appId": "com.square_enix.android_googleplay.dq5j"
+    },
+    {
+      "rank": 14,
+      "appId": "nz.co.codepoint.minimetro"
+    },
+    {
+      "rank": 15,
+      "appId": "com.mintrocket.drmobile"
+    },
+    {
+      "rank": 16,
+      "appId": "com.fundaygames.scritchyscratchy"
+    },
+    {
+      "rank": 17,
+      "appId": "com.fizzd.connectedworlds"
+    },
+    {
+      "rank": 18,
+      "appId": "net.commseed.psvvv2"
+    },
+    {
+      "rank": 19,
+      "appId": "com.universal777.magireco"
+    },
+    {
+      "rank": 20,
+      "appId": "jp.co.level5.fli"
+    },
+    {
+      "rank": 21,
+      "appId": "com.chucklefish.stardewvalley"
+    },
+    {
+      "rank": 22,
+      "appId": "net.commseed.ps_ssg5"
+    },
+    {
+      "rank": 23,
+      "appId": "com.square_enix.android_googleplay.DQM2SPjp"
+    },
+    {
+      "rank": 24,
+      "appId": "com.nintendo.zasa"
+    },
+    {
+      "rank": 25,
+      "appId": "com.square_enix.android_googleplay.DQMTerryjp"
+    },
+    {
+      "rank": 26,
+      "appId": "com.xd.tabs.google"
+    },
+    {
+      "rank": 27,
+      "appId": "de.kamibox.typo"
+    },
+    {
+      "rank": 28,
+      "appId": "com.square_enix.android_googleplay.dq6"
+    },
+    {
+      "rank": 29,
+      "appId": "com.ssicosm.dungeon_princess_3_pay"
+    },
+    {
+      "rank": 30,
+      "appId": "com.square_enix.android_googleplay.dq4j"
+    },
+    {
+      "rank": 31,
+      "appId": "com.Level5.LT1RJP"
+    },
+    {
+      "rank": 32,
+      "appId": "com.ironhidegames.android.kingdomrush6.genesis"
+    },
+    {
+      "rank": 33,
+      "appId": "jp.dorasu.apps.revuestarlight"
+    },
+    {
+      "rank": 34,
+      "appId": "com.square_enix.android_googleplay.DQMTerryRjp"
+    },
+    {
+      "rank": 35,
+      "appId": "jp.co.spikechunsoft.android.terrariajp"
+    },
+    {
+      "rank": 36,
+      "appId": "kemco.rideonjapan.mareniabarpremium"
+    },
+    {
+      "rank": 37,
+      "appId": "com.doghowl.DropDuchy"
+    },
+    {
+      "rank": 38,
+      "appId": "com.ssicosm.dungeon_princess_2"
+    },
+    {
+      "rank": 39,
+      "appId": "com.square_enix.android_googleplay.dq8j"
+    },
+    {
+      "rank": 40,
+      "appId": "com.playdigious.seaofstars"
+    },
+    {
+      "rank": 41,
+      "appId": "net.kairosoft.android.fashion"
+    },
+    {
+      "rank": 42,
+      "appId": "jp.co.sundenshi.cafeterra1p"
+    },
+    {
+      "rank": 43,
+      "appId": "com.paondp.simjsy"
+    },
+    {
+      "rank": 44,
+      "appId": "com.playwithfurcifer.bpb.android"
+    },
+    {
+      "rank": 45,
+      "appId": "com.RobotGentleman.game60SecondsReatomized"
+    },
+    {
+      "rank": 46,
+      "appId": "com.square_enix.android_googleplay.FFPR6"
+    },
+    {
+      "rank": 47,
+      "appId": "net.commseed.pssinoni3"
+    },
+    {
+      "rank": 48,
+      "appId": "com.slggames.hgsg.jp"
+    },
+    {
+      "rank": 49,
+      "appId": "com.square_enix.android_googleplay.chrono"
+    },
+    {
+      "rank": 50,
+      "appId": "net.commseed.pskaguya"
+    },
+    {
+      "rank": 51,
+      "appId": "kemco.execreate.alphadiagenesis"
+    },
+    {
+      "rank": 52,
+      "appId": "jp.co.loxarc.jsp3.prod"
+    },
+    {
+      "rank": 53,
+      "appId": "com.PanikArcade.CloverPit"
+    },
+    {
+      "rank": 54,
+      "appId": "com.mintmouse.rusty_axe"
+    },
+    {
+      "rank": 55,
+      "appId": "net.commseed.psmhrise"
+    },
+    {
+      "rank": 56,
+      "appId": "com.playstack.balatro.android"
+    },
+    {
+      "rank": 57,
+      "appId": "kanatamikado.ae.ThDungeonR"
+    },
+    {
+      "rank": 58,
+      "appId": "net.kairosoft.android.bouken2"
+    },
+    {
+      "rank": 59,
+      "appId": "com.square_enix.android_googleplay.SaGaFrontier2Remasteredjp"
+    },
+    {
+      "rank": 60,
+      "appId": "com.ironhidegames.android.kingdomrush.alliance"
+    },
+    {
+      "rank": 61,
+      "appId": "com.noodlecake.wb"
+    },
+    {
+      "rank": 62,
+      "appId": "com.ustwo.monumentvalley"
+    },
+    {
+      "rank": 63,
+      "appId": "jp.kiteretsu.zookeeper_dx"
+    },
+    {
+      "rank": 64,
+      "appId": "com.square_enix.android_googleplay.FFVII"
+    },
+    {
+      "rank": 65,
+      "appId": "com.brotato.shooting.survivors.games.paid.android"
+    },
+    {
+      "rank": 66,
+      "appId": "net.kairosoft.android.gamedev3"
+    },
+    {
+      "rank": 67,
+      "appId": "jp.co.spike_chunsoft.shiren"
+    },
+    {
+      "rank": 68,
+      "appId": "com.square_enix.android_googleplay.DragonQuestMonsters3jp"
+    },
+    {
+      "rank": 69,
+      "appId": "com.square_enix.android_googleplay.SagaCollection_Sjp"
+    },
+    {
+      "rank": 70,
+      "appId": "com.noodlecake.gettingoverit"
+    },
+    {
+      "rank": 71,
+      "appId": "com.ironhidegames.android.kingdomrushfrontiers"
+    },
+    {
+      "rank": 72,
+      "appId": "com.square_enix.android_googleplay.RomancingSaGa3ww"
+    },
+    {
+      "rank": 73,
+      "appId": "com.square_enix.android_googleplay.ValkyrieProfilej"
+    },
+    {
+      "rank": 74,
+      "appId": "com.square_enix.android_googleplay.SaGaEmeraldBeyondj"
+    },
+    {
+      "rank": 75,
+      "appId": "net.kairosoft.android.dorayaki"
+    },
+    {
+      "rank": 76,
+      "appId": "com.ironhidegames.android.kingdomrush4"
+    },
+    {
+      "rank": 77,
+      "appId": "com.square_enix.android_googleplay.romancingsaga2_jp"
+    },
+    {
+      "rank": 78,
+      "appId": "com.square_enix.android_googleplay.SaGaFrontierRemastered_jp"
+    },
+    {
+      "rank": 79,
+      "appId": "net.kairosoft.android.baseball_ja"
+    },
+    {
+      "rank": 80,
+      "appId": "com.square_enix.android_googleplay.RomancingSaGaMinstrelSongjp"
+    },
+    {
+      "rank": 81,
+      "appId": "com.infinity.traffix"
+    },
+    {
+      "rank": 82,
+      "appId": "com.strayfawnstudio.gambonanza"
+    },
+    {
+      "rank": 83,
+      "appId": "net.kairosoft.android.horse_ja"
+    },
+    {
+      "rank": 84,
+      "appId": "com.playdead.limbo.full"
+    },
+    {
+      "rank": 85,
+      "appId": "com.snapbreak.discounty"
+    },
+    {
+      "rank": 86,
+      "appId": "net.kairosoft.android.sushi_ja"
+    },
+    {
+      "rank": 87,
+      "appId": "net.kairosoft.android.ninja_ja"
+    }
+  ]
+}
