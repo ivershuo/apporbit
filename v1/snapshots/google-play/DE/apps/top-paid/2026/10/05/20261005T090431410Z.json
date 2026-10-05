@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20261005T090431410Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-05T09:04:31.410Z",
+  "observationDate": "2026-10-05",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-10-05",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 21,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "188df0f78d6c218ae209599278b13bf9ec0b8041af462f23f36447024270fb52"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:21/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 4,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 5,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 6,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 7,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 8,
+      "appId": "com.hughjeffreyssoftware.iTest_Battery"
+    },
+    {
+      "rank": 9,
+      "appId": "de.hwn.community"
+    },
+    {
+      "rank": 10,
+      "appId": "com.watchfacestudio.per32"
+    },
+    {
+      "rank": 11,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 12,
+      "appId": "com.watchfacestudio.lbclassic06"
+    },
+    {
+      "rank": 13,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 14,
+      "appId": "com.appslab.nothing.widgetspro"
+    },
+    {
+      "rank": 15,
+      "appId": "com.mobiteka.maps"
+    },
+    {
+      "rank": 16,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 17,
+      "appId": "com.klett.blitzrechnen.schulversion"
+    },
+    {
+      "rank": 18,
+      "appId": "de.dihk.ihk.gewo"
+    },
+    {
+      "rank": 19,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 20,
+      "appId": "de.theorie24.fs.auto"
+    },
+    {
+      "rank": 21,
+      "appId": "com.jndapp.oneui.widgets.pack"
+    }
+  ]
+}
