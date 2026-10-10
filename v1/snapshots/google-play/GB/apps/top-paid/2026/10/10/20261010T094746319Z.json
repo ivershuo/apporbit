@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-gb-apps-top-paid-all-apps-20261010T094746319Z",
+  "store": "google-play",
+  "market": "GB",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-10T09:47:46.319Z",
+  "observationDate": "2026-10-10",
+  "marketTimeZone": "Europe/London",
+  "marketObservationDate": "2026-10-10",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 25,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=GB",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "22fc604a6f54bb7b7ba28ca2857f4e70354f7579d456e1cbbcbf4c51d096b79b"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:25/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "uk.co.focusmm.DTSCombo"
+    },
+    {
+      "rank": 2,
+      "appId": "uk.co.tso.ctt"
+    },
+    {
+      "rank": 3,
+      "appId": "uk.co.citb.imagitech.gt100.android.vy19.plus"
+    },
+    {
+      "rank": 4,
+      "appId": "com.propagator.squeezy"
+    },
+    {
+      "rank": 5,
+      "appId": "uk.co.tso.lituk"
+    },
+    {
+      "rank": 6,
+      "appId": "com.veamstudios.siteauditpro"
+    },
+    {
+      "rank": 7,
+      "appId": "uk.co.citb.imagitech.gt200.android.vy23.plus"
+    },
+    {
+      "rank": 8,
+      "appId": "com.edshed.spellingshed"
+    },
+    {
+      "rank": 9,
+      "appId": "uk.co.tso.highwaycode"
+    },
+    {
+      "rank": 10,
+      "appId": "com.goblintools"
+    },
+    {
+      "rank": 11,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 12,
+      "appId": "com.SpottedGhosts.SpiritTalker"
+    },
+    {
+      "rank": 13,
+      "appId": "com.watchfacestudio.per023pro"
+    },
+    {
+      "rank": 14,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 15,
+      "appId": "com.watchfacestudio.md326"
+    },
+    {
+      "rank": 16,
+      "appId": "com.watchfacestudio.lbclassic06"
+    },
+    {
+      "rank": 17,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 18,
+      "appId": "com.facer.pipboy_se"
+    },
+    {
+      "rank": 19,
+      "appId": "com.salamanca.rolexdaytona1"
+    },
+    {
+      "rank": 20,
+      "appId": "com.wildinart.stlukesguidinglights"
+    },
+    {
+      "rank": 21,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 22,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 23,
+      "appId": "com.watchfacestudio.md307digital"
+    },
+    {
+      "rank": 24,
+      "appId": "com.ukurbanprepper.prepperscompanion"
+    },
+    {
+      "rank": 25,
+      "appId": "com.hughjeffreyssoftware.iTest_Battery"
+    }
+  ]
+}
