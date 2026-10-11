@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-us-apps-top-paid-all-apps-20261011T145613384Z",
+  "store": "google-play",
+  "market": "US",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-11T14:56:13.384Z",
+  "observationDate": "2026-10-11",
+  "marketTimeZone": "America/New_York",
+  "marketObservationDate": "2026-10-11",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 90,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=US",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "09c615f290e517e54c3d4872487b31a61e658e48e8e0e3188982a75ccf117042"
+  },
+  "validation": {
+    "previousSnapshotId": "google-play-us-apps-top-paid-all-apps-20261005T170952149Z",
+    "flags": [
+      "count_below_expected:90/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.tdr3.hs.android"
+    },
+    {
+      "rank": 2,
+      "appId": "com.appslab.liquidglass.widgets"
+    },
+    {
+      "rank": 3,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 4,
+      "appId": "com.edde746.plezy"
+    },
+    {
+      "rank": 5,
+      "appId": "com.g19mobile.gameboosterplus"
+    },
+    {
+      "rank": 6,
+      "appId": "com.sonosaurus.tonalenergytuner"
+    },
+    {
+      "rank": 7,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 8,
+      "appId": "com.goblintools"
+    },
+    {
+      "rank": 9,
+      "appId": "com.facer.pipboy_se"
+    },
+    {
+      "rank": 10,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 11,
+      "appId": "com.watchfacestudio.per023pro"
+    },
+    {
+      "rank": 12,
+      "appId": "hardman.bret.quickbend.pro"
+    },
+    {
+      "rank": 13,
+      "appId": "com.jndapp.oneui.widgets.pack"
+    },
+    {
+      "rank": 14,
+      "appId": "com.AlfaOBD.AlfaOBD"
+    },
+    {
+      "rank": 15,
+      "appId": "com.SpottedGhosts.SpiritTalker"
+    },
+    {
+      "rank": 16,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 17,
+      "appId": "com.samruston.buzzkill"
+    },
+    {
+      "rank": 18,
+      "appId": "com.balsoy.fatih.compass"
+    },
+    {
+      "rank": 19,
+      "appId": "com.ekwatchfaces.paperoftime"
+    },
+    {
+      "rank": 20,
+      "appId": "com.watchfacestudio.per27"
+    },
+    {
+      "rank": 21,
+      "appId": "net.liveatc.liveatc_app"
+    },
+    {
+      "rank": 22,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 23,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 24,
+      "appId": "com.watchfacestudio.lbclassic06"
+    },
+    {
+      "rank": 25,
+      "appId": "com.watchfacestudio.md326"
+    },
+    {
+      "rank": 26,
+      "appId": "com.t11.skyview"
+    },
+    {
+      "rank": 27,
+      "appId": "com.eatos.onedarkpro"
+    },
+    {
+      "rank": 28,
+      "appId": "net.esword.esword"
+    },
+    {
+      "rank": 29,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 30,
+      "appId": "com.watchfacestudio.per32"
+    },
+    {
+      "rank": 31,
+      "appId": "ae.A.A10"
+    },
+    {
+      "rank": 32,
+      "appId": "com.solocator"
+    },
+    {
+      "rank": 33,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 34,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 35,
+      "appId": "org.readera.premium"
+    },
+    {
+      "rank": 36,
+      "appId": "us.flexswag.flexutilitypremium"
+    },
+    {
+      "rank": 37,
+      "appId": "com.natasadev.watchface.hauntinghours"
+    },
+    {
+      "rank": 38,
+      "appId": "com.milgpspro.jsps"
+    },
+    {
+      "rank": 39,
+      "appId": "OCTech.Mobile.Applications.TouchScan"
+    },
+    {
+      "rank": 40,
+      "appId": "com.nerdykidapps21.carequalizermc"
+    },
+    {
+      "rank": 41,
+      "appId": "com.WagotabiLimited.Wagotabi"
+    },
+    {
+      "rank": 42,
+      "appId": "com.digipom.easyvoicerecorder.pro"
+    },
+    {
+      "rank": 43,
+      "appId": "com.progdigy.cdisplay"
+    },
+    {
+      "rank": 44,
+      "appId": "com.watchfacestudio.md307digital"
+    },
+    {
+      "rank": 45,
+      "appId": "com.pwstudio.omegaseamaster"
+    },
+    {
+      "rank": 46,
+      "appId": "com.photopills.android.photopills"
+    },
+    {
+      "rank": 47,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 48,
+      "appId": "com.hughjeffreyssoftware.iTest_Battery"
+    },
+    {
+      "rank": 49,
+      "appId": "com.asa2fly.prepware.general"
+    },
+    {
+      "rank": 50,
+      "appId": "com.watchfacestudio.md339"
+    },
+    {
+      "rank": 51,
+      "appId": "com.minimaa.minimal.detox.launcher"
+    },
+    {
+      "rank": 52,
+      "appId": "com.radikal.gamelauncher"
+    },
+    {
+      "rank": 53,
+      "appId": "com.watchfacestudio.s4uassen"
+    },
+    {
+      "rank": 54,
+      "appId": "com.appslab.nothing.widgetspro"
+    },
+    {
+      "rank": 55,
+      "appId": "com.bearessentials.knotIQ"
+    },
+    {
+      "rank": 56,
+      "appId": "com.BitPlague.Necrometer"
+    },
+    {
+      "rank": 57,
+      "appId": "com.extreamsd.usbaudioplayerpro"
+    },
+    {
+      "rank": 58,
+      "appId": "com.alexvas.dvr.pro"
+    },
+    {
+      "rank": 59,
+      "appId": "com.A0Re.recreative68"
+    },
+    {
+      "rank": 60,
+      "appId": "com.massimobiolcati.irealb"
+    },
+    {
+      "rank": 61,
+      "appId": "jp.ne.ibis.ibispaint.app"
+    },
+    {
+      "rank": 62,
+      "appId": "org.hamstudy.mobile"
+    },
+    {
+      "rank": 63,
+      "appId": "app.moertel.retro.iconpack.neon"
+    },
+    {
+      "rank": 64,
+      "appId": "com.creativepixels.ravendark.iconpack.app"
+    },
+    {
+      "rank": 65,
+      "appId": "com.ascendlearning.uglys.purchase"
+    },
+    {
+      "rank": 66,
+      "appId": "com.futorum.nn1"
+    },
+    {
+      "rank": 67,
+      "appId": "com.basevelocity.radarscope"
+    },
+    {
+      "rank": 68,
+      "appId": "com.panda.mouse"
+    },
+    {
+      "rank": 69,
+      "appId": "com.watchfacestudio.halloweenshifr"
+    },
+    {
+      "rank": 70,
+      "appId": "com.veamstudios.siteauditpro"
+    },
+    {
+      "rank": 71,
+      "appId": "com.andrerinas.headunitrevived"
+    },
+    {
+      "rank": 72,
+      "appId": "com.penly.penly"
+    },
+    {
+      "rank": 73,
+      "appId": "org.fossify.thankyou"
+    },
+    {
+      "rank": 74,
+      "appId": "com.riteshsahu.SMSBackupRestorePro"
+    },
+    {
+      "rank": 75,
+      "appId": "com.wildinart.wildwoodfollowthecrows"
+    },
+    {
+      "rank": 76,
+      "appId": "com.grill.xbxplay"
+    },
+    {
+      "rank": 77,
+      "appId": "com.flyersoft.moonreaderp"
+    },
+    {
+      "rank": 78,
+      "appId": "com.tmsoft.whitenoise.full"
+    },
+    {
+      "rank": 79,
+      "appId": "com.jndapp.nothing.widgets.pack"
+    },
+    {
+      "rank": 80,
+      "appId": "org.kustom.widget.pro"
+    },
+    {
+      "rank": 81,
+      "appId": "com.chillseekers.Necrophonic"
+    },
+    {
+      "rank": 82,
+      "appId": "com.jndapp.i.widgets.pack"
+    },
+    {
+      "rank": 83,
+      "appId": "com.riseupgames.proshot2"
+    },
+    {
+      "rank": 84,
+      "appId": "tech.ula.gimp"
+    },
+    {
+      "rank": 85,
+      "appId": "dev.vodik7.tvquickactions"
+    },
+    {
+      "rank": 86,
+      "appId": "com.tals.duofoldtransition"
+    },
+    {
+      "rank": 87,
+      "appId": "com.cateater.stopmotionstudiopro"
+    },
+    {
+      "rank": 88,
+      "appId": "com.watchfacestudio.ml2u215"
+    },
+    {
+      "rank": 89,
+      "appId": "com.rhmsoft.edit.pro"
+    },
+    {
+      "rank": 90,
+      "appId": "com.vitotechnology.StarWalk2"
+    }
+  ]
+}
