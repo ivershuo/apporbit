@@ -1,7 +1,194 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T03:14:18.724Z",
+  "generatedAt": "2026-10-13T09:28:22.798Z",
   "runs": [
+    {
+      "runId": "20261013T092547020Z",
+      "startedAt": "2026-10-13T09:25:47.020Z",
+      "finishedAt": "2026-10-13T09:28:22.798Z",
+      "targets": [
+        {
+          "targetKey": "apple:DE:apps:top-free:all-apps",
+          "target": {
+            "store": "apple",
+            "market": "DE",
+            "marketTimeZone": "Europe/Berlin",
+            "language": "en",
+            "scope": "apps",
+            "chart": "top-free",
+            "normalizedCategory": "all-apps",
+            "storeCategory": null,
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "valid",
+          "finishedAt": "2026-10-13T09:25:50.791Z",
+          "snapshotPath": "snapshots/apple/DE/apps/top-free/2026/10/13/20261013T092548380Z.json"
+        },
+        {
+          "targetKey": "apple:DE:apps:top-paid:all-apps",
+          "target": {
+            "store": "apple",
+            "market": "DE",
+            "marketTimeZone": "Europe/Berlin",
+            "language": "en",
+            "scope": "apps",
+            "chart": "top-paid",
+            "normalizedCategory": "all-apps",
+            "storeCategory": null,
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "partial",
+          "finishedAt": "2026-10-13T09:25:50.610Z",
+          "snapshotPath": "snapshots/apple/DE/apps/top-paid/2026/10/13/20261013T092549575Z.json"
+        },
+        {
+          "targetKey": "apple:DE:games:top-free:all-games",
+          "target": {
+            "store": "apple",
+            "market": "DE",
+            "marketTimeZone": "Europe/Berlin",
+            "language": "en",
+            "scope": "games",
+            "chart": "top-free",
+            "normalizedCategory": "all-games",
+            "storeCategory": "6014",
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "valid",
+          "finishedAt": "2026-10-13T09:25:50.814Z",
+          "snapshotPath": "snapshots/apple/DE/games/top-free/2026/10/13/20261013T092548694Z.json"
+        },
+        {
+          "targetKey": "apple:DE:games:top-paid:all-games",
+          "target": {
+            "store": "apple",
+            "market": "DE",
+            "marketTimeZone": "Europe/Berlin",
+            "language": "en",
+            "scope": "games",
+            "chart": "top-paid",
+            "normalizedCategory": "all-games",
+            "storeCategory": "6014",
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "partial",
+          "finishedAt": "2026-10-13T09:25:50.704Z",
+          "snapshotPath": "snapshots/apple/DE/games/top-paid/2026/10/13/20261013T092548411Z.json"
+        },
+        {
+          "targetKey": "google-play:DE:apps:top-free:all-apps",
+          "target": {
+            "store": "google-play",
+            "market": "DE",
+            "marketTimeZone": "Europe/Berlin",
+            "language": "en",
+            "scope": "apps",
+            "chart": "top-free",
+            "normalizedCategory": "all-apps",
+            "storeCategory": "APPLICATION",
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "valid",
+          "finishedAt": "2026-10-13T09:28:14.788Z",
+          "snapshotPath": "snapshots/google-play/DE/apps/top-free/2026/10/13/20261013T092548012Z.json"
+        },
+        {
+          "targetKey": "google-play:DE:apps:top-paid:all-apps",
+          "target": {
+            "store": "google-play",
+            "market": "DE",
+            "marketTimeZone": "Europe/Berlin",
+            "language": "en",
+            "scope": "apps",
+            "chart": "top-paid",
+            "normalizedCategory": "all-apps",
+            "storeCategory": "APPLICATION",
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "partial",
+          "finishedAt": "2026-10-13T09:26:30.762Z",
+          "snapshotPath": "snapshots/google-play/DE/apps/top-paid/2026/10/13/20261013T092547889Z.json"
+        },
+        {
+          "targetKey": "google-play:DE:apps:top-grossing:all-apps",
+          "target": {
+            "store": "google-play",
+            "market": "DE",
+            "marketTimeZone": "Europe/Berlin",
+            "language": "en",
+            "scope": "apps",
+            "chart": "top-grossing",
+            "normalizedCategory": "all-apps",
+            "storeCategory": "APPLICATION",
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "valid",
+          "finishedAt": "2026-10-13T09:28:22.104Z",
+          "snapshotPath": "snapshots/google-play/DE/apps/top-grossing/2026/10/13/20261013T092548193Z.json"
+        },
+        {
+          "targetKey": "google-play:DE:games:top-free:all-games",
+          "target": {
+            "store": "google-play",
+            "market": "DE",
+            "marketTimeZone": "Europe/Berlin",
+            "language": "en",
+            "scope": "games",
+            "chart": "top-free",
+            "normalizedCategory": "all-games",
+            "storeCategory": "GAME",
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "valid",
+          "finishedAt": "2026-10-13T09:28:10.750Z",
+          "snapshotPath": "snapshots/google-play/DE/games/top-free/2026/10/13/20261013T092548374Z.json"
+        },
+        {
+          "targetKey": "google-play:DE:games:top-paid:all-games",
+          "target": {
+            "store": "google-play",
+            "market": "DE",
+            "marketTimeZone": "Europe/Berlin",
+            "language": "en",
+            "scope": "games",
+            "chart": "top-paid",
+            "normalizedCategory": "all-games",
+            "storeCategory": "GAME",
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "partial",
+          "finishedAt": "2026-10-13T09:28:22.798Z",
+          "snapshotPath": "snapshots/google-play/DE/games/top-paid/2026/10/13/20261013T092548958Z.json"
+        },
+        {
+          "targetKey": "google-play:DE:games:top-grossing:all-games",
+          "target": {
+            "store": "google-play",
+            "market": "DE",
+            "marketTimeZone": "Europe/Berlin",
+            "language": "en",
+            "scope": "games",
+            "chart": "top-grossing",
+            "normalizedCategory": "all-games",
+            "storeCategory": "GAME",
+            "expectedCount": 100,
+            "publicationMode": "publish"
+          },
+          "status": "valid",
+          "finishedAt": "2026-10-13T09:28:20.864Z",
+          "snapshotPath": "snapshots/google-play/DE/games/top-grossing/2026/10/13/20261013T092548977Z.json"
+        }
+      ]
+    },
     {
       "runId": "20261013T031123888Z",
       "startedAt": "2026-10-13T03:11:23.888Z",
