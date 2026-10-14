@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-br-apps-top-paid-all-apps-20261014T125343065Z",
+  "store": "google-play",
+  "market": "BR",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-14T12:53:43.065Z",
+  "observationDate": "2026-10-14",
+  "marketTimeZone": "America/Sao_Paulo",
+  "marketObservationDate": "2026-10-14",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 20,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=BR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "ebffd70059fe85a7bc2e9e2eb5a60f7202ae64c374b7d9fb539c5cbb0ad3094d"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:20/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.orealsensiff.pro.com"
+    },
+    {
+      "rank": 2,
+      "appId": "com.geradordesensi.app"
+    },
+    {
+      "rank": 3,
+      "appId": "com.dedealbano.padlab"
+    },
+    {
+      "rank": 4,
+      "appId": "com.adrienmaciel.bramskeyboard"
+    },
+    {
+      "rank": 5,
+      "appId": "com.panda.mouse"
+    },
+    {
+      "rank": 6,
+      "appId": "com.booster.gfxpro"
+    },
+    {
+      "rank": 7,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 8,
+      "appId": "com.g19mobile.gameboosterplus"
+    },
+    {
+      "rank": 9,
+      "appId": "com.h4xhdv.ffh4xraistarmacrofire"
+    },
+    {
+      "rank": 10,
+      "appId": "com.extreamsd.aemobile"
+    },
+    {
+      "rank": 11,
+      "appId": "org.prowl.torque"
+    },
+    {
+      "rank": 12,
+      "appId": "com.iliturgia"
+    },
+    {
+      "rank": 13,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 14,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 15,
+      "appId": "com.appsgenz.launcherios.pro"
+    },
+    {
+      "rank": 16,
+      "appId": "inc.trilokia.pubgfxtool"
+    },
+    {
+      "rank": 17,
+      "appId": "com.labmcs.bibliastrong"
+    },
+    {
+      "rank": 18,
+      "appId": "com.appslab.liquidglass.widgets"
+    },
+    {
+      "rank": 19,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 20,
+      "appId": "com.flyersoft.moonreaderp"
+    }
+  ]
+}
