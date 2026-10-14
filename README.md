@@ -124,7 +124,7 @@ The repository uses `main` for source code and documentation. Dataset files can 
 
 The read-only [AppOrbit skill](./skills/apporbit/SKILL.md) queries the public GitHub `data` branch directly for chart rankings, changes, and coverage. When useful, it reads metadata and provides specific chart or app links from [the website](https://apporbit.ooxxz.com/). Its [design note](./docs/agent-skill-design.md) explains the sources and quality rules. The published run index is refreshed by the collection workflow; for a local published `v1` directory, run `APPORBIT_DATA_DIR=/absolute/path/to/v1 pnpm agent:index`.
 
-Install the skill with `npx skills add ivershuo/apporbit --skill apporbit`, then follow the installer to select a supported agent and installation scope when prompted. To install globally for Codex specifically, use `npx skills add ivershuo/apporbit --skill apporbit -g -a codex`.
+Install the skill with `openclaw skills install @ivershuo/apporbit` — see the [ClawHub listing](https://clawhub.ai/ivershuo/skills/apporbit). Claude Code, Codex, and other coding-agent users can keep using `npx skills add ivershuo/apporbit --skill apporbit`, following the installer to select a supported agent and installation scope when prompted; to install globally for Codex specifically, use `npx skills add ivershuo/apporbit --skill apporbit -g -a codex`. WorkBuddy users can install directly from the [WorkBuddy share page](https://www.workbuddy.cn/share/asset?shareCode=aOkUjT6lDdCXqNKVcohJlK&sig=mh9tPWWdgYwI-6iB).
 
 ## Repository map
 

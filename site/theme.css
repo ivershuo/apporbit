@@ -336,6 +336,8 @@ h3 { font-size: var(--text-md); }
 .skill-install__heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-sm); }
 .skill-install__heading h2 { margin: 0; font-weight: 700; }
 .skill-install__heading span { color: var(--color-muted); font-size: var(--text-xs); font-weight: 600; }
+.skill-install > p.skill-install__label { margin: var(--space-lg) 0 0; color: var(--color-muted); font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.skill-install > p.skill-install__label:first-of-type { margin-block-start: 0; }
 .skill-install > p { max-width: 68ch; margin: var(--space-sm) 0 var(--space-md); color: var(--color-muted); }
 .skill-command { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--space-sm); padding: var(--space-sm); border: 1px solid var(--color-rule); border-radius: var(--radius-md); background: var(--color-paper-muted); }
 .skill-command code { display: block; min-width: 0; overflow-wrap: anywhere; color: var(--color-ink); font-family: var(--font-mono); font-size: var(--text-sm); line-height: 1.6; }

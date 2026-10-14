@@ -14,10 +14,16 @@
     <main class="page document-page skill-page">
       <header class="document-hero"><p class="kicker">FOR AI AGENTS</p><h1>Explore AppOrbit with your agent.</h1><p>Install the AppOrbit skill to ask an AI agent about published App Store and Google Play rankings, changes, app details, and market coverage.</p></header>
       <section class="document-section skill-install" id="install" aria-labelledby="install-title">
-        <div class="skill-install__heading"><h2 id="install-title">Install the skill</h2><span>Node.js 22.12+ · HTTPS to GitHub</span></div>
-        <p>Run this command in a terminal. Choose your AI agent and installation scope if prompted.</p>
+        <div class="skill-install__heading"><h2 id="install-title">Install the skill</h2><span>ClawHub · skills CLI · WorkBuddy</span></div>
+        <p class="skill-install__label">OpenClaw · default</p>
+        <p>Install from ClawHub with the OpenClaw CLI. Browse the <a href="https://clawhub.ai/ivershuo/skills/apporbit" target="_blank" rel="noreferrer">AppOrbit listing on ClawHub ↗</a>.</p>
+        <div class="skill-command"><code>openclaw skills install @ivershuo/apporbit</code><button type="button" data-copy-command aria-live="polite">Copy command</button></div>
+        <p class="skill-install__label">Claude Code · Codex · coding agents</p>
+        <p>Prefer the skills CLI inside a coding agent. Requires Node.js 22.12+; choose your agent and installation scope when prompted.</p>
         <div class="skill-command"><code>npx skills add ivershuo/apporbit --skill apporbit</code><button type="button" data-copy-command aria-live="polite">Copy command</button></div>
         <p class="skill-install__note">To target one agent, add <code>-a codex</code> as an example and replace <code>codex</code> with its agent ID. Add <code>-g</code> to install globally. See the <a href="https://www.skills.sh/docs/cli" target="_blank" rel="noreferrer">supported agent IDs</a> and <a href="https://www.skills.sh/ivershuo/apporbit/apporbit" target="_blank" rel="noreferrer">AppOrbit skill listing</a>.</p>
+        <p class="skill-install__label">WorkBuddy</p>
+        <p lang="zh-CN">WorkBuddy 用户无需命令行，<a href="https://www.workbuddy.cn/share/asset?shareCode=aOkUjT6lDdCXqNKVcohJlK&amp;sig=mh9tPWWdgYwI-6iB" target="_blank" rel="noreferrer">点击这里 ↗</a>即可直接使用。</p>
       </section>
       <div class="skill-steps">
         <article><h2>Ask about rankings and movement</h2><p>Start a new conversation with your agent and ask a question in natural language. The skill can find observed charts, compare complete snapshots, and link the exact sources.</p><p class="skill-example">“Show the latest observed top 10 free apps in the US App Store, with capture times and source links.”</p><p class="skill-example">“Which apps climbed most in the US Google Play free chart between the last two complete observations?”</p></article>
