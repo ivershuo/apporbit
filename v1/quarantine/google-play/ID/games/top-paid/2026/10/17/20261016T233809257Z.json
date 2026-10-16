@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-id-games-top-paid-all-games-20261016T233809257Z",
+  "store": "google-play",
+  "market": "ID",
+  "scope": "games",
+  "chart": "top-paid",
+  "normalizedCategory": "all-games",
+  "storeCategory": "GAME",
+  "capturedAt": "2026-10-16T23:38:09.257Z",
+  "observationDate": "2026-10-16",
+  "marketTimeZone": "Asia/Jakarta",
+  "marketObservationDate": "2026-10-17",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 44,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/games?hl=en&gl=ID",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "4d857ea905d61aa307a715d713b052b2562760e331a470d2b5abb4c759f8fa2d"
+  },
+  "validation": {
+    "previousSnapshotId": "google-play-id-games-top-paid-all-games-20260927T234904397Z",
+    "flags": [
+      "count_below_expected:44/100",
+      "suspicious_count_drop:0.560",
+      "suspicious_set_overlap:0.220",
+      "suspicious_top10_overlap:0.176"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.mojang.minecraftpe"
+    },
+    {
+      "rank": 2,
+      "appId": "com.bitzooma.blackborder2"
+    },
+    {
+      "rank": 3,
+      "appId": "com.and.games505.TerrariaPaid"
+    },
+    {
+      "rank": 4,
+      "appId": "com.keplerinteractive.sifuthegame"
+    },
+    {
+      "rank": 5,
+      "appId": "it.rortos.realflightsimulator"
+    },
+    {
+      "rank": 6,
+      "appId": "com.playstack.balatro.android"
+    },
+    {
+      "rank": 7,
+      "appId": "com.bitzooma.blackborder"
+    },
+    {
+      "rank": 8,
+      "appId": "com.xd.tabs.google"
+    },
+    {
+      "rank": 9,
+      "appId": "com.bitzooma.blackborder3"
+    },
+    {
+      "rank": 10,
+      "appId": "com.rockstargames.gtasa"
+    },
+    {
+      "rank": 11,
+      "appId": "com.agaming.thesun.origin"
+    },
+    {
+      "rank": 12,
+      "appId": "com.robtopx.geometryjump"
+    },
+    {
+      "rank": 13,
+      "appId": "com.chucklefish.stardewvalley"
+    },
+    {
+      "rank": 14,
+      "appId": "com.zigzagame.evertale"
+    },
+    {
+      "rank": 15,
+      "appId": "com.pgstudio.survival.evo.pro"
+    },
+    {
+      "rank": 16,
+      "appId": "com.oxiwyle.modernage3premium"
+    },
+    {
+      "rank": 17,
+      "appId": "com.rubberbandgames.wobblylifev2"
+    },
+    {
+      "rank": 18,
+      "appId": "com.joykeratif.PikabuuAntar"
+    },
+    {
+      "rank": 19,
+      "appId": "com.hg.townsmen7"
+    },
+    {
+      "rank": 20,
+      "appId": "nz.co.codepoint.minimetro"
+    },
+    {
+      "rank": 21,
+      "appId": "mobi.bestfreegames.bike.mayhem.extreme.mountain.racing"
+    },
+    {
+      "rank": 22,
+      "appId": "org.ppsspp.ppssppgold"
+    },
+    {
+      "rank": 23,
+      "appId": "com.playdead.limbo.full"
+    },
+    {
+      "rank": 24,
+      "appId": "com.nekki.vector.paid"
+    },
+    {
+      "rank": 25,
+      "appId": "com.VladimirPlyashkun.FootballReferee"
+    },
+    {
+      "rank": 26,
+      "appId": "com.playdigious.northgard"
+    },
+    {
+      "rank": 27,
+      "appId": "com.nino.tulpa.google"
+    },
+    {
+      "rank": 28,
+      "appId": "com.eapublishing.dhsw.paid"
+    },
+    {
+      "rank": 29,
+      "appId": "com.ironhidegames.android.kingdomrush6.genesis"
+    },
+    {
+      "rank": 30,
+      "appId": "com.pockettrend.neomonsters"
+    },
+    {
+      "rank": 31,
+      "appId": "com.drycactus.polybridge2"
+    },
+    {
+      "rank": 32,
+      "appId": "com.fundaygames.scritchyscratchy"
+    },
+    {
+      "rank": 33,
+      "appId": "com.playdigious.deadcells.mobile"
+    },
+    {
+      "rank": 34,
+      "appId": "com.playdigious.potionpermit"
+    },
+    {
+      "rank": 35,
+      "appId": "com.nekki.shadowfight2.paid"
+    },
+    {
+      "rank": 36,
+      "appId": "com.playdigious.littlenightmare"
+    },
+    {
+      "rank": 37,
+      "appId": "com.bscotch.hmd"
+    },
+    {
+      "rank": 38,
+      "appId": "com.pid.caravansandwitch"
+    },
+    {
+      "rank": 39,
+      "appId": "com.coffeestain.goatsimulator3"
+    },
+    {
+      "rank": 40,
+      "appId": "brownmonster.app.game.rushrally3"
+    },
+    {
+      "rank": 41,
+      "appId": "com.pid.shotgunking"
+    },
+    {
+      "rank": 42,
+      "appId": "com.rawfury.kingdom2crowns"
+    },
+    {
+      "rank": 43,
+      "appId": "com.doghowlgames.EasyDeliveryCo"
+    },
+    {
+      "rank": 44,
+      "appId": "com.strayfawnstudio.gambonanza"
+    }
+  ]
+}
