@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-kr-games-top-paid-all-games-20261019T225457969Z",
+  "store": "google-play",
+  "market": "KR",
+  "scope": "games",
+  "chart": "top-paid",
+  "normalizedCategory": "all-games",
+  "storeCategory": "GAME",
+  "capturedAt": "2026-10-19T22:54:57.969Z",
+  "observationDate": "2026-10-19",
+  "marketTimeZone": "Asia/Seoul",
+  "marketObservationDate": "2026-10-20",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 63,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/games?hl=en&gl=KR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "8e63209aa6c6133c61c070f94d57a617693149bb5824118a4405872d34dbc220"
+  },
+  "validation": {
+    "previousSnapshotId": "google-play-kr-games-top-paid-all-games-20260930T230052692Z",
+    "flags": [
+      "count_below_expected:63/100",
+      "suspicious_count_drop:0.370"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.mojang.minecraftpe"
+    },
+    {
+      "rank": 2,
+      "appId": "com.and.games505.TerrariaPaid"
+    },
+    {
+      "rank": 3,
+      "appId": "com.playstack.balatro.android"
+    },
+    {
+      "rank": 4,
+      "appId": "com.PanikArcade.CloverPit"
+    },
+    {
+      "rank": 5,
+      "appId": "com.chucklefish.stardewvalley"
+    },
+    {
+      "rank": 6,
+      "appId": "com.brilbox.dungeonmerge"
+    },
+    {
+      "rank": 7,
+      "appId": "com.fizzd.connectedworlds"
+    },
+    {
+      "rank": 8,
+      "appId": "com.poncle.vampirecrawlers"
+    },
+    {
+      "rank": 9,
+      "appId": "com.robtopx.geometryjump"
+    },
+    {
+      "rank": 10,
+      "appId": "com.RustyLake.ServantOfTheLake"
+    },
+    {
+      "rank": 11,
+      "appId": "com.mintrocket.drmobile"
+    },
+    {
+      "rank": 12,
+      "appId": "net.kairosoft.android.fashion"
+    },
+    {
+      "rank": 13,
+      "appId": "nz.co.codepoint.minimetro"
+    },
+    {
+      "rank": 14,
+      "appId": "com.batomon.showdown"
+    },
+    {
+      "rank": 15,
+      "appId": "com.slggames.hgsg"
+    },
+    {
+      "rank": 16,
+      "appId": "com.ironhidegames.android.kingdomrush6.genesis"
+    },
+    {
+      "rank": 17,
+      "appId": "com.humble.SlayTheSpire"
+    },
+    {
+      "rank": 18,
+      "appId": "jp.co.capcom.gyakusai123"
+    },
+    {
+      "rank": 19,
+      "appId": "com.playdigious.northgard"
+    },
+    {
+      "rank": 20,
+      "appId": "com.GameCoaster.DungeonWithin"
+    },
+    {
+      "rank": 21,
+      "appId": "com.brotato.shooting.survivors.games.paid.android"
+    },
+    {
+      "rank": 22,
+      "appId": "com.fundaygames.scritchyscratchy"
+    },
+    {
+      "rank": 23,
+      "appId": "com.banjihagames.seoul2033_backer"
+    },
+    {
+      "rank": 24,
+      "appId": "com.givepro.towerguild"
+    },
+    {
+      "rank": 25,
+      "appId": "com.aladdinx.suikagame"
+    },
+    {
+      "rank": 26,
+      "appId": "com.xd.tabs.google"
+    },
+    {
+      "rank": 27,
+      "appId": "com.doghowl.DropDuchy"
+    },
+    {
+      "rank": 28,
+      "appId": "com.Level5.LT1RKR"
+    },
+    {
+      "rank": 29,
+      "appId": "com.keplerinteractive.sifuthegame"
+    },
+    {
+      "rank": 30,
+      "appId": "com.teamhoray.dungreed"
+    },
+    {
+      "rank": 31,
+      "appId": "com.sofarsogood.incredibox"
+    },
+    {
+      "rank": 32,
+      "appId": "air.com.noodlecake.luminocity"
+    },
+    {
+      "rank": 33,
+      "appId": "com.Friedemann.SlotsAndDaggers"
+    },
+    {
+      "rank": 34,
+      "appId": "com.ironhidegames.android.kingdomrushfrontiers"
+    },
+    {
+      "rank": 35,
+      "appId": "com.playdigious.dst"
+    },
+    {
+      "rank": 36,
+      "appId": "air.net.machinarium.Machinarium.GP"
+    },
+    {
+      "rank": 37,
+      "appId": "com.NboxGames.TeachingAssistantLifeG"
+    },
+    {
+      "rank": 38,
+      "appId": "com.doghowlgames.thronefall"
+    },
+    {
+      "rank": 39,
+      "appId": "com.halls.of.torment.paid.gp"
+    },
+    {
+      "rank": 40,
+      "appId": "com.playdigious.deadcells.mobile"
+    },
+    {
+      "rank": 41,
+      "appId": "net.kairosoft.android.gamedev3en"
+    },
+    {
+      "rank": 42,
+      "appId": "com.guigugame.guigubahuangoverseas"
+    },
+    {
+      "rank": 43,
+      "appId": "net.kairosoft.android.bouken2"
+    },
+    {
+      "rank": 44,
+      "appId": "com.AbyteEntertainment.DealersLifeLegend"
+    },
+    {
+      "rank": 45,
+      "appId": "com.devolver.reigns"
+    },
+    {
+      "rank": 46,
+      "appId": "com.playdigious.skul"
+    },
+    {
+      "rank": 47,
+      "appId": "com.pid.shotgunking"
+    },
+    {
+      "rank": 48,
+      "appId": "com.strayfawnstudio.dungeonclawlermobile"
+    },
+    {
+      "rank": 49,
+      "appId": "com.excidium.dungeonwarfare3"
+    },
+    {
+      "rank": 50,
+      "appId": "com.Flanne.MinutesTillDawn.roguelike.shooting.gp"
+    },
+    {
+      "rank": 51,
+      "appId": "com.AbyteEntertainment.DealersLife2"
+    },
+    {
+      "rank": 52,
+      "appId": "com.strayfawnstudio.gambonanza"
+    },
+    {
+      "rank": 53,
+      "appId": "com.noodlecake.wb"
+    },
+    {
+      "rank": 54,
+      "appId": "net.kairosoft.android.dorayaki"
+    },
+    {
+      "rank": 55,
+      "appId": "com.coffeestain.goatsimulator3"
+    },
+    {
+      "rank": 56,
+      "appId": "com.pid.beholderconductor"
+    },
+    {
+      "rank": 57,
+      "appId": "com.playdigious.littlenightmare"
+    },
+    {
+      "rank": 58,
+      "appId": "com.mythicowl.truckful"
+    },
+    {
+      "rank": 59,
+      "appId": "com.bscotch.crashlands2"
+    },
+    {
+      "rank": 60,
+      "appId": "com.bscotch.hmd"
+    },
+    {
+      "rank": 61,
+      "appId": "com.unknownworlds.subnautica"
+    },
+    {
+      "rank": 62,
+      "appId": "com.snapbreak.discounty"
+    },
+    {
+      "rank": 63,
+      "appId": "com.playdead.limbo.full"
+    }
+  ]
+}
