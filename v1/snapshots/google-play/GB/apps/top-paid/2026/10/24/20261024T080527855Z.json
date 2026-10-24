@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-gb-apps-top-paid-all-apps-20261024T080527855Z",
+  "store": "google-play",
+  "market": "GB",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-24T08:05:27.855Z",
+  "observationDate": "2026-10-24",
+  "marketTimeZone": "Europe/London",
+  "marketObservationDate": "2026-10-24",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 22,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=GB",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "32570cf015e0226db12b5a8ddd33a89bbd35886122c84acbd73e62db86105a3b"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:22/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "uk.co.focusmm.DTSCombo"
+    },
+    {
+      "rank": 2,
+      "appId": "uk.co.tso.ctt"
+    },
+    {
+      "rank": 3,
+      "appId": "uk.co.citb.imagitech.gt100.android.vy19.plus"
+    },
+    {
+      "rank": 4,
+      "appId": "com.propagator.squeezy"
+    },
+    {
+      "rank": 5,
+      "appId": "uk.co.tso.lituk"
+    },
+    {
+      "rank": 6,
+      "appId": "uk.co.citb.imagitech.gt200.android.vy23.plus"
+    },
+    {
+      "rank": 7,
+      "appId": "com.veamstudios.siteauditpro"
+    },
+    {
+      "rank": 8,
+      "appId": "uk.co.tso.highwaycode"
+    },
+    {
+      "rank": 9,
+      "appId": "com.edshed.spellingshed"
+    },
+    {
+      "rank": 10,
+      "appId": "com.goblintools"
+    },
+    {
+      "rank": 11,
+      "appId": "com.SpottedGhosts.SpiritTalker"
+    },
+    {
+      "rank": 12,
+      "appId": "com.watchfacestudio.md307digital"
+    },
+    {
+      "rank": 13,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 14,
+      "appId": "com.edde746.plezy"
+    },
+    {
+      "rank": 15,
+      "appId": "com.watchfacestudio.lbclassic06"
+    },
+    {
+      "rank": 16,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 17,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 18,
+      "appId": "com.watchfacestudio.per023pro"
+    },
+    {
+      "rank": 19,
+      "appId": "com.watchfacestudio.md326"
+    },
+    {
+      "rank": 20,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 21,
+      "appId": "idm.internet.download.manager.plus"
+    },
+    {
+      "rank": 22,
+      "appId": "com.ukurbanprepper.prepperscompanion"
+    }
+  ]
+}
