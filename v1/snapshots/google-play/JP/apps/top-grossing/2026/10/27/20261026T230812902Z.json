@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-jp-apps-top-grossing-all-apps-20261026T230812902Z",
+  "store": "google-play",
+  "market": "JP",
+  "scope": "apps",
+  "chart": "top-grossing",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-26T23:08:12.902Z",
+  "observationDate": "2026-10-26",
+  "marketTimeZone": "Asia/Tokyo",
+  "marketObservationDate": "2026-10-27",
+  "status": "valid",
+  "expectedCount": 100,
+  "actualCount": 100,
+  "complete": true,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=JP",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "d53e2864f02814bb80428ef7967322a0a40dfce51cbd0f32c9dd2a364caf9009"
+  },
+  "validation": {
+    "previousSnapshotId": "google-play-jp-apps-top-grossing-all-apps-20261025T214836364Z",
+    "flags": []
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.google.android.apps.subscriptions.red"
+    },
+    {
+      "rank": 2,
+      "appId": "com.openai.chatgpt"
+    },
+    {
+      "rank": 3,
+      "appId": "jp.kakao.piccoma"
+    },
+    {
+      "rank": 4,
+      "appId": "jp.naver.linemanga.android"
+    },
+    {
+      "rank": 5,
+      "appId": "com.ss.android.ugc.trill"
+    },
+    {
+      "rank": 6,
+      "appId": "jp.naver.line.android"
+    },
+    {
+      "rank": 7,
+      "appId": "jp.unext.mediaplayer"
+    },
+    {
+      "rank": 8,
+      "appId": "com.ss.android.ugc.tiktok.lite"
+    },
+    {
+      "rank": 9,
+      "appId": "com.scatterlab.messenger"
+    },
+    {
+      "rank": 10,
+      "appId": "jp.linecorp.linemusic.android"
+    },
+    {
+      "rank": 11,
+      "appId": "tv.abema"
+    },
+    {
+      "rank": 12,
+      "appId": "com.anthropic.claude"
+    },
+    {
+      "rank": 13,
+      "appId": "jp.eure.android.pairs"
+    },
+    {
+      "rank": 14,
+      "appId": "jp.co.amutus.mechacomic.android.mangaapp"
+    },
+    {
+      "rank": 15,
+      "appId": "com.dramawave.app"
+    },
+    {
+      "rank": 16,
+      "appId": "com.spotify.music"
+    },
+    {
+      "rank": 17,
+      "appId": "com.dena.pokota"
+    },
+    {
+      "rank": 18,
+      "appId": "com.netshort.abroad"
+    },
+    {
+      "rank": 19,
+      "appId": "jp.co.kodansha.android.magazinepocket"
+    },
+    {
+      "rank": 20,
+      "appId": "ai.x.grok"
+    },
+    {
+      "rank": 21,
+      "appId": "com.read.goodnovel"
+    },
+    {
+      "rank": 22,
+      "appId": "is.with"
+    },
+    {
+      "rank": 23,
+      "appId": "com.access_company.android.sh_jumpplus"
+    },
+    {
+      "rank": 24,
+      "appId": "jp.wrtn.character"
+    },
+    {
+      "rank": 25,
+      "appId": "com.storymatrix.drama"
+    },
+    {
+      "rank": 26,
+      "appId": "air.jp.co.fujitv.fodviewer"
+    },
+    {
+      "rank": 27,
+      "appId": "jp.co.matchingagent.cocotsure"
+    },
+    {
+      "rank": 28,
+      "appId": "com.duolingo"
+    },
+    {
+      "rank": 29,
+      "appId": "jp.cocone.p2"
+    },
+    {
+      "rank": 30,
+      "appId": "net.ap.connectorbit.android"
+    },
+    {
+      "rank": 31,
+      "appId": "com.newreading.goodreels"
+    },
+    {
+      "rank": 32,
+      "appId": "jp.happyon.android"
+    },
+    {
+      "rank": 33,
+      "appId": "com.twitter.android"
+    },
+    {
+      "rank": 34,
+      "appId": "com.tinder"
+    },
+    {
+      "rank": 35,
+      "appId": "jp.bookwalker.kreader.android.epub"
+    },
+    {
+      "rank": 36,
+      "appId": "com.apple.android.music"
+    },
+    {
+      "rank": 37,
+      "appId": "wni.WeathernewsTouch.jp"
+    },
+    {
+      "rank": 38,
+      "appId": "com.newleaf.app.android.victor"
+    },
+    {
+      "rank": 39,
+      "appId": "jp.jig.product.whowatch.viewer"
+    },
+    {
+      "rank": 40,
+      "appId": "com.nikkei.newspaper"
+    },
+    {
+      "rank": 41,
+      "appId": "com.discord"
+    },
+    {
+      "rank": 42,
+      "appId": "com.nttdocomo.android.danimeapp"
+    },
+    {
+      "rank": 43,
+      "appId": "com.disney.disneyplus"
+    },
+    {
+      "rank": 44,
+      "appId": "jp.unext.tv.player"
+    },
+    {
+      "rank": 45,
+      "appId": "jp.co.netdreamers.netkeiba"
+    },
+    {
+      "rank": 46,
+      "appId": "com.dena.mirrativ"
+    },
+    {
+      "rank": 47,
+      "appId": "tv.twitch.android.app"
+    },
+    {
+      "rank": 48,
+      "appId": "jp.co.yahoo.android.ebookjapan"
+    },
+    {
+      "rank": 49,
+      "appId": "com.omiai_jp"
+    },
+    {
+      "rank": 50,
+      "appId": "com.trendmicro.tmmspersonal.jp.googleplayversion"
+    },
+    {
+      "rank": 51,
+      "appId": "jp.cocone.livly"
+    },
+    {
+      "rank": 52,
+      "appId": "jp.co.duo7.vr.iriam"
+    },
+    {
+      "rank": 53,
+      "appId": "jp.radiko.Player"
+    },
+    {
+      "rank": 54,
+      "appId": "com.moneyforward.android.app"
+    },
+    {
+      "rank": 55,
+      "appId": "tv.mixch.android"
+    },
+    {
+      "rank": 56,
+      "appId": "com.sidefeed.TCViewer"
+    },
+    {
+      "rank": 57,
+      "appId": "com.instagram.android"
+    },
+    {
+      "rank": 58,
+      "appId": "jp.co.i_bec.suteki_happy"
+    },
+    {
+      "rank": 59,
+      "appId": "com.microsoft.skydrive"
+    },
+    {
+      "rank": 60,
+      "appId": "com.dmm.premium"
+    },
+    {
+      "rank": 61,
+      "appId": "com.lemon.lvoverseas"
+    },
+    {
+      "rank": 62,
+      "appId": "com.marrish.app"
+    },
+    {
+      "rank": 63,
+      "appId": "com.selabs.speak"
+    },
+    {
+      "rank": 64,
+      "appId": "com.storyreel.tv.android"
+    },
+    {
+      "rank": 65,
+      "appId": "com.square_enix.android_googleplay.mangaup_jp"
+    },
+    {
+      "rank": 66,
+      "appId": "jp.co.greenhouse.asken"
+    },
+    {
+      "rank": 67,
+      "appId": "com.navitime.local.navitime"
+    },
+    {
+      "rank": 68,
+      "appId": "com.shionplus_android"
+    },
+    {
+      "rank": 69,
+      "appId": "jp.co.yamap"
+    },
+    {
+      "rank": 70,
+      "appId": "com.vibeshort.visualnovel.android"
+    },
+    {
+      "rank": 71,
+      "appId": "com.zyhwplatform.shortplay"
+    },
+    {
+      "rank": 72,
+      "appId": "jp.co.cyberagent.miami"
+    },
+    {
+      "rank": 73,
+      "appId": "ai.plaud.android.plaud"
+    },
+    {
+      "rank": 74,
+      "appId": "com.navitime.local.navitimetruck"
+    },
+    {
+      "rank": 75,
+      "appId": "fm.awa.liverpool"
+    },
+    {
+      "rank": 76,
+      "appId": "com.canva.editor"
+    },
+    {
+      "rank": 77,
+      "appId": "com.cookpad.android.activities"
+    },
+    {
+      "rank": 78,
+      "appId": "com.immomo.miraimind"
+    },
+    {
+      "rank": 79,
+      "appId": "com.jkfrnds"
+    },
+    {
+      "rank": 80,
+      "appId": "org.telegram.messenger"
+    },
+    {
+      "rank": 81,
+      "appId": "jp.co.toei.TokusatsuFanClub"
+    },
+    {
+      "rank": 82,
+      "appId": "com.symantec.mobilesecurity"
+    },
+    {
+      "rank": 83,
+      "appId": "us.mitene"
+    },
+    {
+      "rank": 84,
+      "appId": "com.dazn"
+    },
+    {
+      "rank": 85,
+      "appId": "com.wejoy.weplay.jp"
+    },
+    {
+      "rank": 86,
+      "appId": "com.adobe.reader"
+    },
+    {
+      "rank": 87,
+      "appId": "jp.wkapp"
+    },
+    {
+      "rank": 88,
+      "appId": "jp.dena.showroom"
+    },
+    {
+      "rank": 89,
+      "appId": "com.zebrack"
+    },
+    {
+      "rank": 90,
+      "appId": "anonymous.sns.community.gravity"
+    },
+    {
+      "rank": 91,
+      "appId": "com.amazon.mp3"
+    },
+    {
+      "rank": 92,
+      "appId": "jp.pxv.android"
+    },
+    {
+      "rank": 93,
+      "appId": "com.amazon.kindle"
+    },
+    {
+      "rank": 94,
+      "appId": "net.imikapp"
+    },
+    {
+      "rank": 95,
+      "appId": "com.suno.android"
+    },
+    {
+      "rank": 96,
+      "appId": "ai.mero.app"
+    },
+    {
+      "rank": 97,
+      "appId": "com.changdu.mobovideo"
+    },
+    {
+      "rank": 98,
+      "appId": "com.dropbox.android"
+    },
+    {
+      "rank": 99,
+      "appId": "com.storage.androidcleaner"
+    },
+    {
+      "rank": 100,
+      "appId": "biz.gokinjo_juku"
+    }
+  ]
+}
