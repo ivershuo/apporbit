@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-br-apps-top-paid-all-apps-20261027T131334855Z",
+  "store": "google-play",
+  "market": "BR",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-27T13:13:34.855Z",
+  "observationDate": "2026-10-27",
+  "marketTimeZone": "America/Sao_Paulo",
+  "marketObservationDate": "2026-10-27",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 24,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=BR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "860873ab5c30ec168529a39ffca36214a227264462a8509d4d199c70483b1476"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:24/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.orealsensiff.pro.com"
+    },
+    {
+      "rank": 2,
+      "appId": "com.geradordesensi.app"
+    },
+    {
+      "rank": 3,
+      "appId": "com.dedealbano.padlab"
+    },
+    {
+      "rank": 4,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 5,
+      "appId": "com.panda.mouse"
+    },
+    {
+      "rank": 6,
+      "appId": "com.booster.gfxpro"
+    },
+    {
+      "rank": 7,
+      "appId": "com.extreamsd.aemobile"
+    },
+    {
+      "rank": 8,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 9,
+      "appId": "com.iliturgia"
+    },
+    {
+      "rank": 10,
+      "appId": "com.adrienmaciel.bramskeyboard"
+    },
+    {
+      "rank": 11,
+      "appId": "org.prowl.torque"
+    },
+    {
+      "rank": 12,
+      "appId": "com.honestapp.tagheuerf1chronograph"
+    },
+    {
+      "rank": 13,
+      "appId": "com.g19mobile.gameboosterplus"
+    },
+    {
+      "rank": 14,
+      "appId": "com.jndapp.nothing.widgets.pack"
+    },
+    {
+      "rank": 15,
+      "appId": "com.h4xhdv.ffh4xraistarmacrofire"
+    },
+    {
+      "rank": 16,
+      "appId": "com.appsgenz.launcherios.pro"
+    },
+    {
+      "rank": 17,
+      "appId": "idm.internet.download.manager.plus"
+    },
+    {
+      "rank": 18,
+      "appId": "inc.trilokia.pubgfxtool"
+    },
+    {
+      "rank": 19,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 20,
+      "appId": "com.appslab.materialyou.widgetspro"
+    },
+    {
+      "rank": 21,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 22,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 23,
+      "appId": "com.bhanu.contactorganizerpro"
+    },
+    {
+      "rank": 24,
+      "appId": "com.bhanu.imageresizer"
+    }
+  ]
+}
