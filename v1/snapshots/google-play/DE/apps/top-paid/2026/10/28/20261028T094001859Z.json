@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20261028T094001859Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-28T09:40:01.859Z",
+  "observationDate": "2026-10-28",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-10-28",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 27,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "802bb5b490ff797a8a32c5cba332e60ca6873ebacc42c1a7dc4f1b4c31a1a63b"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:27/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 4,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 5,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 6,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 7,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 8,
+      "appId": "org.fossify.thankyou"
+    },
+    {
+      "rank": 9,
+      "appId": "de.hwn.community"
+    },
+    {
+      "rank": 10,
+      "appId": "com.watchfacestudio.per32"
+    },
+    {
+      "rank": 11,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 12,
+      "appId": "com.louisseiger.dartstreak"
+    },
+    {
+      "rank": 13,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 14,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 15,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 16,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 17,
+      "appId": "de.theorie24.fs.auto"
+    },
+    {
+      "rank": 18,
+      "appId": "de.dihk.ihk.gewo"
+    },
+    {
+      "rank": 19,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 20,
+      "appId": "com.watchfacestudio.lbclassic06"
+    },
+    {
+      "rank": 21,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 22,
+      "appId": "com.watchfacestudio.per27"
+    },
+    {
+      "rank": 23,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 24,
+      "appId": "com.appslab.materialyou.widgetspro"
+    },
+    {
+      "rank": 25,
+      "appId": "com.edde746.plezy"
+    },
+    {
+      "rank": 26,
+      "appId": "com.tappytaps.android.babymonitor3g"
+    },
+    {
+      "rank": 27,
+      "appId": "com.pdf.reader.editor.viewer.pro"
+    }
+  ]
+}
