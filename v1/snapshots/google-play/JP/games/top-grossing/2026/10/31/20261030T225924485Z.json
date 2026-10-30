@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-jp-games-top-grossing-all-games-20261030T225924485Z",
+  "store": "google-play",
+  "market": "JP",
+  "scope": "games",
+  "chart": "top-grossing",
+  "normalizedCategory": "all-games",
+  "storeCategory": "GAME",
+  "capturedAt": "2026-10-30T22:59:24.485Z",
+  "observationDate": "2026-10-30",
+  "marketTimeZone": "Asia/Tokyo",
+  "marketObservationDate": "2026-10-31",
+  "status": "valid",
+  "expectedCount": 100,
+  "actualCount": 100,
+  "complete": true,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/games?hl=en&gl=JP",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "64ae1bd5fdf3678083e26055cbe0c85c75bb0d72d7fc6f9e8c0ae2d4b5b5c1d5"
+  },
+  "validation": {
+    "previousSnapshotId": "google-play-jp-games-top-grossing-all-games-20261029T231854448Z",
+    "flags": []
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "jp.co.cygames.umamusume"
+    },
+    {
+      "rank": 2,
+      "appId": "com.aniplex.fategrandorder"
+    },
+    {
+      "rank": 3,
+      "appId": "com.proximabeta.nikke"
+    },
+    {
+      "rank": 4,
+      "appId": "com.gof.global"
+    },
+    {
+      "rank": 5,
+      "appId": "com.global.ztmslg"
+    },
+    {
+      "rank": 6,
+      "appId": "com.mergegames.gossipharbor"
+    },
+    {
+      "rank": 7,
+      "appId": "jp.gungho.pad"
+    },
+    {
+      "rank": 8,
+      "appId": "game.qualiarts.hololive.dreams.jp"
+    },
+    {
+      "rank": 9,
+      "appId": "com.fun.lastwar.gp"
+    },
+    {
+      "rank": 10,
+      "appId": "com.dreamgames.royalmatch"
+    },
+    {
+      "rank": 11,
+      "appId": "jp.pokemon.pokemontcgp"
+    },
+    {
+      "rank": 12,
+      "appId": "com.bandainamcoent.gget_JP"
+    },
+    {
+      "rank": 13,
+      "appId": "jp.konami.prospia"
+    },
+    {
+      "rank": 14,
+      "appId": "com.YostarJP.BlueArchive"
+    },
+    {
+      "rank": 15,
+      "appId": "com.bandainamcoent.idolmaster_gakuen"
+    },
+    {
+      "rank": 16,
+      "appId": "jp.co.mixi.monsterstrike"
+    },
+    {
+      "rank": 17,
+      "appId": "com.run.tower.defense"
+    },
+    {
+      "rank": 18,
+      "appId": "com.YoStarJP.Arknights"
+    },
+    {
+      "rank": 19,
+      "appId": "com.nianticlabs.pokemongo"
+    },
+    {
+      "rank": 20,
+      "appId": "com.playrix.gardenscapes"
+    },
+    {
+      "rank": 21,
+      "appId": "net.peakgames.toonblast"
+    },
+    {
+      "rank": 22,
+      "appId": "jp.konami.pesam"
+    },
+    {
+      "rank": 23,
+      "appId": "com.tencent.mhadv"
+    },
+    {
+      "rank": 24,
+      "appId": "jp.konami.wecc"
+    },
+    {
+      "rank": 25,
+      "appId": "com.playrix.township"
+    },
+    {
+      "rank": 26,
+      "appId": "jp.co.cygames.ShadowverseWorldsBeyond"
+    },
+    {
+      "rank": 27,
+      "appId": "com.fatmerge.global"
+    },
+    {
+      "rank": 28,
+      "appId": "com.kurogame.wutheringwaves.global"
+    },
+    {
+      "rank": 29,
+      "appId": "com.HoYoverse.Nap"
+    },
+    {
+      "rank": 30,
+      "appId": "jp.co.takaratomy.duelmastersplays"
+    },
+    {
+      "rank": 31,
+      "appId": "com.nhnpa.cps"
+    },
+    {
+      "rank": 32,
+      "appId": "com.dreamgames.royalkingdom"
+    },
+    {
+      "rank": 33,
+      "appId": "jp.glee.girl"
+    },
+    {
+      "rank": 34,
+      "appId": "com.linecorp.LGPKPK"
+    },
+    {
+      "rank": 35,
+      "appId": "com.zigzagame.paranoize"
+    },
+    {
+      "rank": 36,
+      "appId": "com.readygo.barrel.gp"
+    },
+    {
+      "rank": 37,
+      "appId": "com.bushiroad.sirius"
+    },
+    {
+      "rank": 38,
+      "appId": "com.square_enix.android_googleplay.dqwalkj"
+    },
+    {
+      "rank": 39,
+      "appId": "com.namcobandaigames.spmoja010"
+    },
+    {
+      "rank": 40,
+      "appId": "com.HoYoverse.hkrpgoversea"
+    },
+    {
+      "rank": 41,
+      "appId": "jp.pokemon.pokemonsleep"
+    },
+    {
+      "rank": 42,
+      "appId": "com.smilegate.chaoszero.stove.google"
+    },
+    {
+      "rank": 43,
+      "appId": "com.phs.global"
+    },
+    {
+      "rank": 44,
+      "appId": "com.playrix.homescapes"
+    },
+    {
+      "rank": 45,
+      "appId": "jp.co.drecom.wizardry.daphne"
+    },
+    {
+      "rank": 46,
+      "appId": "com.gamespark.topking.gp"
+    },
+    {
+      "rank": 47,
+      "appId": "com.mrtgd2.jp.and"
+    },
+    {
+      "rank": 48,
+      "appId": "jp.boi.mementomori.android"
+    },
+    {
+      "rank": 49,
+      "appId": "com.hollywood.merge"
+    },
+    {
+      "rank": 50,
+      "appId": "com.hottagames.nte"
+    },
+    {
+      "rank": 51,
+      "appId": "com.bandainamcoent.kingdomhadou"
+    },
+    {
+      "rank": 52,
+      "appId": "jp.co.ponos.battlecats"
+    },
+    {
+      "rank": 53,
+      "appId": "com.linecorp.LGTMTM"
+    },
+    {
+      "rank": 54,
+      "appId": "com.roblox.client"
+    },
+    {
+      "rank": 55,
+      "appId": "com.nianticlabs.monsterhunter"
+    },
+    {
+      "rank": 56,
+      "appId": "com.playrix.fishdomdd.gplay"
+    },
+    {
+      "rank": 57,
+      "appId": "jp.co.koeitecmo.Power"
+    },
+    {
+      "rank": 58,
+      "appId": "com.superplaystudios.disneysolitairedreams"
+    },
+    {
+      "rank": 59,
+      "appId": "com.zjcs.android.jp"
+    },
+    {
+      "rank": 60,
+      "appId": "com.nexon.devcat.mm.jp"
+    },
+    {
+      "rank": 61,
+      "appId": "com.miHoYo.GenshinImpact"
+    },
+    {
+      "rank": 62,
+      "appId": "com.bilibili.trickcal"
+    },
+    {
+      "rank": 63,
+      "appId": "com.aniplex.magia.exedra.jp"
+    },
+    {
+      "rank": 64,
+      "appId": "jp.co.happyelements.boysm"
+    },
+    {
+      "rank": 65,
+      "appId": "com.bandainamcoent.opbrjp"
+    },
+    {
+      "rank": 66,
+      "appId": "com.mhcljp.xpvsfd"
+    },
+    {
+      "rank": 67,
+      "appId": "com.jp.beauty"
+    },
+    {
+      "rank": 68,
+      "appId": "jp.mbga.a12016007.lite"
+    },
+    {
+      "rank": 69,
+      "appId": "com.bandainamcoent.tensuramrkrelease"
+    },
+    {
+      "rank": 70,
+      "appId": "com.cedargames.mysterytown"
+    },
+    {
+      "rank": 71,
+      "appId": "com.king.candycrushsaga"
+    },
+    {
+      "rank": 72,
+      "appId": "com.dmm.games.touken"
+    },
+    {
+      "rank": 73,
+      "appId": "com.gryphline.endfield.gp"
+    },
+    {
+      "rank": 74,
+      "appId": "jp.co.cygames.princessconnectredive"
+    },
+    {
+      "rank": 75,
+      "appId": "com.aniplex.twst.jp"
+    },
+    {
+      "rank": 76,
+      "appId": "jp.konami.suikoden.starleap"
+    },
+    {
+      "rank": 77,
+      "appId": "com.greenmushroom.boomblitz.gp"
+    },
+    {
+      "rank": 78,
+      "appId": "com.square_enix.android_googleplay.DD"
+    },
+    {
+      "rank": 79,
+      "appId": "com.haoplay.game.and.exilium"
+    },
+    {
+      "rank": 80,
+      "appId": "com.iyagames.flotshelter"
+    },
+    {
+      "rank": 81,
+      "appId": "com.ea.gp.fifaultimate"
+    },
+    {
+      "rank": 82,
+      "appId": "com.dena.a12026418"
+    },
+    {
+      "rank": 83,
+      "appId": "jp.co.happyelements.rxr"
+    },
+    {
+      "rank": 84,
+      "appId": "com.heavenburnsred"
+    },
+    {
+      "rank": 85,
+      "appId": "com.nexters.herowars"
+    },
+    {
+      "rank": 86,
+      "appId": "com.farlightgames.pgame.gp"
+    },
+    {
+      "rank": 87,
+      "appId": "com.funplus.ts.global"
+    },
+    {
+      "rank": 88,
+      "appId": "jp.co.koeitecmo.Might"
+    },
+    {
+      "rank": 89,
+      "appId": "com.YoStarJP.AzurLane"
+    },
+    {
+      "rank": 90,
+      "appId": "com.yottagames.mafiawar"
+    },
+    {
+      "rank": 91,
+      "appId": "com.bandainamcogames.dbzdokkan"
+    },
+    {
+      "rank": 92,
+      "appId": "com.qookkagames.xczyw.gp.jp"
+    },
+    {
+      "rank": 93,
+      "appId": "jp.goodsmile.touhoulostword_android"
+    },
+    {
+      "rank": 94,
+      "appId": "com.gamedots.seasideescape"
+    },
+    {
+      "rank": 95,
+      "appId": "com.bandainamcoent.bleach_mh"
+    },
+    {
+      "rank": 96,
+      "appId": "jp.co.koeitecmo.nobunaga.shutsujin"
+    },
+    {
+      "rank": 97,
+      "appId": "com.readygo.dark.gp"
+    },
+    {
+      "rank": 98,
+      "appId": "com.tentree.gp.jp.mecharashi"
+    },
+    {
+      "rank": 99,
+      "appId": "com.sega.pjsekai"
+    },
+    {
+      "rank": 100,
+      "appId": "jp.scbf"
+    }
+  ]
+}

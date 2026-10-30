@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-kr-apps-top-paid-all-apps-20261030T225922374Z",
+  "store": "google-play",
+  "market": "KR",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-10-30T22:59:22.374Z",
+  "observationDate": "2026-10-30",
+  "marketTimeZone": "Asia/Seoul",
+  "marketObservationDate": "2026-10-31",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 20,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=KR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "80bddbdd508697860c74b286c90593b9a9c2d27fa017b7e1247b783d162a000c"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:20/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.mayacrew.rolliescam"
+    },
+    {
+      "rank": 2,
+      "appId": "kr.co.lylstudio.unicorn"
+    },
+    {
+      "rank": 3,
+      "appId": "com.seesun.berryberryfilm"
+    },
+    {
+      "rank": 4,
+      "appId": "com.arter97.tesor"
+    },
+    {
+      "rank": 5,
+      "appId": "co.byeol.hanneung"
+    },
+    {
+      "rank": 6,
+      "appId": "com.seesun.youngphoto"
+    },
+    {
+      "rank": 7,
+      "appId": "com.watchfacestudio.lbclassic06"
+    },
+    {
+      "rank": 8,
+      "appId": "com.watchfacestudio.noda"
+    },
+    {
+      "rank": 9,
+      "appId": "com.chaechaecode.navy_ptsd"
+    },
+    {
+      "rank": 10,
+      "appId": "com.yongcalcompany.JlptVip"
+    },
+    {
+      "rank": 11,
+      "appId": "com.chaechaecode.marine_ptsd2"
+    },
+    {
+      "rank": 12,
+      "appId": "com.realbyteapps.moneya"
+    },
+    {
+      "rank": 13,
+      "appId": "psyberia.alpinequest.full"
+    },
+    {
+      "rank": 14,
+      "appId": "wfs.wtw.m11b3"
+    },
+    {
+      "rank": 15,
+      "appId": "com.novalink.daypic"
+    },
+    {
+      "rank": 16,
+      "appId": "com.kakao.talk.theme.goodday"
+    },
+    {
+      "rank": 17,
+      "appId": "com.jasonkim.tesladashcamviewer"
+    },
+    {
+      "rank": 18,
+      "appId": "com.watchfacestudio.samwatch_military_w_2024"
+    },
+    {
+      "rank": 19,
+      "appId": "com.watchfacestudio.samwatch_digital_themis_2024"
+    },
+    {
+      "rank": 20,
+      "appId": "com.watchfacestudio.samwatch_digital_final_6"
+    }
+  ]
+}
