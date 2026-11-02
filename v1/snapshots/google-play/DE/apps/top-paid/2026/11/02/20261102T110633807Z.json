@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20261102T110633807Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-02T11:06:33.807Z",
+  "observationDate": "2026-11-02",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-11-02",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 30,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "e78f1ed6b99b64a123c034f778fef60da816ed3b7ff69a64f06e20119cec114f"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:30/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 4,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 5,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 6,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 7,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 8,
+      "appId": "com.watchfacestudio.per32"
+    },
+    {
+      "rank": 9,
+      "appId": "de.blitzer.pro.automotive"
+    },
+    {
+      "rank": 10,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 11,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 12,
+      "appId": "de.hwn.community"
+    },
+    {
+      "rank": 13,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 14,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 15,
+      "appId": "com.kerry.a3dmodelingcadcamstudio"
+    },
+    {
+      "rank": 16,
+      "appId": "org.fossify.thankyou"
+    },
+    {
+      "rank": 17,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 18,
+      "appId": "com.minimaa.minimal.detox.launcher"
+    },
+    {
+      "rank": 19,
+      "appId": "com.watchfacestudio.lbclassic06"
+    },
+    {
+      "rank": 20,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 21,
+      "appId": "org.readera.premium"
+    },
+    {
+      "rank": 22,
+      "appId": "org.withouthat.acalendarplus"
+    },
+    {
+      "rank": 23,
+      "appId": "com.louisseiger.dartstreak"
+    },
+    {
+      "rank": 24,
+      "appId": "com.visiblebody.atlas"
+    },
+    {
+      "rank": 25,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 26,
+      "appId": "de.dihk.ihk.gewo"
+    },
+    {
+      "rank": 27,
+      "appId": "com.jndapp.nothing.widgets.pack"
+    },
+    {
+      "rank": 28,
+      "appId": "de.theorie24.fs.auto"
+    },
+    {
+      "rank": 29,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 30,
+      "appId": "com.pdf.reader.editor.viewer.pro"
+    }
+  ]
+}
