@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-in-apps-top-grossing-all-apps-20261107T022226849Z",
+  "store": "google-play",
+  "market": "IN",
+  "scope": "apps",
+  "chart": "top-grossing",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-07T02:22:26.849Z",
+  "observationDate": "2026-11-07",
+  "marketTimeZone": "Asia/Kolkata",
+  "marketObservationDate": "2026-11-07",
+  "status": "valid",
+  "expectedCount": 100,
+  "actualCount": 100,
+  "complete": true,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=IN",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "01e1a46ded1baad9e3ea4ff9483c4cf43cbe109f1bb3f76ed5a29200ba1f0290"
+  },
+  "validation": {
+    "previousSnapshotId": "google-play-in-apps-top-grossing-all-apps-20261106T024953109Z",
+    "flags": []
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.google.android.apps.subscriptions.red"
+    },
+    {
+      "rank": 2,
+      "appId": "com.openai.chatgpt"
+    },
+    {
+      "rank": 3,
+      "appId": "com.anthropic.claude"
+    },
+    {
+      "rank": 4,
+      "appId": "com.instagram.android"
+    },
+    {
+      "rank": 5,
+      "appId": "com.facebook.katana"
+    },
+    {
+      "rank": 6,
+      "appId": "com.linkedin.android"
+    },
+    {
+      "rank": 7,
+      "appId": "com.bite.chillchat"
+    },
+    {
+      "rank": 8,
+      "appId": "in.amazon.mShop.android.shopping"
+    },
+    {
+      "rank": 9,
+      "appId": "com.amazon.avod.thirdpartyclient"
+    },
+    {
+      "rank": 10,
+      "appId": "com.storymatrix.drama"
+    },
+    {
+      "rank": 11,
+      "appId": "com.netshort.abroad"
+    },
+    {
+      "rank": 12,
+      "appId": "com.truecaller"
+    },
+    {
+      "rank": 13,
+      "appId": "org.telegram.messenger"
+    },
+    {
+      "rank": 14,
+      "appId": "io.photora.mood"
+    },
+    {
+      "rank": 15,
+      "appId": "com.sonyliv"
+    },
+    {
+      "rank": 16,
+      "appId": "com.spotify.music"
+    },
+    {
+      "rank": 17,
+      "appId": "com.bumble.app"
+    },
+    {
+      "rank": 18,
+      "appId": "com.radio.pocketfm"
+    },
+    {
+      "rank": 19,
+      "appId": "com.tinder"
+    },
+    {
+      "rank": 20,
+      "appId": "com.newreading.goodreels"
+    },
+    {
+      "rank": 21,
+      "appId": "com.zyhwplatform.shortplay"
+    },
+    {
+      "rank": 22,
+      "appId": "ai.x.grok"
+    },
+    {
+      "rank": 23,
+      "appId": "com.newleaf.app.android.victor"
+    },
+    {
+      "rank": 24,
+      "appId": "cn.wps.moffice_eng"
+    },
+    {
+      "rank": 25,
+      "appId": "co.hinge.app"
+    },
+    {
+      "rank": 26,
+      "appId": "com.getpure.pure"
+    },
+    {
+      "rank": 27,
+      "appId": "com.wejoy.weplay.ar"
+    },
+    {
+      "rank": 28,
+      "appId": "com.crunchyroll.crunchyroid"
+    },
+    {
+      "rank": 29,
+      "appId": "com.canva.editor"
+    },
+    {
+      "rank": 30,
+      "appId": "net.vividix.mint"
+    },
+    {
+      "rank": 31,
+      "appId": "com.snapchat.android"
+    },
+    {
+      "rank": 32,
+      "appId": "com.sgiggle.production"
+    },
+    {
+      "rank": 33,
+      "appId": "com.jk.dream.artists"
+    },
+    {
+      "rank": 34,
+      "appId": "com.dubox.drive"
+    },
+    {
+      "rank": 35,
+      "appId": "com.whatsapp.w4b"
+    },
+    {
+      "rank": 36,
+      "appId": "com.tradingview.tradingviewapp"
+    },
+    {
+      "rank": 37,
+      "appId": "com.grindrapp.android"
+    },
+    {
+      "rank": 38,
+      "appId": "com.twitter.android"
+    },
+    {
+      "rank": 39,
+      "appId": "com.love.vone"
+    },
+    {
+      "rank": 40,
+      "appId": "me.rendio.spark"
+    },
+    {
+      "rank": 41,
+      "appId": "com.toki.android"
+    },
+    {
+      "rank": 42,
+      "appId": "com.boloji.videocall.chatting"
+    },
+    {
+      "rank": 43,
+      "appId": "qrscanner.barcodescanner.qrcodereader.qrgenerator"
+    },
+    {
+      "rank": 44,
+      "appId": "com.suno.android"
+    },
+    {
+      "rank": 45,
+      "appId": "com.duolingo"
+    },
+    {
+      "rank": 46,
+      "appId": "com.wondershare.filmorago"
+    },
+    {
+      "rank": 47,
+      "appId": "com.blink.drama.player"
+    },
+    {
+      "rank": 48,
+      "appId": "com.flashget.parentalcontrol"
+    },
+    {
+      "rank": 49,
+      "appId": "com.sygic.familywhere.android"
+    },
+    {
+      "rank": 50,
+      "appId": "com.picsart.studio"
+    },
+    {
+      "rank": 51,
+      "appId": "com.zw.freeshortplay"
+    },
+    {
+      "rank": 52,
+      "appId": "com.adobe.reader"
+    },
+    {
+      "rank": 53,
+      "appId": "com.cricheroes.cricheroes.alpha"
+    },
+    {
+      "rank": 54,
+      "appId": "kling.ai.video.chat"
+    },
+    {
+      "rank": 55,
+      "appId": "com.mumu.videochat.india"
+    },
+    {
+      "rank": 56,
+      "appId": "net.familo.android"
+    },
+    {
+      "rank": 57,
+      "appId": "com.fumaomao.genie.baby"
+    },
+    {
+      "rank": 58,
+      "appId": "com.viki.android"
+    },
+    {
+      "rank": 59,
+      "appId": "com.gonext.gpsphotolocation"
+    },
+    {
+      "rank": 60,
+      "appId": "com.camerasideas.instashot"
+    },
+    {
+      "rank": 61,
+      "appId": "com.sand.airdroidkidp"
+    },
+    {
+      "rank": 62,
+      "appId": "com.santech.desireapp"
+    },
+    {
+      "rank": 63,
+      "appId": "us.zoom.videomeetings"
+    },
+    {
+      "rank": 64,
+      "appId": "com.blackdivine.gleeden"
+    },
+    {
+      "rank": 65,
+      "appId": "com.vibeshort.visualnovel.android"
+    },
+    {
+      "rank": 66,
+      "appId": "melodytalk.camvideo.live"
+    },
+    {
+      "rank": 67,
+      "appId": "com.blued.international.qy"
+    },
+    {
+      "rank": 68,
+      "appId": "com.aiscanner.mobile"
+    },
+    {
+      "rank": 69,
+      "appId": "com.live.party"
+    },
+    {
+      "rank": 70,
+      "appId": "com.fun.share"
+    },
+    {
+      "rank": 71,
+      "appId": "com.aicleaner.clean.cleanstorage.ai"
+    },
+    {
+      "rank": 72,
+      "appId": "com.parau.pro.videochat"
+    },
+    {
+      "rank": 73,
+      "appId": "com.gpscamera.map.location.geotagphoto"
+    },
+    {
+      "rank": 74,
+      "appId": "ai.perplexity.app.android"
+    },
+    {
+      "rank": 75,
+      "appId": "com.jj.PhantAI"
+    },
+    {
+      "rank": 76,
+      "appId": "com.joyreels.video"
+    },
+    {
+      "rank": 77,
+      "appId": "com.microsoft.skydrive"
+    },
+    {
+      "rank": 78,
+      "appId": "org.coursera.android"
+    },
+    {
+      "rank": 79,
+      "appId": "so.nymph.android"
+    },
+    {
+      "rank": 80,
+      "appId": "in.mohalla.sharechat"
+    },
+    {
+      "rank": 81,
+      "appId": "com.usgen.magic"
+    },
+    {
+      "rank": 82,
+      "appId": "com.frontrow.vlog"
+    },
+    {
+      "rank": 83,
+      "appId": "com.apple.android.music"
+    },
+    {
+      "rank": 84,
+      "appId": "com.walastseen.app"
+    },
+    {
+      "rank": 85,
+      "appId": "com.dramawave.app"
+    },
+    {
+      "rank": 86,
+      "appId": "com.whatsapp"
+    },
+    {
+      "rank": 87,
+      "appId": "com.adobe.scan.android"
+    },
+    {
+      "rank": 88,
+      "appId": "com.storyreel.tv.android"
+    },
+    {
+      "rank": 89,
+      "appId": "com.bigwinepot.nwdn.international"
+    },
+    {
+      "rank": 90,
+      "appId": "com.ftw_and_co.happn"
+    },
+    {
+      "rank": 91,
+      "appId": "com.diskwalaapp"
+    },
+    {
+      "rank": 92,
+      "appId": "com.traderoom.mobile"
+    },
+    {
+      "rank": 93,
+      "appId": "com.adobe.lrmobile"
+    },
+    {
+      "rank": 94,
+      "appId": "com.suntv.sunnxt"
+    },
+    {
+      "rank": 95,
+      "appId": "com.nexstreaming.app.kinemasterfree"
+    },
+    {
+      "rank": 96,
+      "appId": "com.joymet.videocall"
+    },
+    {
+      "rank": 97,
+      "appId": "com.nordvpn.android"
+    },
+    {
+      "rank": 98,
+      "appId": "com.scorp.who"
+    },
+    {
+      "rank": 99,
+      "appId": "com.smule.singandroid"
+    },
+    {
+      "rank": 100,
+      "appId": "com.starmakerinteractive.starmaker"
+    }
+  ]
+}
