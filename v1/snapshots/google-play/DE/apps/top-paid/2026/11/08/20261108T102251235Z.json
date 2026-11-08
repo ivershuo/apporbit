@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20261108T102251235Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-08T10:22:51.235Z",
+  "observationDate": "2026-11-08",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-11-08",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 24,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "3beba8ffa760c12965d6418f8c0fae718f2276452ee9e65cdda9a0335da8f88d"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:24/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 4,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 5,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 6,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 7,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 8,
+      "appId": "com.kerry.a3dmodelingcadcamstudio"
+    },
+    {
+      "rank": 9,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 10,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 11,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 12,
+      "appId": "com.watchfacestudio.lbclassic06"
+    },
+    {
+      "rank": 13,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 14,
+      "appId": "de.theorie24.fs.auto"
+    },
+    {
+      "rank": 15,
+      "appId": "com.jndapp.oneui.widgets.pack"
+    },
+    {
+      "rank": 16,
+      "appId": "org.withouthat.acalendarplus"
+    },
+    {
+      "rank": 17,
+      "appId": "de.dihk.ihk.gewo"
+    },
+    {
+      "rank": 18,
+      "appId": "de.hwn.community"
+    },
+    {
+      "rank": 19,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 20,
+      "appId": "org.fossify.thankyou"
+    },
+    {
+      "rank": 21,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 22,
+      "appId": "com.watchfacestudio.per32"
+    },
+    {
+      "rank": 23,
+      "appId": "com.visiblebody.atlas"
+    },
+    {
+      "rank": 24,
+      "appId": "com.pdf.reader.editor.viewer.pro"
+    }
+  ]
+}
