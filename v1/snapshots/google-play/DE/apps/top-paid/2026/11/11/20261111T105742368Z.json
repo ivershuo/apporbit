@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20261111T105742368Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-11T10:57:42.368Z",
+  "observationDate": "2026-11-11",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-11-11",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 27,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "243952b37baeb4215d9d6f984e4e49621432db5fcb0ef548884380c21dfcf8c3"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:27/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 4,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 5,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 6,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 7,
+      "appId": "com.watchfacestudio.lbclassic06"
+    },
+    {
+      "rank": 8,
+      "appId": "com.kerry.a3dmodelingcadcamstudio"
+    },
+    {
+      "rank": 9,
+      "appId": "psremoteplay.gamecontroller.playstream.pro"
+    },
+    {
+      "rank": 10,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 11,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 12,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 13,
+      "appId": "de.bechtoldit.intake"
+    },
+    {
+      "rank": 14,
+      "appId": "de.dihk.ihk.gewo"
+    },
+    {
+      "rank": 15,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 16,
+      "appId": "org.fossify.thankyou"
+    },
+    {
+      "rank": 17,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 18,
+      "appId": "de.theorie24.fs.auto"
+    },
+    {
+      "rank": 19,
+      "appId": "com.louisseiger.dartstreak"
+    },
+    {
+      "rank": 20,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 21,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 22,
+      "appId": "de.hwn.community"
+    },
+    {
+      "rank": 23,
+      "appId": "com.jndapp.oneui.widgets.pack"
+    },
+    {
+      "rank": 24,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 25,
+      "appId": "org.withouthat.acalendarplus"
+    },
+    {
+      "rank": 26,
+      "appId": "com.mayacrew.rolliescam"
+    },
+    {
+      "rank": 27,
+      "appId": "com.pdf.reader.editor.viewer.pro"
+    }
+  ]
+}
