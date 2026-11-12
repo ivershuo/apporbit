@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-br-games-top-grossing-all-games-20261112T155929701Z",
+  "store": "google-play",
+  "market": "BR",
+  "scope": "games",
+  "chart": "top-grossing",
+  "normalizedCategory": "all-games",
+  "storeCategory": "GAME",
+  "capturedAt": "2026-11-12T15:59:29.701Z",
+  "observationDate": "2026-11-12",
+  "marketTimeZone": "America/Sao_Paulo",
+  "marketObservationDate": "2026-11-12",
+  "status": "valid",
+  "expectedCount": 100,
+  "actualCount": 100,
+  "complete": true,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/games?hl=en&gl=BR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "90f511eb994acee456981f61e39cc0de7b2794dbf094b87c2cefeff374007235"
+  },
+  "validation": {
+    "previousSnapshotId": "google-play-br-games-top-grossing-all-games-20261111T151419925Z",
+    "flags": []
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.roblox.client"
+    },
+    {
+      "rank": 2,
+      "appId": "com.dts.freefireth"
+    },
+    {
+      "rank": 3,
+      "appId": "com.moonactive.coinmaster"
+    },
+    {
+      "rank": 4,
+      "appId": "com.mergegames.gossipharbor"
+    },
+    {
+      "rank": 5,
+      "appId": "com.supercell.brawlstars"
+    },
+    {
+      "rank": 6,
+      "appId": "com.king.candycrushsaga"
+    },
+    {
+      "rank": 7,
+      "appId": "jp.konami.pesam"
+    },
+    {
+      "rank": 8,
+      "appId": "com.riotgames.league.wildrift"
+    },
+    {
+      "rank": 9,
+      "appId": "com.dreamgames.royalmatch"
+    },
+    {
+      "rank": 10,
+      "appId": "com.mojang.minecraftpe"
+    },
+    {
+      "rank": 11,
+      "appId": "io.randomco.travel"
+    },
+    {
+      "rank": 12,
+      "appId": "com.ea.gp.fifamobile"
+    },
+    {
+      "rank": 13,
+      "appId": "com.playrix.gardenscapes"
+    },
+    {
+      "rank": 14,
+      "appId": "com.supercell.clashofclans"
+    },
+    {
+      "rank": 15,
+      "appId": "com.fatmerge.global"
+    },
+    {
+      "rank": 16,
+      "appId": "com.totalbattle"
+    },
+    {
+      "rank": 17,
+      "appId": "com.activision.callofduty.shooter"
+    },
+    {
+      "rank": 18,
+      "appId": "com.dreamgames.royalkingdom"
+    },
+    {
+      "rank": 19,
+      "appId": "com.nianticlabs.pokemongo"
+    },
+    {
+      "rank": 20,
+      "appId": "com.playrix.township"
+    },
+    {
+      "rank": 21,
+      "appId": "com.run.tower.defense"
+    },
+    {
+      "rank": 22,
+      "appId": "com.supercell.clashroyale"
+    },
+    {
+      "rank": 23,
+      "appId": "com.playrix.fishdomdd.gplay"
+    },
+    {
+      "rank": 24,
+      "appId": "com.pazugames.avatarworld"
+    },
+    {
+      "rank": 25,
+      "appId": "com.firsttouchgames.dls7"
+    },
+    {
+      "rank": 26,
+      "appId": "com.HoYoverse.hkrpgoversea"
+    },
+    {
+      "rank": 27,
+      "appId": "com.miniclip.eightballpool"
+    },
+    {
+      "rank": 28,
+      "appId": "com.gof.global"
+    },
+    {
+      "rank": 29,
+      "appId": "com.mobile.legends"
+    },
+    {
+      "rank": 30,
+      "appId": "air.com.pipastudios.release.praiabingo"
+    },
+    {
+      "rank": 31,
+      "appId": "com.Chillgaming.oneState"
+    },
+    {
+      "rank": 32,
+      "appId": "com.fun.lastwar.gp"
+    },
+    {
+      "rank": 33,
+      "appId": "com.lockwoodpublishing.avakinlife"
+    },
+    {
+      "rank": 34,
+      "appId": "com.hollywood.merge"
+    },
+    {
+      "rank": 35,
+      "appId": "com.playrix.homescapes"
+    },
+    {
+      "rank": 36,
+      "appId": "com.miHoYo.GenshinImpact"
+    },
+    {
+      "rank": 37,
+      "appId": "com.supercell.hayday"
+    },
+    {
+      "rank": 38,
+      "appId": "com.catsbit.oxidesurvivalisland"
+    },
+    {
+      "rank": 39,
+      "appId": "com.king.farmheroessaga"
+    },
+    {
+      "rank": 40,
+      "appId": "com.netease.newspike"
+    },
+    {
+      "rank": 41,
+      "appId": "com.axlebolt.standoff2"
+    },
+    {
+      "rank": 42,
+      "appId": "com.merge.game.foodstars"
+    },
+    {
+      "rank": 43,
+      "appId": "com.cola.game"
+    },
+    {
+      "rank": 44,
+      "appId": "com.smallgiantgames.empires"
+    },
+    {
+      "rank": 45,
+      "appId": "com.king.candycrushsodasaga"
+    },
+    {
+      "rank": 46,
+      "appId": "com.trucovamos.play"
+    },
+    {
+      "rank": 47,
+      "appId": "com.epicgames.fortnite"
+    },
+    {
+      "rank": 48,
+      "appId": "com.moonactive.cmboard"
+    },
+    {
+      "rank": 49,
+      "appId": "com.gamespark.topking.gp"
+    },
+    {
+      "rank": 50,
+      "appId": "com.merge.cooking.theme.restaurant.food"
+    },
+    {
+      "rank": 51,
+      "appId": "br.com.bombapatch"
+    },
+    {
+      "rank": 52,
+      "appId": "com.slg.policewar"
+    },
+    {
+      "rank": 53,
+      "appId": "com.garena.game.mho"
+    },
+    {
+      "rank": 54,
+      "appId": "com.levelinfinite.sgameGlobal"
+    },
+    {
+      "rank": 55,
+      "appId": "com.playshoo.texaspoker.romania"
+    },
+    {
+      "rank": 56,
+      "appId": "com.phs.global"
+    },
+    {
+      "rank": 57,
+      "appId": "net.peakgames.toonblast"
+    },
+    {
+      "rank": 58,
+      "appId": "com.jarvigames.viceonline"
+    },
+    {
+      "rank": 59,
+      "appId": "ai.heyyyy.app"
+    },
+    {
+      "rank": 60,
+      "appId": "com.roomperfect.global"
+    },
+    {
+      "rank": 61,
+      "appId": "com.readygo.barrel.gp"
+    },
+    {
+      "rank": 62,
+      "appId": "com.multicastgames.butcher"
+    },
+    {
+      "rank": 63,
+      "appId": "com.gamedots.seasideescape"
+    },
+    {
+      "rank": 64,
+      "appId": "com.igg.android.lordsmobile"
+    },
+    {
+      "rank": 65,
+      "appId": "jp.pokemon.pokemontcgp"
+    },
+    {
+      "rank": 66,
+      "appId": "com.goldenjogos.game"
+    },
+    {
+      "rank": 67,
+      "appId": "com.chess"
+    },
+    {
+      "rank": 68,
+      "appId": "com.roleplay.riorise"
+    },
+    {
+      "rank": 69,
+      "appId": "com.cedargames.mysterytown"
+    },
+    {
+      "rank": 70,
+      "appId": "com.zroute.global"
+    },
+    {
+      "rank": 71,
+      "appId": "com.tocaboca.tocalifeworld"
+    },
+    {
+      "rank": 72,
+      "appId": "com.topgamesinc.evony"
+    },
+    {
+      "rank": 73,
+      "appId": "com.epicoro.castleclashers"
+    },
+    {
+      "rank": 74,
+      "appId": "com.MelsoftGames.FamilyIslandFarm"
+    },
+    {
+      "rank": 75,
+      "appId": "com.play.merge.restyle"
+    },
+    {
+      "rank": 76,
+      "appId": "com.lilithgame.roc.gp"
+    },
+    {
+      "rank": 77,
+      "appId": "com.hnhs.endlesssea.gp"
+    },
+    {
+      "rank": 78,
+      "appId": "es.socialpoint.DragonCity"
+    },
+    {
+      "rank": 79,
+      "appId": "com.spark.sp.gp"
+    },
+    {
+      "rank": 80,
+      "appId": "com.abi.colony.flow"
+    },
+    {
+      "rank": 81,
+      "appId": "com.justdesserts.global"
+    },
+    {
+      "rank": 82,
+      "appId": "com.zjcs.android.us"
+    },
+    {
+      "rank": 83,
+      "appId": "eu.nordeus.topeleven.android"
+    },
+    {
+      "rank": 84,
+      "appId": "com.kitkagames.fallbuddies"
+    },
+    {
+      "rank": 85,
+      "appId": "com.gamesmartltd.doctorbingo"
+    },
+    {
+      "rank": 86,
+      "appId": "com.xd.xdtglobal.gp"
+    },
+    {
+      "rank": 87,
+      "appId": "com.kabam.marvelbattle"
+    },
+    {
+      "rank": 88,
+      "appId": "net.peakgames.match"
+    },
+    {
+      "rank": 89,
+      "appId": "com.project.idle.cd"
+    },
+    {
+      "rank": 90,
+      "appId": "com.gear2.growslayer"
+    },
+    {
+      "rank": 91,
+      "appId": "com.scopely.monopolygo"
+    },
+    {
+      "rank": 92,
+      "appId": "com.s01.global"
+    },
+    {
+      "rank": 93,
+      "appId": "leyi.ageofspirits"
+    },
+    {
+      "rank": 94,
+      "appId": "com.tencent.ig"
+    },
+    {
+      "rank": 95,
+      "appId": "com.movile.playkids.pkxd"
+    },
+    {
+      "rank": 96,
+      "appId": "com.liteorange.hometopia"
+    },
+    {
+      "rank": 97,
+      "appId": "com.superplaystudios.disneysolitairedreams"
+    },
+    {
+      "rank": 98,
+      "appId": "com.GybeGames.ColorBlockJam"
+    },
+    {
+      "rank": 99,
+      "appId": "com.wemade.mir4global"
+    },
+    {
+      "rank": 100,
+      "appId": "com.pixonic.wwr"
+    }
+  ]
+}
