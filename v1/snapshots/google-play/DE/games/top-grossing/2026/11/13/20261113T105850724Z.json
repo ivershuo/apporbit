@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-games-top-grossing-all-games-20261113T105850724Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "games",
+  "chart": "top-grossing",
+  "normalizedCategory": "all-games",
+  "storeCategory": "GAME",
+  "capturedAt": "2026-11-13T10:58:50.724Z",
+  "observationDate": "2026-11-13",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-11-13",
+  "status": "valid",
+  "expectedCount": 100,
+  "actualCount": 100,
+  "complete": true,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/games?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "51be90076b62ece3fa38329d426fef87bbd5c1cd1289a0c40d42e057766087e3"
+  },
+  "validation": {
+    "previousSnapshotId": "google-play-de-games-top-grossing-all-games-20261112T110911385Z",
+    "flags": []
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.mergegames.gossipharbor"
+    },
+    {
+      "rank": 2,
+      "appId": "com.moonactive.coinmaster"
+    },
+    {
+      "rank": 3,
+      "appId": "com.dreamgames.royalmatch"
+    },
+    {
+      "rank": 4,
+      "appId": "com.playrix.gardenscapes"
+    },
+    {
+      "rank": 5,
+      "appId": "com.roblox.client"
+    },
+    {
+      "rank": 6,
+      "appId": "com.king.candycrushsaga"
+    },
+    {
+      "rank": 7,
+      "appId": "com.playrix.fishdomdd.gplay"
+    },
+    {
+      "rank": 8,
+      "appId": "com.playrix.township"
+    },
+    {
+      "rank": 9,
+      "appId": "com.nianticlabs.pokemongo"
+    },
+    {
+      "rank": 10,
+      "appId": "com.scopely.monopolygo"
+    },
+    {
+      "rank": 11,
+      "appId": "com.playrix.homescapes"
+    },
+    {
+      "rank": 12,
+      "appId": "com.totalbattle"
+    },
+    {
+      "rank": 13,
+      "appId": "com.run.tower.defense"
+    },
+    {
+      "rank": 14,
+      "appId": "com.dreamgames.royalkingdom"
+    },
+    {
+      "rank": 15,
+      "appId": "com.superplaystudios.dicedreams"
+    },
+    {
+      "rank": 16,
+      "appId": "com.gof.global"
+    },
+    {
+      "rank": 17,
+      "appId": "com.supercell.hayday"
+    },
+    {
+      "rank": 18,
+      "appId": "com.phs.global"
+    },
+    {
+      "rank": 19,
+      "appId": "com.superplaystudios.disneysolitairedreams"
+    },
+    {
+      "rank": 20,
+      "appId": "com.fun.lastwar.gp"
+    },
+    {
+      "rank": 21,
+      "appId": "com.moonactive.cmboard"
+    },
+    {
+      "rank": 22,
+      "appId": "com.readygo.barrel.gp"
+    },
+    {
+      "rank": 23,
+      "appId": "net.peakgames.toonblast"
+    },
+    {
+      "rank": 24,
+      "appId": "com.fatmerge.global"
+    },
+    {
+      "rank": 25,
+      "appId": "com.platogo.pmp"
+    },
+    {
+      "rank": 26,
+      "appId": "com.supercell.clashofclans"
+    },
+    {
+      "rank": 27,
+      "appId": "net.wooga.junes_journey_hidden_object_mystery_game"
+    },
+    {
+      "rank": 28,
+      "appId": "com.s01.global"
+    },
+    {
+      "rank": 29,
+      "appId": "net.supertreat.solitaire"
+    },
+    {
+      "rank": 30,
+      "appId": "io.randomco.travel"
+    },
+    {
+      "rank": 31,
+      "appId": "com.cedargames.mysterytown"
+    },
+    {
+      "rank": 32,
+      "appId": "com.joycastle.mergematch"
+    },
+    {
+      "rank": 33,
+      "appId": "com.supercell.brawlstars"
+    },
+    {
+      "rank": 34,
+      "appId": "com.plarium.raidlegends"
+    },
+    {
+      "rank": 35,
+      "appId": "com.gameduell.romme.treff.kartenspiel"
+    },
+    {
+      "rank": 36,
+      "appId": "com.king.candycrushsodasaga"
+    },
+    {
+      "rank": 37,
+      "appId": "com.smallgiantgames.empires"
+    },
+    {
+      "rank": 38,
+      "appId": "com.HoYoverse.hkrpgoversea"
+    },
+    {
+      "rank": 39,
+      "appId": "air.com.buffalo_studios.newflashbingo"
+    },
+    {
+      "rank": 40,
+      "appId": "com.screenshake.dominodreams"
+    },
+    {
+      "rank": 41,
+      "appId": "com.hollywood.merge"
+    },
+    {
+      "rank": 42,
+      "appId": "com.cola.game"
+    },
+    {
+      "rank": 43,
+      "appId": "com.tencent.ig"
+    },
+    {
+      "rank": 44,
+      "appId": "com.funtomic.matchmasters"
+    },
+    {
+      "rank": 45,
+      "appId": "com.huuuge.casino.slots"
+    },
+    {
+      "rank": 46,
+      "appId": "com.funplus.ts.global"
+    },
+    {
+      "rank": 47,
+      "appId": "com.gamedots.seasideescape"
+    },
+    {
+      "rank": 48,
+      "appId": "com.bingo.cruise.free.best.top.game"
+    },
+    {
+      "rank": 49,
+      "appId": "eu.nordeus.topeleven.android"
+    },
+    {
+      "rank": 50,
+      "appId": "de.merkur24.universalapp"
+    },
+    {
+      "rank": 51,
+      "appId": "com.abi.colony.flow"
+    },
+    {
+      "rank": 52,
+      "appId": "com.cooking.bingo.ldkwh"
+    },
+    {
+      "rank": 53,
+      "appId": "com.combo.yarnflow"
+    },
+    {
+      "rank": 54,
+      "appId": "com.fatr.global"
+    },
+    {
+      "rank": 55,
+      "appId": "com.topgamesinc.evony"
+    },
+    {
+      "rank": 56,
+      "appId": "ai.heyyyy.app"
+    },
+    {
+      "rank": 57,
+      "appId": "com.ea.gp.fifamobile"
+    },
+    {
+      "rank": 58,
+      "appId": "com.vigafun.funfinity.foodhunt"
+    },
+    {
+      "rank": 59,
+      "appId": "net.peakgames.match"
+    },
+    {
+      "rank": 60,
+      "appId": "com.farlightgames.warline.gp.global"
+    },
+    {
+      "rank": 61,
+      "appId": "com.project.idle.cd"
+    },
+    {
+      "rank": 62,
+      "appId": "jp.pokemon.pokemontcgp"
+    },
+    {
+      "rank": 63,
+      "appId": "com.supercell.clashroyale"
+    },
+    {
+      "rank": 64,
+      "appId": "com.gamespark.topking.gp"
+    },
+    {
+      "rank": 65,
+      "appId": "com.mobile.legends"
+    },
+    {
+      "rank": 66,
+      "appId": "com.activision.callofduty.shooter"
+    },
+    {
+      "rank": 67,
+      "appId": "com.loomgames.pixelflow"
+    },
+    {
+      "rank": 68,
+      "appId": "com.king.farmheroessaga"
+    },
+    {
+      "rank": 69,
+      "appId": "com.yottagames.gameofmafia"
+    },
+    {
+      "rank": 70,
+      "appId": "com.monopoly.dream.idle.king"
+    },
+    {
+      "rank": 71,
+      "appId": "com.innplaylabs.animalkingdomraid"
+    },
+    {
+      "rank": 72,
+      "appId": "com.tocaboca.tocalifeworld"
+    },
+    {
+      "rank": 73,
+      "appId": "com.funplus.kingofavalon"
+    },
+    {
+      "rank": 74,
+      "appId": "com.zroute.global"
+    },
+    {
+      "rank": 75,
+      "appId": "com.lilithgame.roc.gp"
+    },
+    {
+      "rank": 76,
+      "appId": "com.hnhs.endlesssea.gp"
+    },
+    {
+      "rank": 77,
+      "appId": "com.spark.sp.gp"
+    },
+    {
+      "rank": 78,
+      "appId": "com.rotatelab.cubeblast"
+    },
+    {
+      "rank": 79,
+      "appId": "com.justgame.jails"
+    },
+    {
+      "rank": 80,
+      "appId": "com.moonactive.jellybusters"
+    },
+    {
+      "rank": 81,
+      "appId": "com.slg.policewar"
+    },
+    {
+      "rank": 82,
+      "appId": "com.papegames.lysk.en"
+    },
+    {
+      "rank": 83,
+      "appId": "com.multicastgames.butcher"
+    },
+    {
+      "rank": 84,
+      "appId": "de.whow.jackpot"
+    },
+    {
+      "rank": 85,
+      "appId": "com.miHoYo.GenshinImpact"
+    },
+    {
+      "rank": 86,
+      "appId": "com.kingsgroup.sos"
+    },
+    {
+      "rank": 87,
+      "appId": "com.gameduell.skat.treff.kartenspiel"
+    },
+    {
+      "rank": 88,
+      "appId": "com.merge.game.foodstars"
+    },
+    {
+      "rank": 89,
+      "appId": "com.games.foundation"
+    },
+    {
+      "rank": 90,
+      "appId": "com.igg.android.lordsmobile"
+    },
+    {
+      "rank": 91,
+      "appId": "com.huuuge.casino.texas"
+    },
+    {
+      "rank": 92,
+      "appId": "com.readygo.dark.gp"
+    },
+    {
+      "rank": 93,
+      "appId": "com.olleyo.piggy.king.free"
+    },
+    {
+      "rank": 94,
+      "appId": "com.tensquaregames.letsfish2"
+    },
+    {
+      "rank": 95,
+      "appId": "jp.konami.pesam"
+    },
+    {
+      "rank": 96,
+      "appId": "com.everywear.game5"
+    },
+    {
+      "rank": 97,
+      "appId": "com.nexters.herowars"
+    },
+    {
+      "rank": 98,
+      "appId": "com.zjcs.android.us"
+    },
+    {
+      "rank": 99,
+      "appId": "com.funfizz.palmon.gp"
+    },
+    {
+      "rank": 100,
+      "appId": "com.newmoonproduction.sunshineisland"
+    }
+  ]
+}
