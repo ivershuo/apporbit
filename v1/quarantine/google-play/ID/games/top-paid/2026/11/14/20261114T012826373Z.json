@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-id-games-top-paid-all-games-20261114T012826373Z",
+  "store": "google-play",
+  "market": "ID",
+  "scope": "games",
+  "chart": "top-paid",
+  "normalizedCategory": "all-games",
+  "storeCategory": "GAME",
+  "capturedAt": "2026-11-14T01:28:26.373Z",
+  "observationDate": "2026-11-14",
+  "marketTimeZone": "Asia/Jakarta",
+  "marketObservationDate": "2026-11-14",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 41,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/games?hl=en&gl=ID",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "e33c77d182797c290d5e204443952132700e2f60ff04d24052d944e8d11f7b1a"
+  },
+  "validation": {
+    "previousSnapshotId": "google-play-id-games-top-paid-all-games-20261024T231815214Z",
+    "flags": [
+      "count_below_expected:41/100",
+      "suspicious_count_drop:0.590",
+      "suspicious_set_overlap:0.156"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.mojang.minecraftpe"
+    },
+    {
+      "rank": 2,
+      "appId": "it.rortos.realflightsimulator"
+    },
+    {
+      "rank": 3,
+      "appId": "com.hg.bfbb"
+    },
+    {
+      "rank": 4,
+      "appId": "jp.co.capcom.rxdoff"
+    },
+    {
+      "rank": 5,
+      "appId": "com.oxiwyle.modernage3premium"
+    },
+    {
+      "rank": 6,
+      "appId": "com.playdigious.potionpermit"
+    },
+    {
+      "rank": 7,
+      "appId": "com.rockstargames.gtasa"
+    },
+    {
+      "rank": 8,
+      "appId": "com.chucklefish.stardewvalley"
+    },
+    {
+      "rank": 9,
+      "appId": "com.joykeratif.PikabuuAntar"
+    },
+    {
+      "rank": 10,
+      "appId": "nz.co.codepoint.minimetro"
+    },
+    {
+      "rank": 11,
+      "appId": "com.agaming.thesun.origin"
+    },
+    {
+      "rank": 12,
+      "appId": "com.playappking.android.metalsoldiers4pro"
+    },
+    {
+      "rank": 13,
+      "appId": "com.minoslab.boxingcash"
+    },
+    {
+      "rank": 14,
+      "appId": "com.robtopx.geometryjump"
+    },
+    {
+      "rank": 15,
+      "appId": "com.playdigious.absolum"
+    },
+    {
+      "rank": 16,
+      "appId": "mobi.bestfreegames.bike.mayhem.extreme.mountain.racing"
+    },
+    {
+      "rank": 17,
+      "appId": "com.rubberbandgames.wobblylifev2"
+    },
+    {
+      "rank": 18,
+      "appId": "com.pockettrend.neomonsters"
+    },
+    {
+      "rank": 19,
+      "appId": "com.xd.tabs.google"
+    },
+    {
+      "rank": 20,
+      "appId": "com.unimob.mini.restaurant.premium"
+    },
+    {
+      "rank": 21,
+      "appId": "com.oxiwyle.modernage2premium"
+    },
+    {
+      "rank": 22,
+      "appId": "com.pid.lilguardsman"
+    },
+    {
+      "rank": 23,
+      "appId": "com.playdigious.sor4"
+    },
+    {
+      "rank": 24,
+      "appId": "com.playdigious.legendofkeepers"
+    },
+    {
+      "rank": 25,
+      "appId": "com.fansipan.stickman.shadow.knights.fightinggames"
+    },
+    {
+      "rank": 26,
+      "appId": "com.hg.wreckfest"
+    },
+    {
+      "rank": 27,
+      "appId": "com.and.games505.TerrariaPaid"
+    },
+    {
+      "rank": 28,
+      "appId": "com.playstack.balatro.android"
+    },
+    {
+      "rank": 29,
+      "appId": "com.fundaygames.boosterpack"
+    },
+    {
+      "rank": 30,
+      "appId": "es.brokenrul.oldmansjourney"
+    },
+    {
+      "rank": 31,
+      "appId": "com.playdigious.deadcells.mobile"
+    },
+    {
+      "rank": 32,
+      "appId": "com.pid.caravansandwitch"
+    },
+    {
+      "rank": 33,
+      "appId": "com.pid.shotgunking"
+    },
+    {
+      "rank": 34,
+      "appId": "com.playdead.limbo.full"
+    },
+    {
+      "rank": 35,
+      "appId": "com.devolver.reigns"
+    },
+    {
+      "rank": 36,
+      "appId": "com.nekki.shadowfight2.paid"
+    },
+    {
+      "rank": 37,
+      "appId": "com.unknownworlds.subnauticabelowzero"
+    },
+    {
+      "rank": 38,
+      "appId": "com.fundaygames.scritchyscratchy"
+    },
+    {
+      "rank": 39,
+      "appId": "com.bandainamcoent.op_restaurant"
+    },
+    {
+      "rank": 40,
+      "appId": "com.and.games505.humanfallflat"
+    },
+    {
+      "rank": 41,
+      "appId": "com.coffeestain.goatsimulator3"
+    }
+  ]
+}
