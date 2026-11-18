@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20261118T114214109Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-18T11:42:14.109Z",
+  "observationDate": "2026-11-18",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-11-18",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 21,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "4c959469c620b2947a78b519ab79e20f59218ccb4a46fa162ce5d6bd2f034d4b"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:21/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 4,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 5,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 6,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 7,
+      "appId": "psremoteplay.gamecontroller.playstream.pro"
+    },
+    {
+      "rank": 8,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 9,
+      "appId": "com.salamanca.rolexdaytona1"
+    },
+    {
+      "rank": 10,
+      "appId": "de.blitzer.pro.automotive"
+    },
+    {
+      "rank": 11,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 12,
+      "appId": "org.peakfinder.area.alps"
+    },
+    {
+      "rank": 13,
+      "appId": "com.kerry.a3dmodelingcadcamstudio"
+    },
+    {
+      "rank": 14,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 15,
+      "appId": "de.theorie24.fs.auto"
+    },
+    {
+      "rank": 16,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 17,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 18,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 19,
+      "appId": "com.appslab.nothing.widgetspro"
+    },
+    {
+      "rank": 20,
+      "appId": "com.watchfacestudio.lbclassic06"
+    },
+    {
+      "rank": 21,
+      "appId": "com.pdf.reader.editor.viewer.pro"
+    }
+  ]
+}
