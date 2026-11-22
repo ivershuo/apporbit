@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-gb-apps-top-paid-all-apps-20261122T123357850Z",
+  "store": "google-play",
+  "market": "GB",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-22T12:33:57.850Z",
+  "observationDate": "2026-11-22",
+  "marketTimeZone": "Europe/London",
+  "marketObservationDate": "2026-11-22",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 23,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=GB",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.3.0",
+    "payloadSha256": "2c15d77847639c844a373cc8e6bf94ea04df58011492792dbdff2786a5657d4c"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:23/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "uk.co.focusmm.DTSCombo"
+    },
+    {
+      "rank": 2,
+      "appId": "uk.co.tso.ctt"
+    },
+    {
+      "rank": 3,
+      "appId": "uk.co.citb.imagitech.gt100.android.vy19.plus"
+    },
+    {
+      "rank": 4,
+      "appId": "uk.co.tso.lituk"
+    },
+    {
+      "rank": 5,
+      "appId": "com.propagator.squeezy"
+    },
+    {
+      "rank": 6,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 7,
+      "appId": "uk.co.citb.imagitech.gt200.android.vy23.plus"
+    },
+    {
+      "rank": 8,
+      "appId": "com.mayacrew.rolliescam"
+    },
+    {
+      "rank": 9,
+      "appId": "com.veamstudios.siteauditpro"
+    },
+    {
+      "rank": 10,
+      "appId": "com.blueprint.pocket"
+    },
+    {
+      "rank": 11,
+      "appId": "uk.co.tso.highwaycode"
+    },
+    {
+      "rank": 12,
+      "appId": "com.edshed.spellingshed"
+    },
+    {
+      "rank": 13,
+      "appId": "com.goblintools"
+    },
+    {
+      "rank": 14,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 15,
+      "appId": "com.watchfacestudio.md307digital"
+    },
+    {
+      "rank": 16,
+      "appId": "com.SpottedGhosts.SpiritTalker"
+    },
+    {
+      "rank": 17,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 18,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 19,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 20,
+      "appId": "ae.A.A10"
+    },
+    {
+      "rank": 21,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 22,
+      "appId": "com.thepositivebirthcompany.freyasurgetimer"
+    },
+    {
+      "rank": 23,
+      "appId": "com.salamanca.rolexdaytona1"
+    }
+  ]
+}
