@@ -4,6 +4,7 @@ import {
   GOOGLE_PLAY_REQUESTS_PER_SECOND,
   GooglePlayAdapter
 } from "../src/adapters/google-play.js";
+import packageManifest from "../package.json" with { type: "json" };
 import { target } from "./helpers.js";
 
 afterEach(() => {
@@ -45,6 +46,9 @@ describe("Google Play adapter observation timing", () => {
 
     expect(observation.capturedAt).toBe("2026-09-18T02:17:00.000Z");
     expect(observation.source.method).toBe("list");
+    expect(observation.source.adapterVersion).toBe(
+      `@mradex77/google-play-scraper@${packageManifest.dependencies["@mradex77/google-play-scraper"]}`
+    );
     expect(client.app).not.toHaveBeenCalled();
     expect(client.list).toHaveBeenCalledWith(expect.objectContaining({ fullDetail: false }));
 
