@@ -33,23 +33,18 @@ on:
     types: [completed]
     branches: [main]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 concurrency:
   group: github-pages
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.name != 'Migrate probes to publish' || github.event.workflow_run.conclusion == 'success'
+    permissions:
+      contents: read
+      pages: read
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -90,6 +85,18 @@ jobs:
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: dist/pages
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy Pages
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
