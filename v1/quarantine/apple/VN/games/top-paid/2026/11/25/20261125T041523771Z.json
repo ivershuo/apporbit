@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "apple-vn-games-top-paid-all-games-20261125T041523771Z",
+  "store": "apple",
+  "market": "VN",
+  "scope": "games",
+  "chart": "top-paid",
+  "normalizedCategory": "all-games",
+  "storeCategory": "6014",
+  "capturedAt": "2026-11-25T04:15:23.771Z",
+  "observationDate": "2026-11-25",
+  "marketTimeZone": "Asia/Ho_Chi_Minh",
+  "marketObservationDate": "2026-11-25",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 98,
+  "complete": false,
+  "source": {
+    "type": "apple-rss",
+    "method": "itunes-rss-category",
+    "url": "https://itunes.apple.com/vn/rss/toppaidapplications/limit=100/genre=6014/json",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "apple-rss-v4+itunes-lookup",
+    "payloadSha256": "a11be8203628b8994e734a9fb91b6f7e3643d3ed2782e5a41a5cd4af71942509"
+  },
+  "validation": {
+    "previousSnapshotId": "apple-vn-games-top-paid-all-games-20261103T025613753Z",
+    "flags": [
+      "count_below_expected:98/100",
+      "suspicious_top10_overlap:0.111"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "6799098911"
+    },
+    {
+      "rank": 2,
+      "appId": "578448682"
+    },
+    {
+      "rank": 3,
+      "appId": "6468845068"
+    },
+    {
+      "rank": 4,
+      "appId": "891194610"
+    },
+    {
+      "rank": 5,
+      "appId": "625334537"
+    },
+    {
+      "rank": 6,
+      "appId": "1406710800"
+    },
+    {
+      "rank": 7,
+      "appId": "1389752090"
+    },
+    {
+      "rank": 8,
+      "appId": "6458144503"
+    },
+    {
+      "rank": 9,
+      "appId": "1444761746"
+    },
+    {
+      "rank": 10,
+      "appId": "6743467531"
+    },
+    {
+      "rank": 11,
+      "appId": "525818839"
+    },
+    {
+      "rank": 12,
+      "appId": "6469419567"
+    },
+    {
+      "rank": 13,
+      "appId": "1094038347"
+    },
+    {
+      "rank": 14,
+      "appId": "6759664029"
+    },
+    {
+      "rank": 15,
+      "appId": "6801113954"
+    },
+    {
+      "rank": 16,
+      "appId": "6762813110"
+    },
+    {
+      "rank": 17,
+      "appId": "385902072"
+    },
+    {
+      "rank": 18,
+      "appId": "6738784092"
+    },
+    {
+      "rank": 19,
+      "appId": "6502453075"
+    },
+    {
+      "rank": 20,
+      "appId": "562989701"
+    },
+    {
+      "rank": 21,
+      "appId": "1668755109"
+    },
+    {
+      "rank": 22,
+      "appId": "6446021269"
+    },
+    {
+      "rank": 23,
+      "appId": "1560172174"
+    },
+    {
+      "rank": 24,
+      "appId": "1291427111"
+    },
+    {
+      "rank": 25,
+      "appId": "1574175808"
+    },
+    {
+      "rank": 26,
+      "appId": "6480453979"
+    },
+    {
+      "rank": 27,
+      "appId": "6474194438"
+    },
+    {
+      "rank": 28,
+      "appId": "6788134172"
+    },
+    {
+      "rank": 29,
+      "appId": "1261834568"
+    },
+    {
+      "rank": 30,
+      "appId": "824305459"
+    },
+    {
+      "rank": 31,
+      "appId": "6762192063"
+    },
+    {
+      "rank": 32,
+      "appId": "935528099"
+    },
+    {
+      "rank": 33,
+      "appId": "1438091392"
+    },
+    {
+      "rank": 34,
+      "appId": "1474716211"
+    },
+    {
+      "rank": 35,
+      "appId": "6474541983"
+    },
+    {
+      "rank": 36,
+      "appId": "598581396"
+    },
+    {
+      "rank": 37,
+      "appId": "6444400410"
+    },
+    {
+      "rank": 38,
+      "appId": "479662730"
+    },
+    {
+      "rank": 39,
+      "appId": "6738784151"
+    },
+    {
+      "rank": 40,
+      "appId": "935216956"
+    },
+    {
+      "rank": 41,
+      "appId": "912536422"
+    },
+    {
+      "rank": 42,
+      "appId": "6801980968"
+    },
+    {
+      "rank": 43,
+      "appId": "6444311205"
+    },
+    {
+      "rank": 44,
+      "appId": "1118115766"
+    },
+    {
+      "rank": 45,
+      "appId": "1248033433"
+    },
+    {
+      "rank": 46,
+      "appId": "6450416059"
+    },
+    {
+      "rank": 47,
+      "appId": "1591627945"
+    },
+    {
+      "rank": 48,
+      "appId": "1012298403"
+    },
+    {
+      "rank": 49,
+      "appId": "1373057849"
+    },
+    {
+      "rank": 50,
+      "appId": "1028950091"
+    },
+    {
+      "rank": 51,
+      "appId": "6748056918"
+    },
+    {
+      "rank": 52,
+      "appId": "6746390893"
+    },
+    {
+      "rank": 53,
+      "appId": "6452803093"
+    },
+    {
+      "rank": 54,
+      "appId": "1439889483"
+    },
+    {
+      "rank": 55,
+      "appId": "512142109"
+    },
+    {
+      "rank": 56,
+      "appId": "1143364232"
+    },
+    {
+      "rank": 57,
+      "appId": "6686394372"
+    },
+    {
+      "rank": 58,
+      "appId": "6473001577"
+    },
+    {
+      "rank": 59,
+      "appId": "959272198"
+    },
+    {
+      "rank": 60,
+      "appId": "1537362903"
+    },
+    {
+      "rank": 61,
+      "appId": "1239299402"
+    },
+    {
+      "rank": 62,
+      "appId": "6813841355"
+    },
+    {
+      "rank": 63,
+      "appId": "1030548464"
+    },
+    {
+      "rank": 64,
+      "appId": "6478639011"
+    },
+    {
+      "rank": 65,
+      "appId": "1114815401"
+    },
+    {
+      "rank": 66,
+      "appId": "6447508479"
+    },
+    {
+      "rank": 67,
+      "appId": "1453808408"
+    },
+    {
+      "rank": 68,
+      "appId": "904278510"
+    },
+    {
+      "rank": 69,
+      "appId": "623592465"
+    },
+    {
+      "rank": 70,
+      "appId": "6477835115"
+    },
+    {
+      "rank": 71,
+      "appId": "1453875289"
+    },
+    {
+      "rank": 72,
+      "appId": "424591347"
+    },
+    {
+      "rank": 73,
+      "appId": "6758201392"
+    },
+    {
+      "rank": 74,
+      "appId": "469343097"
+    },
+    {
+      "rank": 75,
+      "appId": "6747752407"
+    },
+    {
+      "rank": 76,
+      "appId": "1005098334"
+    },
+    {
+      "rank": 77,
+      "appId": "1620883955"
+    },
+    {
+      "rank": 78,
+      "appId": "392486160"
+    },
+    {
+      "rank": 79,
+      "appId": "1197552569"
+    },
+    {
+      "rank": 80,
+      "appId": "6478287619"
+    },
+    {
+      "rank": 81,
+      "appId": "728293409"
+    },
+    {
+      "rank": 82,
+      "appId": "1442776789"
+    },
+    {
+      "rank": 83,
+      "appId": "1176797391"
+    },
+    {
+      "rank": 84,
+      "appId": "1293681293"
+    },
+    {
+      "rank": 85,
+      "appId": "1316150324"
+    },
+    {
+      "rank": 86,
+      "appId": "983632334"
+    },
+    {
+      "rank": 87,
+      "appId": "1357651989"
+    },
+    {
+      "rank": 88,
+      "appId": "292421271"
+    },
+    {
+      "rank": 89,
+      "appId": "6748751735"
+    },
+    {
+      "rank": 90,
+      "appId": "1262474519"
+    },
+    {
+      "rank": 91,
+      "appId": "1606703078"
+    },
+    {
+      "rank": 92,
+      "appId": "6448530928"
+    },
+    {
+      "rank": 93,
+      "appId": "1253855339"
+    },
+    {
+      "rank": 94,
+      "appId": "1453838527"
+    },
+    {
+      "rank": 95,
+      "appId": "549105915"
+    },
+    {
+      "rank": 96,
+      "appId": "6749406060"
+    },
+    {
+      "rank": 97,
+      "appId": "6738282698"
+    },
+    {
+      "rank": 98,
+      "appId": "6502953520"
+    }
+  ]
+}
