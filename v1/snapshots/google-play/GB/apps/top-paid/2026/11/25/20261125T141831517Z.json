@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-gb-apps-top-paid-all-apps-20261125T141831517Z",
+  "store": "google-play",
+  "market": "GB",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-25T14:18:31.517Z",
+  "observationDate": "2026-11-25",
+  "marketTimeZone": "Europe/London",
+  "marketObservationDate": "2026-11-25",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 27,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=GB",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.4.0",
+    "payloadSha256": "3a7e4855c1a0575a1d84f0eee28f22416838ed67d36cdd070392a02d0cfef1fe"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:27/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "uk.co.focusmm.DTSCombo"
+    },
+    {
+      "rank": 2,
+      "appId": "uk.co.tso.ctt"
+    },
+    {
+      "rank": 3,
+      "appId": "uk.co.citb.imagitech.gt100.android.vy19.plus"
+    },
+    {
+      "rank": 4,
+      "appId": "uk.co.tso.lituk"
+    },
+    {
+      "rank": 5,
+      "appId": "com.propagator.squeezy"
+    },
+    {
+      "rank": 6,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 7,
+      "appId": "uk.co.citb.imagitech.gt200.android.vy23.plus"
+    },
+    {
+      "rank": 8,
+      "appId": "com.veamstudios.siteauditpro"
+    },
+    {
+      "rank": 9,
+      "appId": "com.mayacrew.rolliescam"
+    },
+    {
+      "rank": 10,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 11,
+      "appId": "com.blueprint.pocket"
+    },
+    {
+      "rank": 12,
+      "appId": "com.edshed.spellingshed"
+    },
+    {
+      "rank": 13,
+      "appId": "uk.co.tso.highwaycode"
+    },
+    {
+      "rank": 14,
+      "appId": "com.SpottedGhosts.SpiritTalker"
+    },
+    {
+      "rank": 15,
+      "appId": "com.goblintools"
+    },
+    {
+      "rank": 16,
+      "appId": "com.monashuniversity.fodmap"
+    },
+    {
+      "rank": 17,
+      "appId": "com.watchfacestudio.per86"
+    },
+    {
+      "rank": 18,
+      "appId": "ae.A.A10"
+    },
+    {
+      "rank": 19,
+      "appId": "com.propagator.squeezyformen"
+    },
+    {
+      "rank": 20,
+      "appId": "com.grill.xbxplay"
+    },
+    {
+      "rank": 21,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 22,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 23,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 24,
+      "appId": "com.appland.subwhere"
+    },
+    {
+      "rank": 25,
+      "appId": "com.universalis.android.universalis"
+    },
+    {
+      "rank": 26,
+      "appId": "com.watchfacestudio.md307digital"
+    },
+    {
+      "rank": 27,
+      "appId": "com.thepositivebirthcompany.freyasurgetimer"
+    }
+  ]
+}
