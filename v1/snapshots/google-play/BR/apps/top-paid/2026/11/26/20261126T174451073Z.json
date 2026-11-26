@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-br-apps-top-paid-all-apps-20261126T174451073Z",
+  "store": "google-play",
+  "market": "BR",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-26T17:44:51.073Z",
+  "observationDate": "2026-11-26",
+  "marketTimeZone": "America/Sao_Paulo",
+  "marketObservationDate": "2026-11-26",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 23,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=BR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.4.0",
+    "payloadSha256": "449aefcafedececa5db1e10e70dbf697a042292bacbb7dbb862144c527a9c1ef"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:23/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.geradordesensi.app"
+    },
+    {
+      "rank": 2,
+      "appId": "realsensiffpro.oficial"
+    },
+    {
+      "rank": 3,
+      "appId": "com.mayacrew.rolliescam"
+    },
+    {
+      "rank": 4,
+      "appId": "com.dedealbano.padlab"
+    },
+    {
+      "rank": 5,
+      "appId": "com.booster.gfxpro"
+    },
+    {
+      "rank": 6,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 7,
+      "appId": "com.panda.mouse"
+    },
+    {
+      "rank": 8,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 9,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 10,
+      "appId": "com.extreamsd.aemobile"
+    },
+    {
+      "rank": 11,
+      "appId": "com.adrienmaciel.bramskeyboard"
+    },
+    {
+      "rank": 12,
+      "appId": "com.appsgenz.launcherios.pro"
+    },
+    {
+      "rank": 13,
+      "appId": "com.iliturgia"
+    },
+    {
+      "rank": 14,
+      "appId": "psremoteplay.gamecontroller.playstream.pro"
+    },
+    {
+      "rank": 15,
+      "appId": "org.prowl.torque"
+    },
+    {
+      "rank": 16,
+      "appId": "com.g19mobile.gameboosterplus"
+    },
+    {
+      "rank": 17,
+      "appId": "com.jndapp.material.widgets.pack"
+    },
+    {
+      "rank": 18,
+      "appId": "com.h4xhdv.ffh4xraistarmacrofire"
+    },
+    {
+      "rank": 19,
+      "appId": "inc.trilokia.pubgfxtool"
+    },
+    {
+      "rank": 20,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 21,
+      "appId": "com.appslab.liquidglass.widgets"
+    },
+    {
+      "rank": 22,
+      "appId": "com.appslab.nothing.widgetspro"
+    },
+    {
+      "rank": 23,
+      "appId": "com.ffsensi.max"
+    }
+  ]
+}
