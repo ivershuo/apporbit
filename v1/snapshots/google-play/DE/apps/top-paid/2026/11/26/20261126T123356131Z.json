@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-de-apps-top-paid-all-apps-20261126T123356131Z",
+  "store": "google-play",
+  "market": "DE",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-26T12:33:56.131Z",
+  "observationDate": "2026-11-26",
+  "marketTimeZone": "Europe/Berlin",
+  "marketObservationDate": "2026-11-26",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 22,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=DE",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.4.0",
+    "payloadSha256": "94f021b2301700dbdf25de5ab4726f970486770e5dd3fdea8ec9adca1a38287b"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:22/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "de.blitzer.plus"
+    },
+    {
+      "rank": 2,
+      "appId": "ch.threema.app"
+    },
+    {
+      "rank": 3,
+      "appId": "de.dihk.ihk.aevo"
+    },
+    {
+      "rank": 4,
+      "appId": "de.theorie24.fs.multilingualpro"
+    },
+    {
+      "rank": 5,
+      "appId": "com.zubersoft.mobilesheetspro"
+    },
+    {
+      "rank": 6,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 7,
+      "appId": "at.bitfire.davdroid"
+    },
+    {
+      "rank": 8,
+      "appId": "psremoteplay.gamecontroller.playstream.pro"
+    },
+    {
+      "rank": 9,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 10,
+      "appId": "com.kerry.a3dmodelingcadcamstudio"
+    },
+    {
+      "rank": 11,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 12,
+      "appId": "de.notfallguru.app"
+    },
+    {
+      "rank": 13,
+      "appId": "de.dihk.ihk.gewo"
+    },
+    {
+      "rank": 14,
+      "appId": "com.watchfacestudio.per86"
+    },
+    {
+      "rank": 15,
+      "appId": "com.wakdev.nfctools.pro"
+    },
+    {
+      "rank": 16,
+      "appId": "org.fossify.thankyou"
+    },
+    {
+      "rank": 17,
+      "appId": "com.klett.blitzrechnen.schulversion"
+    },
+    {
+      "rank": 18,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 19,
+      "appId": "com.mayacrew.rolliescam"
+    },
+    {
+      "rank": 20,
+      "appId": "com.elf.koalasampler"
+    },
+    {
+      "rank": 21,
+      "appId": "com.appslab.nothing.widgetspro"
+    },
+    {
+      "rank": 22,
+      "appId": "com.jndapp.material.widgets.pack"
+    }
+  ]
+}
