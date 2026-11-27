@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-br-apps-top-paid-all-apps-20261127T172938462Z",
+  "store": "google-play",
+  "market": "BR",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-27T17:29:38.462Z",
+  "observationDate": "2026-11-27",
+  "marketTimeZone": "America/Sao_Paulo",
+  "marketObservationDate": "2026-11-27",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 22,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=BR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.4.0",
+    "payloadSha256": "81720726fae9040b49edba4c434eaf0f396d980faa708030a5a08fad179c91dd"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:22/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.geradordesensi.app"
+    },
+    {
+      "rank": 2,
+      "appId": "com.mayacrew.rolliescam"
+    },
+    {
+      "rank": 3,
+      "appId": "com.booster.gfxpro"
+    },
+    {
+      "rank": 4,
+      "appId": "com.dedealbano.padlab"
+    },
+    {
+      "rank": 5,
+      "appId": "com.imageline.FLM"
+    },
+    {
+      "rank": 6,
+      "appId": "com.panda.mouse"
+    },
+    {
+      "rank": 7,
+      "appId": "com.orealsensiff.pro.com"
+    },
+    {
+      "rank": 8,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 9,
+      "appId": "com.extreamsd.aemobile"
+    },
+    {
+      "rank": 10,
+      "appId": "com.iliturgia"
+    },
+    {
+      "rank": 11,
+      "appId": "com.adrienmaciel.bramskeyboard"
+    },
+    {
+      "rank": 12,
+      "appId": "com.teamspeak.ts3client"
+    },
+    {
+      "rank": 13,
+      "appId": "com.appsgenz.launcherios.pro"
+    },
+    {
+      "rank": 14,
+      "appId": "org.prowl.torque"
+    },
+    {
+      "rank": 15,
+      "appId": "psremoteplay.gamecontroller.playstream.pro"
+    },
+    {
+      "rank": 16,
+      "appId": "dev.chordlab.android"
+    },
+    {
+      "rank": 17,
+      "appId": "com.jndapp.material.widgets.pack"
+    },
+    {
+      "rank": 18,
+      "appId": "com.appslab.glass.widgets"
+    },
+    {
+      "rank": 19,
+      "appId": "com.g19mobile.gameboosterplus"
+    },
+    {
+      "rank": 20,
+      "appId": "inc.trilokia.pubgfxtool"
+    },
+    {
+      "rank": 21,
+      "appId": "com.ffsensi.max"
+    },
+    {
+      "rank": 22,
+      "appId": "com.h4xhdv.ffh4xraistarmacrofire"
+    }
+  ]
+}
