@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "google-play-kr-apps-top-paid-all-apps-20261127T021127389Z",
+  "store": "google-play",
+  "market": "KR",
+  "scope": "apps",
+  "chart": "top-paid",
+  "normalizedCategory": "all-apps",
+  "storeCategory": "APPLICATION",
+  "capturedAt": "2026-11-27T02:11:27.389Z",
+  "observationDate": "2026-11-27",
+  "marketTimeZone": "Asia/Seoul",
+  "marketObservationDate": "2026-11-27",
+  "status": "partial",
+  "expectedCount": 100,
+  "actualCount": 22,
+  "complete": false,
+  "source": {
+    "type": "google-play-scraper",
+    "method": "list",
+    "url": "https://play.google.com/store/apps?hl=en&gl=KR",
+    "collectorVersion": "0.1.0",
+    "adapterVersion": "@mradex77/google-play-scraper@1.4.0",
+    "payloadSha256": "11e6539b61faadc17477d64e46dea765f2d15cb3d20cee8595da252a475d01c1"
+  },
+  "validation": {
+    "previousSnapshotId": null,
+    "flags": [
+      "count_below_expected:22/100"
+    ]
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "appId": "com.mayacrew.rolliescam"
+    },
+    {
+      "rank": 2,
+      "appId": "com.gika.android"
+    },
+    {
+      "rank": 3,
+      "appId": "co.byeol.hanneung"
+    },
+    {
+      "rank": 4,
+      "appId": "com.heedam.filtercamera"
+    },
+    {
+      "rank": 5,
+      "appId": "psplay.grill.com"
+    },
+    {
+      "rank": 6,
+      "appId": "com.seesun.youngphoto"
+    },
+    {
+      "rank": 7,
+      "appId": "com.arter97.tesor"
+    },
+    {
+      "rank": 8,
+      "appId": "kr.co.lylstudio.unicorn"
+    },
+    {
+      "rank": 9,
+      "appId": "com.modernplanning.milwatch"
+    },
+    {
+      "rank": 10,
+      "appId": "com.seesun.berryberryfilm"
+    },
+    {
+      "rank": 11,
+      "appId": "com.watchfacestudio.md242"
+    },
+    {
+      "rank": 12,
+      "appId": "com.chaechaecode.navy_ptsd"
+    },
+    {
+      "rank": 13,
+      "appId": "com.yongcalcompany.JlptVip"
+    },
+    {
+      "rank": 14,
+      "appId": "net.dinglisch.android.taskerm"
+    },
+    {
+      "rank": 15,
+      "appId": "com.chaechaecode.marine_ptsd2"
+    },
+    {
+      "rank": 16,
+      "appId": "com.sangsanglyeog.iy2k"
+    },
+    {
+      "rank": 17,
+      "appId": "app.assistantmanager.am27"
+    },
+    {
+      "rank": 18,
+      "appId": "com.kakao.talk.theme.goodday"
+    },
+    {
+      "rank": 19,
+      "appId": "com.watchfacestudio.samwatch_military_w_2024"
+    },
+    {
+      "rank": 20,
+      "appId": "com.watchfacestudio.samwatch_digital_shu_2_2025"
+    },
+    {
+      "rank": 21,
+      "appId": "com.watchfacestudio.samwatch_digital_themis_2024"
+    },
+    {
+      "rank": 22,
+      "appId": "com.watchfacestudio.samwatch_digital_harmony_1"
+    }
+  ]
+}
